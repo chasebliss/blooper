@@ -1,0 +1,15 @@
+h1 {
+  @apply text-7xl;
+}
+
+.hero {
+  font-size: 7vw;
+}
+h4 {
+  @apply text-4xl uppercase;
+}
+
+h5 {
+  font-weight: 500;
+  @apply text-xl uppercase text-white
+}

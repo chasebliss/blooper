@@ -1,0 +1,69 @@
+.glitch {
+color: white;
+  animation: glitch 3s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.glitch:before,
+.glitch:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.glitch:before {
+
+  @apply text-blooperDarkBlue;
+  animation: glitchTop 2.5s linear infinite;
+  clip-path: polygon(12% 0, 67% 0, 100% 52%, 0 40%);
+
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(3px, -3px);
+  }
+  4%,
+  60% {
+    transform: translate(-3px, 3px);
+  }
+  62% {
+    transform: translate(10px, -1px) skew(-13deg);
+  }
+}
+
+.glitch:after {
+color: #739aae;
+
+  animation: glitchBotom 3.5s linear infinite;
+  clip-path: polygon(0 77%, 100% 67%, 100% 100%, 0 100%);
+
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
