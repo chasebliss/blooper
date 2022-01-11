@@ -1,36 +1,47 @@
 const actions = [
   {
     title: 'Resources',
+    description:
+      'What the blooper is, how it works, and how to get the most' +
+      ' out of it.',
     href: '#',
     iconBackground: 'bg-moodDarkRed/20',
     img: '/images/s1.png',
   },
   {
     title: 'Modifiers',
+    description: "A closer look at blooper's cast of modifiers",
     href: '#',
     iconBackground: 'bg-preampBlue/10',
     img: '/images/s2.png',
   },
   {
     title: 'Interface',
+    description:
+      'Connect directly to your blooper to download saved loops,' +
+      ' update firmware, or customize your modifiers.',
     href: '#',
     iconBackground: 'bg-thermaeGold/30',
     img: '/images/s3.png',
   },
   {
     title: 'Midi',
+    description:
+      'The ins and out of getting blooper talking with other devices',
     href: '#',
     iconBackground: 'bg-moodLightRed/20',
     img: '/images/s9.png',
   },
   {
     title: 'FAQ',
+    description: 'Some things you might be wondering about.',
     href: '#',
     iconBackground: 'bg-moodBlue/20',
     img: '/images/s5.png',
   },
   {
     title: 'Contact',
+    description: 'Hi, we are friendly',
     href: '#',
     iconBackground: 'bg-darkWorldGreen/40',
 
@@ -45,7 +56,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <div className="drop-shadow-2xl rounded-3xl bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 ">
+    <div className="lg:w-2/3 mx-5 lg:my-16 drop-shadow-2xl rounded-3xl bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 ">
       {actions.map((action, actionIdx) => (
         <div
           key={action.title}
@@ -65,23 +76,22 @@ export default function Example() {
             <span
               className={classNames(
                 action.iconBackground,
-                'rounded-3lg inline-flex p-3 ring-4 ring-white'
+                'rounded-3lg inline-flex p-3 ring-4 ring-white rounded-xl'
               )}
             >
-              <img src={action.img} className="h-6 w-6" />
+              <img src={action.img} className="h-6 w-6 " />
             </span>
           </div>
           <div className="mt-8">
-            <h3 className="text-lg font-medium">
+            <h3 className="text-blooperDarkBlue font-medium">
               <a href={action.href} className="focus:outline-none">
                 {/* Extend touch target to entire panel */}
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
               </a>
             </h3>
-            <p className="mt-2 text-sm text-gray-500">
-              Doloribus dolores nostrum quia qui natus officia quod et dolorem.
-              Sit repellendus qui ut at blanditiis et quo et molestiae.
+            <p className="mt-2  lg:text-sm xl:text-lg text-gray-500">
+              {action.description}
             </p>
           </div>
           <span

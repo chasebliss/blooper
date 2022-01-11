@@ -7,9 +7,10 @@ import type { AppProps } from 'next/app'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DesktopNav />
-      <main className="mx-auto">
+      <main className="max-w-[1440px] mx-auto">
+        <DesktopNav />
         <Component {...pageProps} />
+        <footer className="h-64 w-full" />
       </main>
     </>
   )

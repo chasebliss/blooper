@@ -1,23 +1,129 @@
-import type { NextPage } from 'next'
+// @ts-nocheck
 import List from '../components/List'
-
+import Image from 'next/image'
 import React from 'react'
-const Home: NextPage = () => {
-  const getRandomInt = (max: number) => Math.floor(Math.random() * max)
-  console.log(getRandomInt(10))
-  return (
-    <section className="h-screen overflow-hidden py-[14vh] px-[14vw] grid h-full">
-      <h1 title="blooper" className="glitch pb-20 mx-auto hero font-nunito">
-        blooper
-      </h1>
+import Particles from 'react-tsparticles'
+import Heading from '../components/Navigation/Heading'
 
-      <div className="grid  sm:grid-cols-3 grid-rows-1 h-full gap-24">
-        <img
-          src="/images/blooper-front-v2.png"
-          className="drop-shadow-2xl object-contain"
-        />
+const Home = () => {
+  const options = {
+    background: {
+      color: {
+        value: '#294c61',
+      },
+      position: '50% 50%',
+      repeat: 'no-repeat',
+      size: 'cover',
+    },
+    fullScreen: {
+      zIndex: -1,
+    },
+    interactivity: {
+      events: {
+        onClick: {
+          enable: true,
+          mode: 'push',
+        },
+        onHover: {
+          enable: true,
+          mode: 'grab',
+          parallax: {
+            enable: true,
+            force: 60,
+          },
+        },
+      },
+    },
+    particles: {
+      color: {
+        value: '#bcdeee',
+      },
+      links: {
+        color: {
+          value: '#bcdeee',
+        },
+        distance: 150,
+        enable: true,
+        opacity: 0.6,
+      },
+      move: {
+        attract: {
+          rotate: {
+            x: 600,
+            y: 1200,
+          },
+        },
+        speed: 1,
+        enable: true,
+        outModes: 'bounce',
+      },
+      shape: {
+        options: {
+          character: {
+            value: ['BLOOPER', 'MOD B', 'MOD A', 'LAYERS', 'STABILITY', 'RAMP'],
+            font: 'antarctican-mono',
+            style: '',
+            weight: '400',
+            fill: true,
+          },
+          char: {
+            value: ['BLOOPER', 'MOD B', 'MOD A', 'LAYERS', 'STABILITY', 'RAMP'],
+            font: 'antarctican-mono',
+            style: '',
+            weight: '400',
+            fill: true,
+          },
+        },
+        type: 'char',
+      },
+      number: {
+        max: 100,
+        density: {
+          enable: true,
+        },
+      },
+      opacity: {
+        value: 0.8,
+        random: {
+          enable: true,
+          value: 0.8,
+        },
+      },
+      size: {
+        random: {
+          enable: true,
+        },
+        value: {
+          min: 7,
+          max: 8,
+        },
+      },
+    },
+  }
+
+  return (
+    <section className="w-full p-16">
+      <Heading
+        title="Blooper"
+        description={`The Blooper was designed to encourage free, experimental, and
+          personalized looping. And with great freedom comes great confusion,
+          sometimes. The resources below should help you get comfortable.`}
+      />
+
+      <div className="flex flex-col lg:flex-row w-full">
+        <div className="relative h-128 lg:h-auto lg:w-1/3 mx-5 my-16">
+          <Image
+            alt="Front of Blooper image"
+            src="/images/blooper-front-v2.png"
+            height={1136}
+            width="100%"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <List />
       </div>
+      <Particles options={options} />
     </section>
   )
 }

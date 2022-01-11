@@ -1,6 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
-
 const data = [
   {
     title: 'Quick Start',
@@ -43,14 +40,11 @@ const data = [
 
 export default function Example() {
   return (
-    <ul
-      role="list"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-4"
-    >
+    <ul role="list" className="grid grid-cols-1 gap-16  md:grid-cols-2">
       {data.map((card) => (
         <li
           key={card.title}
-          className="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
+          className="flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
         >
           <div className="flex-1 flex flex-col p-8">
             <img
@@ -62,9 +56,7 @@ export default function Example() {
               {card.title}
             </h3>
             <dl className="mt-1 flex-grow flex flex-col justify-between">
-              <dd className="text-gray-500 text-sm text-left">
-                {card.description}
-              </dd>
+              <dd className="text-gray-500  text-left">{card.description}</dd>
             </dl>
           </div>
           <div>
@@ -73,7 +65,8 @@ export default function Example() {
                 <a
                   href={card.asset}
                   target="_blank"
-                  className="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
+                  rel="noreferrer"
+                  className="relative  w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
                 >
                   <span className=" uppercase">View</span>
                 </a>
