@@ -4,6 +4,10 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    backdropFilter: {
+      none: 'none',
+      blur: 'blur(20px)',
+    },
     fontFamily: {
       montserrat: ['montserrat', 'sans-serif'],
       nunito: ['nunito', 'sans-serif'],
@@ -56,5 +60,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: ['tailwindcss-filters'],
 }

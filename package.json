@@ -8,11 +8,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^1.4.2",
     "glitched-writer": "^2.0.29",
+    "hamburger-react": "^2.4.1",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-tsparticles": "^1.39.0"
+    "react-responsive": "^9.0.0-beta.5",
+    "react-tsparticles": "^1.39.0",
+    "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
     "@heroicons/react": "^1.0.5",

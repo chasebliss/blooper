@@ -1,5 +1,5 @@
 h1 {
-  @apply text-2xl sm:text-3xl md:text-4xl xl:text-6xl uppercase;
+  @apply text-2xl sm:text-3xl md:text-4xl xl:text-5xl uppercase;
 }
 
 h3 {
@@ -19,5 +19,5 @@ h4 {
 
 h5 {
   font-weight: 500;
-  @apply text-xl uppercase text-white
+  @apply  text-xl uppercase text-white
 }

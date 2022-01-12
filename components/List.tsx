@@ -4,14 +4,14 @@ const actions = [
     description:
       'What the blooper is, how it works, and how to get the most' +
       ' out of it.',
-    href: '#',
+    href: '/resources',
     iconBackground: 'bg-moodDarkRed/20',
     img: '/images/s1.png',
   },
   {
     title: 'Modifiers',
     description: "A closer look at blooper's cast of modifiers",
-    href: '#',
+    href: '/modifiers',
     iconBackground: 'bg-preampBlue/10',
     img: '/images/s2.png',
   },
@@ -20,7 +20,7 @@ const actions = [
     description:
       'Connect directly to your blooper to download saved loops,' +
       ' update firmware, or customize your modifiers.',
-    href: '#',
+    href: 'https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html',
     iconBackground: 'bg-thermaeGold/30',
     img: '/images/s3.png',
   },
@@ -28,23 +28,22 @@ const actions = [
     title: 'Midi',
     description:
       'The ins and out of getting blooper talking with other devices',
-    href: '#',
+    href: '/midi',
     iconBackground: 'bg-moodLightRed/20',
     img: '/images/s9.png',
   },
   {
     title: 'FAQ',
     description: 'Some things you might be wondering about.',
-    href: '#',
+    href: 'faq',
     iconBackground: 'bg-moodBlue/20',
     img: '/images/s5.png',
   },
   {
     title: 'Contact',
     description: 'Hi, we are friendly',
-    href: '#',
+    href: 'mailto:https://info@chaseblissaudio.com',
     iconBackground: 'bg-darkWorldGreen/40',
-
     img: '/images/s4.png',
   },
 ]

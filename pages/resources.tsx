@@ -1,7 +1,6 @@
+import Heading from 'components/Heading'
 import Grid from '../components/Grid'
 import Particles from '../components/Particles'
-import Heading from '../components/Navigation/Heading'
-import React from 'react'
 
 export default function Example() {
   return (

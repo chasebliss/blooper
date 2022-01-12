@@ -16,16 +16,22 @@ const MyComponent = () => {
             onHover: {
               enable: true,
               mode: 'attract',
+              parallax: {
+                enable: true,
+                force: 80,
+                smooth: 100,
+              },
             },
             resize: true,
           },
         },
+
         particles: {
           opacity: {
             value: 0.3,
           },
           links: {
-            distance: 150,
+            distance: 50,
             enable: true,
             opacity: 0.4,
             width: 1,
@@ -63,6 +69,13 @@ const MyComponent = () => {
                 src: `/images/s10.svg`,
               },
             ],
+          },
+
+          number: {
+            max: 100,
+            density: {
+              enable: true,
+            },
           },
           size: {
             random: {

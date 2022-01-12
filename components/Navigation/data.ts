@@ -4,7 +4,8 @@ export const NAV_ITEMS = [
   {
     id: 3,
     title: 'interface',
-    route: 'https://wwww.chaseblissaudio.com',
+    route:
+      'https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html',
     external: true,
   },
   {
