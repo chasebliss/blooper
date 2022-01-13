@@ -1,15 +1,18 @@
 import React from 'react'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+import remarkBreaks from 'remark-breaks'
 
 interface Props {
-  title: string
-  description: string
+  content: string
 }
 
-const Heading = ({ title, description }: Props) => {
+const Heading = ({ content }: Props) => {
   return (
     <div className="m-5 p-5  mt-32 md:w-144 md:mx-auto lg:mx-0 relative border bg-blooperBlue z-40 drop-shadow-2xl rounded-2xl">
-      <h1>{title}</h1>
-      <p className="mt-6 text-white">{description}</p>
+      <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
+        {content}
+      </ReactMarkdown>
     </div>
   )
 }

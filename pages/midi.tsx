@@ -1,6 +1,8 @@
 import Heading from 'components/Heading'
 import React from 'react'
 import Image from 'next/image'
+import Particles from 'react-tsparticles'
+import { midiParticles } from '../styles/particles'
 
 const data = [
   {
@@ -23,17 +25,16 @@ const data = [
   },
 ]
 
-const Modifiers = () => {
+const headingContent = `
+# Midi
+
+Embracing midi opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going.
+`
+
+const Midi = () => {
   return (
     <div className="lg:p-16 bg-blooperDarlBlue">
-      <Heading
-        title="Midi"
-        description="
-          Blooper was designed to encourage free, experimental, and personalized
-          looping. And with great freedom comes great confusion, sometimes.
-          The resources below should help you get comfortable.
-        "
-      />
+      <Heading content={headingContent} />
       <div className="relative p-16">
         <Image
           src="/images/midi-time.png"
@@ -43,11 +44,11 @@ const Modifiers = () => {
           layout="responsive"
           objectFit="contain"
         />
-        <div className="z-10 w-full h-full backdrop-blur-sm bg-blooperGray/10 rounded-3xl absolute inset-0" />
+        <div className="mx-5 lg:mx-0 z-10 h-full backdrop-blur-sm bg-blooperGray/10 rounded-3xl absolute inset-0" />
 
         <ul
           role="list"
-          className="m-5 grid grid-cols-1 gap-16 pt-16 md:grid-cols-3"
+          className="lg:m-5 grid grid-cols-1 gap-16 pt-16 md:grid-cols-3"
         >
           {data.map((card) => (
             <li
@@ -96,8 +97,9 @@ const Modifiers = () => {
           ))}
         </ul>
       </div>
+      <Particles options={midiParticles} />
     </div>
   )
 }
 
-export default Modifiers
+export default Midi

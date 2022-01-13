@@ -49,7 +49,7 @@ export default function Example() {
           key={card.title}
           className="relative flex flex-col text-center rounded-lg "
         >
-          <div className="w-full h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0 z-10" />
+          <div className="w-full h-full backdrop-blur-sm bg-black/ rounded-3xl absolute inset-0 z-10" />
           <div className="flex-1 flex flex-col relative z-20 p-8">
             <img
               className="w-full h-32 flex-shrink-0 mx-auto rounded-2xl object-contain"
