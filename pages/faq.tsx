@@ -127,7 +127,7 @@ export default function Example() {
             ))}
           </dl>
         </div>
-        <div className="w-full h-full backdrop-blur-sm bg-blooperGray/10 rounded-3xl absolute inset-0 z-10" />
+        <div className="w-full h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0 z-10" />
       </div>
       <Particles options={faqParticles} />
     </div>

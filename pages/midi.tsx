@@ -44,7 +44,7 @@ const Midi = () => {
           layout="responsive"
           objectFit="contain"
         />
-        <div className="mx-5 lg:mx-0 z-10 h-full backdrop-blur-sm bg-blooperGray/10 rounded-3xl absolute inset-0" />
+        <div className="mx-5 lg:mx-0 z-10 h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0" />
 
         <ul
           role="list"

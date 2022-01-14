@@ -1,3 +1,5 @@
+import React from 'react'
+
 const actions = [
   {
     title: 'Resources',
@@ -48,48 +50,27 @@ const actions = [
   },
 ]
 
-// @ts-ignore
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function Example() {
   return (
-    <div className="lg:w-2/3 mx-5 lg:my-16 drop-shadow-2xl rounded-3xl bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 ">
-      {actions.map((action, actionIdx) => (
-        <div
-          key={action.title}
-          className={classNames(
-            actionIdx === 0
-              ? 'rounded-tl-3xl rounded-tr-3xl sm:rounded-tr-none'
-              : '',
-            actionIdx === 1 ? 'sm:rounded-tr-3xl' : '',
-            actionIdx === actions.length - 2 ? 'sm:rounded-bl-3xl' : '',
-            actionIdx === actions.length - 1
-              ? 'rounded-bl-3xl rounded-br-3xl sm:rounded-bl-none'
-              : '',
-            'relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500'
-          )}
-        >
+    <div className="lg:w-2/3 mx-5 lg:my-16  rounded-3xl overflow-hidden  sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 relative backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0">
+      {actions.map((action) => (
+        <div key={action.title} className="p-6 relative">
           <div>
             <span
-              className={classNames(
-                action.iconBackground,
-                'rounded-3lg inline-flex p-3 ring-4 ring-white rounded-xl'
-              )}
+              className={`${action.iconBackground} rounded-3lg inline-flex p-3 ring-4 ring-white rounded-xl`}
             >
               <img src={action.img} className="h-6 w-6 " />
             </span>
           </div>
           <div className="mt-8">
-            <h3 className="text-blooperDarkBlue font-medium">
+            <h3 className="text-white font-medium">
               <a href={action.href} className="focus:outline-none">
                 {/* Extend touch target to entire panel */}
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
               </a>
             </h3>
-            <p className="mt-2  lg:text-sm xl:text-lg text-gray-500">
+            <p className="mt-2  lg:text-sm xl:text-lg text-white">
               {action.description}
             </p>
           </div>

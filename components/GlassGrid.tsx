@@ -24,7 +24,7 @@ const GlassGrid = ({ images }: Props) => {
             </figure>
           ))}
         </div>
-        <div className="w-full h-full backdrop-blur-sm bg-blooperGray/10 rounded-3xl absolute inset-0" />
+        <div className="w-full h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0" />
       </div>
     </div>
   )
