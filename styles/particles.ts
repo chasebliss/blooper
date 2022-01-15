@@ -47,7 +47,6 @@ export const homeParticles = {
       },
       speed: 1,
       enable: true,
-      outModes: 'bounce',
     },
     shape: {
       options: {
@@ -76,15 +75,10 @@ export const homeParticles = {
     },
     opacity: {
       value: 0.8,
-      random: {
-        enable: true,
-        value: 0.8,
-      },
+      random: true,
     },
     size: {
-      random: {
-        enable: true,
-      },
+      random: true,
       value: {
         min: 7,
         max: 8,
