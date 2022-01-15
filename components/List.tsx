@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import React from 'react'
 
 const actions = [
@@ -7,15 +8,15 @@ const actions = [
       'What the blooper is, how it works, and how to get the most' +
       ' out of it.',
     href: '/resources',
-    iconBackground: 'bg-moodDarkRed/20',
-    img: '/images/s1.png',
+    iconBackground: 'bg-moodDarkRed',
+    img: '/particles/s1.svg',
   },
   {
     title: 'Modifiers',
     description: "A closer look at blooper's cast of modifiers",
     href: '/modifiers',
-    iconBackground: 'bg-preampBlue/10',
-    img: '/images/s2.png',
+    iconBackground: 'bg-preampBlue',
+    img: '/particles/s3.svg',
   },
   {
     title: 'Interface',
@@ -23,36 +24,36 @@ const actions = [
       'Connect directly to your blooper to download saved loops,' +
       ' update firmware, or customize your modifiers.',
     href: 'https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html',
-    iconBackground: 'bg-thermaeGold/30',
-    img: '/images/s3.png',
+    iconBackground: 'bg-thermaeGold',
+    img: '/particles/s4.svg',
   },
   {
     title: 'Midi',
     description:
       'The ins and out of getting blooper talking with other devices',
     href: '/midi',
-    iconBackground: 'bg-moodLightRed/20',
-    img: '/images/s9.png',
+    iconBackground: 'bg-moodLightRed',
+    img: '/particles/s7.svg',
   },
   {
     title: 'FAQ',
     description: 'Some things you might be wondering about.',
     href: 'faq',
-    iconBackground: 'bg-moodBlue/20',
-    img: '/images/s5.png',
+    iconBackground: 'bg-moodBlue',
+    img: '/particles/s9.svg',
   },
   {
     title: 'Contact',
     description: 'Hi, we are friendly',
     href: 'mailto:https://info@chaseblissaudio.com',
-    iconBackground: 'bg-darkWorldGreen/40',
-    img: '/images/s4.png',
+    iconBackground: 'bg-darkWorldGreen',
+    img: '/particles/s10.svg',
   },
 ]
 
 export default function Example() {
   return (
-    <div className="lg:w-2/3 mx-5 lg:my-16  rounded-3xl overflow-hidden  sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 relative backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0">
+    <motion.div className="lg:w-2/3 mx-5 lg:my-16  rounded-3xl overflow-hidden  sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 relative backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0">
       {actions.map((action) => (
         <div key={action.title} className="p-6 relative">
           <div>
@@ -65,7 +66,6 @@ export default function Example() {
           <div className="mt-8">
             <h3 className="text-white font-medium">
               <a href={action.href} className="focus:outline-none">
-                {/* Extend touch target to entire panel */}
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
               </a>
@@ -89,6 +89,6 @@ export default function Example() {
           </span>
         </div>
       ))}
-    </div>
+    </motion.div>
   )
 }

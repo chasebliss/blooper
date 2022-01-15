@@ -1,11 +1,10 @@
-// @ts-nocheck
 import List from '../components/List'
 import Image from 'next/image'
 import React from 'react'
 import Particles from 'react-tsparticles'
 import Heading from '../components/Heading'
 import { homeParticles } from '../styles/particles'
-
+import { motion } from 'framer-motion'
 const headingContent = `
 # Blooper
 
@@ -17,19 +16,23 @@ It does a lot and it can get pretty weird. So, get familiar with its many tricks
 const Home = () => {
   return (
     <section className="w-full md:p-16">
-      <Heading content={headingContent} />
+      <motion.div>
+        <Heading content={headingContent} />
+      </motion.div>
 
       <div className="flex flex-col lg:flex-row w-full">
-        <div className="relative h-128 lg:h-auto lg:w-1/3 mx-5 my-16">
+        <motion.div className="relative h-128 lg:h-auto lg:w-1/3 mx-5 my-16">
           <Image
+            priority
             alt="Front of Blooper image"
-            src="/images/blooper-front-v2.png"
+            src="/images/blooper-front.png"
             height={1136}
             width="100%"
             layout="fill"
             objectFit="contain"
           />
-        </div>
+        </motion.div>
+
         <List />
       </div>
       <Particles options={homeParticles} />

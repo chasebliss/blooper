@@ -4,8 +4,8 @@ const data = [
   {
     title: 'Quick Start',
     description: 'The bare essentials, for the looping experience.',
-    imageUrl: '/docs/quick-start.png',
-    asset: '/docs/quick-start.pdf',
+    imageUrl: '/resources/images/quick-start.png',
+    asset: '/resources/docs/quick-start.pdf',
     downloadable: true,
   },
   {
@@ -13,7 +13,7 @@ const data = [
     description:
       'Piece-by-piece video walkthroughs of blooper’s main features,' +
       ' including tips and tricks.',
-    imageUrl: '/docs/you-tube.png',
+    imageUrl: '/resources/images/you-tube.png',
     asset:
       'https://www.youtube.com/playlist?list=PLX7ehdcDltWiMQ-ffmCB4_OBLaU8IXPxw',
     downloadable: false,
@@ -21,10 +21,10 @@ const data = [
   {
     title: 'Manual',
     description:
-      'There are lots of hidden goodies in blooper, so you might' +
+      'There are lots of idden goodies in blooper, so you might' +
       ' want to read this. It’s pretty fun, as manuals go.',
-    imageUrl: '/docs/dip-switches.png',
-    asset: '/docs/manual.pdf',
+    imageUrl: '/resources/images/dip-switches.png',
+    asset: '/resources/docs/manual.pdf',
     downloadable: true,
   },
   {
@@ -32,13 +32,13 @@ const data = [
     description:
       'A guide to blooper’s stranger side. Set up your blooper,' +
       ' take your time, and feel amaze.',
-    imageUrl: '/docs/recording.png',
-    asset: '/docs/recording-mod.pdf',
+    imageUrl: '/resources/images/recording.png',
+    asset: '/resources/docs/recording-mod.pdf',
     downloadable: true,
   },
 ]
 
-export default function Example() {
+export const Grid = () => {
   return (
     <ul
       role="list"
@@ -93,3 +93,5 @@ export default function Example() {
     </ul>
   )
 }
+
+export default Grid

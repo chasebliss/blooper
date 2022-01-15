@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main className="max-w-[1440px] mx-auto">
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
         <Component {...pageProps} />
-        <footer className="h-64 w-full" />
+        <footer className="h-16 w-full" />
       </main>
     </>
   )

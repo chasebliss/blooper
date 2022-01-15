@@ -21,30 +21,30 @@ const Modifiers = () => {
       <Heading content={headingContent} />
       <GlassGrid
         images={[
-          '/images/bloops/stretcher-card.png',
-          '/images/bloops/stepped-speed-card.png',
-          '/images/bloops/smooth-speed-card.png',
+          '/modifiers/images/stretcher-card.png',
+          '/modifiers/images/stepped-speed-card.png',
+          '/modifiers/images/smooth-speed-card.png',
         ]}
       />
       <GlassGrid
         images={[
-          '/images/bloops/trimmer-card.png',
-          '/images/bloops/stepped-trimmer-card.png',
-          '/images/bloops/scrambler-card.png',
+          '/modifiers/images/trimmer-card.png',
+          '/modifiers/images/stepped-trimmer-card.png',
+          '/modifiers/images/scrambler-card.png',
         ]}
       />
       <GlassGrid
         images={[
-          '/images/bloops/dropper-card.png',
-          '/images/bloops/filter-card.png',
-          '/images/bloops/pitcher-card.png',
+          '/modifiers/images/dropper-card.png',
+          '/modifiers/images/filter-card.png',
+          '/modifiers/images/pitcher-card.png',
         ]}
       />
       <GlassGrid
         images={[
-          '/images/bloops/stopper-card.png',
-          '/images/bloops/swapper-card.png',
-          '/images/bloops/stutter-card.png',
+          '/modifiers/images/stopper-card.png',
+          '/modifiers/images/swapper-card.png',
+          '/modifiers/images/stutter-card.png',
         ]}
       />
       <Particles options={modifierParticles} />

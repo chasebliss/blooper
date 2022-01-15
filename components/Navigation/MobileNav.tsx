@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { NAV_ITEMS } from './data'
 import { Sling as Hamburger } from 'hamburger-react'
 
-const MobileNave = () => {
+const MobileNav = () => {
   const [isOpen, setOpen] = React.useState(false)
   return (
     <header className="max-w-[1440px] flex items-center px-5 mx-auto h-[80px] absolute inset-0 w-full z-50">
@@ -47,4 +47,4 @@ const MobileNave = () => {
   )
 }
 
-export default MobileNave
+export default MobileNav

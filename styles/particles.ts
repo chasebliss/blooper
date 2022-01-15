@@ -137,22 +137,22 @@ export const resourcesParticles = {
       type: ['image'],
       image: [
         {
-          src: `/images/s1.svg`,
+          src: `/particles/s1.svg`,
         },
         {
-          src: `/images/s3.svg`,
+          src: `/particles/s3.svg`,
         },
         {
-          src: `/images/s4.svg`,
+          src: `/particles/s4.svg`,
         },
         {
-          src: `/images/s7.svg`,
+          src: `/particles/s7.svg`,
         },
         {
-          src: `/images/s9.svg`,
+          src: `/particles/s9.svg`,
         },
         {
-          src: `/images/s10.svg`,
+          src: `/particles/s10.svg`,
         },
       ],
     },
@@ -215,40 +215,40 @@ export const modifierParticles = {
       type: ['image'],
       image: [
         {
-          src: `/images/bloops/dropper.svg`,
+          src: `/particles/dropper.svg`,
         },
         {
-          src: `/images/bloops/filter.svg`,
+          src: `/particles/filter.svg`,
         },
         {
-          src: `/images/bloops/pitcher.svg`,
+          src: `/particles/pitcher.svg`,
         },
         {
-          src: `/images/bloops/scrambler.svg`,
+          src: `/particles/scrambler.svg`,
         },
         {
-          src: `/images/bloops/smooth-speed.svg`,
+          src: `/particles/smooth-speed.svg`,
         },
         {
-          src: `/images/bloops/stepped-speed.svg`,
+          src: `/particles/stepped-speed.svg`,
         },
         {
-          src: `/images/bloops/stepped-trimmer.svg`,
+          src: `/particles/stepped-trimmer.svg`,
         },
         {
-          src: `/images/bloops/stopper.svg`,
+          src: `/particles/stopper.svg`,
         },
         {
-          src: `/images/bloops/stretcher.svg`,
+          src: `/particles/stretcher.svg`,
         },
         {
-          src: `/images/bloops/stutter.svg`,
+          src: `/particles/stutter.svg`,
         },
         {
-          src: `/images/bloops/swapper.svg`,
+          src: `/particles/swapper.svg`,
         },
         {
-          src: `/images/bloops/trimmer.svg`,
+          src: `/particles/trimmer.svg`,
         },
       ],
     },
@@ -427,22 +427,22 @@ export const midiParticles = {
       type: ['image'],
       image: [
         {
-          src: `/images/s1.svg`,
+          src: `/particles/s1.svg`,
         },
         {
-          src: `/images/s3.svg`,
+          src: `/particles/s3.svg`,
         },
         {
-          src: `/images/s4.svg`,
+          src: `/particles/s4.svg`,
         },
         {
-          src: `/images/s7.svg`,
+          src: `/particles/s7.svg`,
         },
         {
-          src: `/images/s9.svg`,
+          src: `/particles/s9.svg`,
         },
         {
-          src: `/images/s10.svg`,
+          src: `/particles/s10.svg`,
         },
       ],
     },

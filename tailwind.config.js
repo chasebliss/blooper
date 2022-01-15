@@ -51,12 +51,28 @@ module.exports = {
         gravitasBlack: '#424036',
         gravitasGray: '#828582',
       },
+
       spacing: {
         128: '32rem',
         144: '36rem',
       },
       dropShadow: {
         cool: '0 1px 3px rgba(24, 53, 76, 0.11), 0 2px 9px rgba(11, 22, 99, 0.42)',
+      },
+      keyframes: {
+        'fade-in-down': {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-10px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        'fade-in-down': 'fade-in-down 0.5s ease-out',
       },
     },
   },

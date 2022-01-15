@@ -8,20 +8,20 @@ const data = [
   {
     title: 'What can midi do',
     description: 'An intro to the benefits of midi blooping.',
-    imageUrl: '/images/midi-can-do.png',
-    asset: '/docs/midi-can-do.pdf',
+    imageUrl: '/midi/images/midi-can-do.png',
+    asset: '/midi/docs/midi-can-do.pdf',
   },
   {
     title: 'Quick Start',
     description: 'A friendly guide to starting out with midi.',
-    imageUrl: '/images/midi-quick-start.png',
-    asset: '/docs/midi-quick-start',
+    imageUrl: '/midi/images/midi-quick-start.png',
+    asset: '/midi/docs/midi-quick-start',
   },
   {
     title: 'Manual',
     description: 'this is where you’ll find the details.',
-    imageUrl: '/images/midi-manual.png',
-    asset: '/docs/midi-manual.pdf',
+    imageUrl: '/midi/images/midi-manual.png',
+    asset: '/midi/docs/midi-manual.pdf',
   },
 ]
 
@@ -33,11 +33,12 @@ Embracing midi opens up a whole other side of blooper. Browse these quick refere
 
 const Midi = () => {
   return (
-    <div className="lg:p-16 bg-blooperDarlBlue">
+    <div className="lg:p-16 bg-blooperDarkBlue">
       <Heading content={headingContent} />
       <div className="relative p-16">
         <Image
-          src="/images/midi-time.png"
+          priority
+          src="/midi/images/midi-time.png"
           height={216}
           width={1120}
           className="z-50"
