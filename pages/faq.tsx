@@ -4,8 +4,7 @@ import React from 'react'
 import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import ReactMarkdown from 'react-markdown'
-import Particles from 'react-tsparticles'
-import { FAQParticles, faqParticles } from '../styles/particles'
+import { FAQParticles } from '../styles/particles'
 import { useTheme } from 'next-themes'
 
 const faqs = [

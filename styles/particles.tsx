@@ -1,6 +1,10 @@
 import Particles from 'react-tsparticles'
 
-const HomeParticles = ({ theme }) => {
+interface Props {
+  theme?: 'dark' | 'light'
+}
+
+const HomeParticles = ({ theme }: Props) => {
   const options = {
     background: {
       position: '50% 50%',
@@ -92,7 +96,7 @@ const HomeParticles = ({ theme }) => {
   )
 }
 
-const ResourcesParticles = ({ theme }) => {
+const ResourcesParticles = () => {
   const options = {
     fpsLimit: 60,
     interactivity: {
@@ -180,7 +184,7 @@ const ResourcesParticles = ({ theme }) => {
   )
 }
 
-const ModifierParticles = ({ theme }) => {
+const ModifierParticles = () => {
   const options = {
     fullScreen: {
       zIndex: -1,
@@ -286,7 +290,7 @@ const ModifierParticles = ({ theme }) => {
   )
 }
 
-const MidiParticles = ({ theme }) => {
+const MidiParticles = () => {
   const options = {
     fpsLimit: 60,
 
@@ -411,7 +415,7 @@ const MidiParticles = ({ theme }) => {
   )
 }
 
-const FAQParticles = ({ theme }) => {
+const FAQParticles = ({ theme }: Props) => {
   const options = {
     background: {
       position: '50% 50%',

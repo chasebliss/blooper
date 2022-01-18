@@ -5,7 +5,7 @@ import '../styles/glitch.css'
 import type { AppProps } from 'next/app'
 import { useMediaQuery } from 'react-responsive'
 import MobileNav from '../components/Navigation/MobileNav'
-import { ThemeProvider, useTheme } from 'next-themes'
+import { ThemeProvider } from 'next-themes'
 import React from 'react'
 
 function MyApp({ Component, pageProps }: AppProps) {
