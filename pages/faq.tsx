@@ -5,7 +5,8 @@ import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import ReactMarkdown from 'react-markdown'
 import Particles from 'react-tsparticles'
-import { faqParticles } from '../styles/particles'
+import { FAQParticles, faqParticles } from '../styles/particles'
+import { useTheme } from 'next-themes'
 
 const faqs = [
   {
@@ -81,11 +82,12 @@ const markdownConfig = {
 }
 
 export default function Example() {
+  const { theme } = useTheme()
   return (
     <div className="pt-32 mx-5 lg:mx-0">
       <div className="relative max-w-4xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200 relative z-40">
-          <h2 className="text-center text-3xl font-semibold text-white sm:text-4xl uppercase  py-8">
+          <h2 className="text-center text-3xl font-semibold  sm:text-4xl uppercase  py-8">
             Frequently asked questions
           </h2>
           <dl className="mt-6 space-y-6 divide-y divide-gray-200">
@@ -94,8 +96,8 @@ export default function Example() {
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
-                      <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                        <span className="font-medium text-white">
+                      <Disclosure.Button className="text-left w-full flex justify-between items-start">
+                        <span className="font-medium ">
                           <ReactMarkdown
                             remarkPlugins={[remarkGfm, remarkBreaks]}
                           >
@@ -127,9 +129,9 @@ export default function Example() {
             ))}
           </dl>
         </div>
-        <div className="w-full h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0 z-10" />
+        <div className="w-full h-full backdrop-blur-sm dark:bg-black/10 border border-black/50 darK:border-0 rounded-3xl absolute inset-0 z-10" />
       </div>
-      <Particles options={faqParticles} />
+      <FAQParticles theme={theme} />
     </div>
   )
 }

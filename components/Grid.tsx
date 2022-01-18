@@ -40,47 +40,44 @@ const data = [
 
 export const Grid = () => {
   return (
-    <ul
-      role="list"
-      className="m-5 grid grid-cols-1 gap-16 pt-16 md:grid-cols-2"
-    >
+    <ul role="list" className="grid grid-cols-1 gap-16 m-5 md:grid-cols-2">
       {data.map((card) => (
         <li
           key={card.title}
-          className="relative flex flex-col text-center rounded-lg"
+          className="flex relative flex-col text-center rounded-lg"
         >
-          <div className="w-full h-full backdrop-blur-sm bg-black/20 rounded-3xl absolute inset-0 z-10" />
-          <div className="flex-1 flex flex-col relative z-20 p-8">
+          <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/20 border-black/50 dark:border-0" />
+          <div className="flex relative z-20 flex-col flex-1 p-8">
             <img
-              className="w-full h-32 flex-shrink-0 mx-auto rounded-2xl object-contain"
+              className="object-contain flex-shrink-0 mx-auto w-full h-32 rounded-2xl"
               src={card.imageUrl}
               alt=""
             />
-            <h3 className="mt-6  text-md uppercase text-white font-medium  pb-3">
+            <h3 className="pb-3 mt-6 font-medium uppercase text-md">
               {card.title}
             </h3>
-            <dl className="mt-1  flex-grow flex flex-col justify-between">
-              <dd className="text-white  text-left">{card.description}</dd>
+            <dl className="flex flex-col flex-grow justify-between mt-1">
+              <dd className="text-left">{card.description}</dd>
             </dl>
           </div>
-          <div className="relative border-t border-white/20 z-20">
-            <div className="-mt-px flex divide-x divide-white/20">
-              <div className="w-0 flex-1 flex">
+          <div className="relative z-20 border-t border-white/20">
+            <div className="flex -mt-px divide-x divide-white/20">
+              <div className="flex flex-1 w-0">
                 <a
                   href={card.asset}
                   target="_blank"
                   rel="noreferrer"
-                  className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-white font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
+                  className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-bl-lg border border-transparent"
                 >
-                  <span className=" uppercase">View</span>
+                  <span className="uppercase">View</span>
                 </a>
               </div>
               {card.downloadable && (
-                <div className="-ml-px w-0 flex-1 flex">
+                <div className="flex flex-1 -ml-px w-0">
                   <a
                     href={card.asset}
                     download
-                    className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-white font-medium border border-transparent rounded-br-lg hover:text-gray-500"
+                    className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-br-lg border border-transparent"
                   >
                     <span className="uppercase">Download</span>
                   </a>

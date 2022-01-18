@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ExternalLinkIcon } from '@heroicons/react/outline'
 
 import { NAV_ITEMS } from './data'
+import ThemeButton from './ThemeButton'
 
 const DesktopNav = () => {
   return (
@@ -12,7 +13,7 @@ const DesktopNav = () => {
           <a href="/">Chase Bliss Audio</a>
         </h3>
 
-        <ul className="flex">
+        <ul className="flex items-center">
           {NAV_ITEMS.map(({ id, title, route, external }) => (
             <li key={id} className="pl-6 relative">
               <h3>
@@ -25,6 +26,7 @@ const DesktopNav = () => {
               </h3>
             </li>
           ))}
+          <ThemeButton />
         </ul>
       </nav>
     </header>

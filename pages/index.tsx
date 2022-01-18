@@ -1,10 +1,12 @@
 import List from '../components/List'
 import Image from 'next/image'
 import React from 'react'
-import Particles from 'react-tsparticles'
+
+import { HomeParticles } from '../styles/particles'
 import Heading from '../components/Heading'
-import { homeParticles } from '../styles/particles'
 import { motion } from 'framer-motion'
+import { useTheme } from 'next-themes'
+
 const headingContent = `
 # Blooper
 
@@ -14,14 +16,14 @@ It does a lot and it can get pretty weird. So, get familiar with its many tricks
 `
 
 const Home = () => {
+  const { theme } = useTheme()
   return (
     <section className="w-full md:p-16">
       <motion.div>
         <Heading content={headingContent} />
       </motion.div>
-
-      <div className="flex flex-col lg:flex-row w-full">
-        <motion.div className="relative h-128 lg:h-auto lg:w-1/3 mx-5 my-16">
+      <div className="flex flex-col w-full lg:flex-row">
+        <motion.div className="relative mx-5 my-16 h-128 lg:h-auto lg:w-1/3">
           <Image
             priority
             alt="Front of Blooper image"
@@ -35,7 +37,7 @@ const Home = () => {
 
         <List />
       </div>
-      <Particles options={homeParticles} />
+      <HomeParticles theme={theme} />
     </section>
   )
 }

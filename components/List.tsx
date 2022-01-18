@@ -53,33 +53,31 @@ const actions = [
 
 export default function Example() {
   return (
-    <motion.div className="lg:w-2/3 mx-5 lg:my-16  rounded-3xl overflow-hidden  sm:grid sm:grid-cols-2 sm:gap-px col-start-2 col-span-2 relative backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0">
+    <motion.div className="overflow-hidden absolute relative inset-0 col-span-2 col-start-2 mx-5 rounded-3xl border backdrop-blur-sm lg:w-2/3 lg:my-16 sm:grid sm:grid-cols-2 sm:gap-px dark:bg-black/10 border-black/50 dark:border-0">
       {actions.map((action) => (
-        <div key={action.title} className="p-6 relative">
+        <div key={action.title} className="relative p-6">
           <div>
             <span
               className={`${action.iconBackground} rounded-3lg inline-flex p-3 ring-4 ring-white rounded-xl`}
             >
-              <img src={action.img} className="h-6 w-6 " />
+              <img src={action.img} className="w-6 h-6" />
             </span>
           </div>
           <div className="mt-8">
-            <h3 className="text-white font-medium">
+            <h3 className="font-medium">
               <a href={action.href} className="focus:outline-none">
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
               </a>
             </h3>
-            <p className="mt-2  lg:text-sm xl:text-lg text-white">
-              {action.description}
-            </p>
+            <p className="mt-2 lg:text-sm xl:text-lg">{action.description}</p>
           </div>
           <span
-            className="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400"
+            className="absolute top-6 right-6 pointer-events-none"
             aria-hidden="true"
           >
             <svg
-              className="h-6 w-6"
+              className="w-6 h-6"
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
               viewBox="0 0 24 24"

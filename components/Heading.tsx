@@ -9,7 +9,7 @@ interface Props {
 
 const Heading = ({ content }: Props) => {
   return (
-    <div className="m-5 p-5  mt-32 md:w-144 md:mx-auto lg:mx-0 relative border bg-blooperBlue z-40 drop-shadow-2xl rounded-2xl">
+    <div className="backdrop-blur-sm relative z-40 p-5 m-5 mt-32 rounded-2xl border drop-shadow-2xl md:w-144 md:mx-auto lg:mx-0 dark:border-white border-black/50 dark:bg-blooperBlue">
       <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
         {content}
       </ReactMarkdown>

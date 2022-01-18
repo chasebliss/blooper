@@ -1,9 +1,9 @@
 import Heading from 'components/Heading'
 import Grid from 'components/Grid'
 
-import { resourcesParticles } from 'styles/particles'
+import { ResourcesParticles } from 'styles/particles'
 import React from 'react'
-import Particles from 'react-tsparticles'
+import { useTheme } from 'next-themes'
 
 const headingContent = `
 # Resources
@@ -13,12 +13,16 @@ Blooper was designed to encourage free, experimental, and personalized looping. 
 The resources below should help you get comfortable.
 `
 
-export const Resources = () => (
-  <div className="p-16">
-    <Heading content={headingContent} />
-    <Grid />
-    <Particles options={resourcesParticles} />
-  </div>
-)
+export const Resources = () => {
+  const { theme } = useTheme()
+
+  return (
+    <div className="lg:p-16">
+      <Heading content={headingContent} />
+      <Grid />
+      <ResourcesParticles theme={theme} />
+    </div>
+  )
+}
 
 export default Resources

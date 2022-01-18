@@ -1,8 +1,8 @@
 import Heading from 'components/Heading'
 import React from 'react'
-import Image from 'next/image'
-import Particles from 'react-tsparticles'
-import { midiParticles } from '../styles/particles'
+
+import { MidiParticles } from '../styles/particles'
+import { useTheme } from 'next-themes'
 
 const data = [
   {
@@ -32,24 +32,15 @@ Embracing midi opens up a whole other side of blooper. Browse these quick refere
 `
 
 const Midi = () => {
+  const { theme } = useTheme()
   return (
-    <div className="lg:p-16 bg-blooperDarkBlue">
+    <div className="lg:p-16">
       <Heading content={headingContent} />
-      <div className="relative p-16">
-        <Image
-          priority
-          src="/midi/images/midi-time.png"
-          height={216}
-          width={1120}
-          className="z-50"
-          layout="responsive"
-          objectFit="contain"
-        />
-        <div className="mx-5 lg:mx-0 z-10 h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0" />
-
+      <div className="relative p-12 lg:p-16">
+        <div className="mx-5 lg:mx-0 z-10 h-full backdrop-blur-sm dark:bg-black/10 border dark:border-0 border-black/50 rounded-3xl absolute inset-0" />
         <ul
           role="list"
-          className="lg:m-5 grid grid-cols-1 gap-16 pt-16 md:grid-cols-3"
+          className="lg:m-5 grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3"
         >
           {data.map((card) => (
             <li
@@ -57,9 +48,9 @@ const Midi = () => {
               className="relative flex flex-col text-center rounded-lg "
             >
               <div className="w-full h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0 z-10" />
-              <div className="flex-1 flex flex-col relative z-20 p-8 ">
+              <div className="flex-1 flex flex-col relative z-10 p-8 ">
                 <img
-                  className=" h-32 flex-shrink-0 mx-auto object-contain"
+                  className="z-10 relative h-32 flex-shrink-0 mx-auto object-contain"
                   src={card.imageUrl}
                   alt=""
                 />
@@ -98,7 +89,7 @@ const Midi = () => {
           ))}
         </ul>
       </div>
-      <Particles options={midiParticles} />
+      <MidiParticles theme={theme} />
     </div>
   )
 }

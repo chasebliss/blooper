@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { NAV_ITEMS } from './data'
 import { Sling as Hamburger } from 'hamburger-react'
+import ThemeButton from './ThemeButton'
 
 const MobileNav = () => {
   const [isOpen, setOpen] = React.useState(false)
@@ -40,6 +41,7 @@ const MobileNav = () => {
                 </h5>
               </li>
             ))}
+            <ThemeButton />
           </ul>
         )}
       </nav>

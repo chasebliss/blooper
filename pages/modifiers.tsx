@@ -1,9 +1,9 @@
 import Heading from 'components/Heading'
 import React from 'react'
-import Particles from 'react-tsparticles'
 
 import GlassGrid from '../components/GlassGrid'
-import { modifierParticles } from '../styles/particles'
+import { ModifierParticles } from '../styles/particles'
+import { useTheme } from 'next-themes'
 
 const headingContent = `
 # Modifiers
@@ -16,38 +16,28 @@ The modifiers are the creative heart of blooper, allowing you to contort and rei
 `
 
 const Modifiers = () => {
+  const { theme } = useTheme()
   return (
-    <div className="lg:p-16 bg-blooperDarlBlue">
+    <div className="lg:p-16">
       <Heading content={headingContent} />
       <GlassGrid
         images={[
           '/modifiers/images/stretcher-card.png',
           '/modifiers/images/stepped-speed-card.png',
           '/modifiers/images/smooth-speed-card.png',
-        ]}
-      />
-      <GlassGrid
-        images={[
           '/modifiers/images/trimmer-card.png',
           '/modifiers/images/stepped-trimmer-card.png',
           '/modifiers/images/scrambler-card.png',
-        ]}
-      />
-      <GlassGrid
-        images={[
           '/modifiers/images/dropper-card.png',
           '/modifiers/images/filter-card.png',
           '/modifiers/images/pitcher-card.png',
-        ]}
-      />
-      <GlassGrid
-        images={[
           '/modifiers/images/stopper-card.png',
           '/modifiers/images/swapper-card.png',
           '/modifiers/images/stutter-card.png',
         ]}
       />
-      <Particles options={modifierParticles} />
+
+      <ModifierParticles theme={theme} />
     </div>
   )
 }
