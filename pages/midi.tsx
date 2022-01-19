@@ -2,6 +2,7 @@ import Heading from 'components/Heading'
 import React from 'react'
 
 import { MidiParticles } from '../styles/particles'
+import { useTheme } from 'next-themes'
 
 const data = [
   {
@@ -35,48 +36,48 @@ const Midi = () => {
     <div className="lg:p-16">
       <Heading content={headingContent} />
       <div className="relative p-12 lg:p-16">
-        <div className="mx-5 lg:mx-0 z-10 h-full backdrop-blur-sm dark:bg-black/10 border dark:border-0 border-black/50 rounded-3xl absolute inset-0" />
+        <div className="absolute inset-0 z-10 mx-5 h-full rounded-3xl border backdrop-blur-sm lg:mx-0 dark:bg-black/10 dark:border-0 border-black/50" />
         <ul
           role="list"
-          className="lg:m-5 grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-8 lg:m-5 md:grid-cols-2 lg:grid-cols-3"
         >
           {data.map((card) => (
             <li
               key={card.title}
-              className="relative flex flex-col text-center rounded-lg "
+              className="flex relative flex-col text-center rounded-lg"
             >
-              <div className="w-full h-full backdrop-blur-sm bg-black/10 rounded-3xl absolute inset-0 z-10" />
-              <div className="flex-1 flex flex-col relative z-10 p-8 ">
+              <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm bg-black/10" />
+              <div className="flex relative z-10 flex-col flex-1 p-8">
                 <img
-                  className="z-10 relative h-32 flex-shrink-0 mx-auto object-contain"
+                  className="object-contain relative z-10 flex-shrink-0 mx-auto h-32"
                   src={card.imageUrl}
                   alt=""
                 />
-                <h3 className="mt-6  text-md uppercase text-white font-medium  pb-3">
+                <h3 className="pb-3 mt-6 font-medium uppercase text-md">
                   {card.title}
                 </h3>
-                <dl className="mt-1  flex-grow flex flex-col justify-between">
-                  <dd className="text-white  text-left">{card.description}</dd>
+                <dl className="flex flex-col flex-grow justify-between mt-1">
+                  <dd className="text-left">{card.description}</dd>
                 </dl>
               </div>
-              <div className="relative border-t border-white/20 z-20">
-                <div className="-mt-px flex divide-x divide-white/20">
-                  <div className="w-0 flex-1 flex">
+              <div className="relative z-20 border-t border-white/20">
+                <div className="flex -mt-px divide-x divide-white/20">
+                  <div className="flex flex-1 w-0">
                     <a
                       href={card.asset}
                       target="_blank"
                       rel="noreferrer"
-                      className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-white font-medium border border-transparent rounded-bl-lg hover:text-gray-500"
+                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-bl-lg border border-transparent hover:text-gray-500"
                     >
-                      <span className=" uppercase">View</span>
+                      <span className="uppercase">View</span>
                     </a>
                   </div>
 
-                  <div className="-ml-px w-0 flex-1 flex">
+                  <div className="flex flex-1 -ml-px w-0">
                     <a
                       href={card.asset}
                       download
-                      className="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-white font-medium border border-transparent rounded-br-lg hover:text-gray-500"
+                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-br-lg border border-transparent hover:text-gray-500"
                     >
                       <span className="uppercase">Download</span>
                     </a>
