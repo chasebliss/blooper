@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 976px)' })
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <main className="max-w-[1440px] mx-auto">
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
         <Component {...pageProps} />

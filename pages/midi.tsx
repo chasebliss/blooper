@@ -2,7 +2,6 @@ import Heading from 'components/Heading'
 import React from 'react'
 
 import { MidiParticles } from '../styles/particles'
-import { useTheme } from 'next-themes'
 
 const data = [
   {
@@ -33,13 +32,13 @@ Embracing midi opens up a whole other side of blooper. Browse these quick refere
 
 const Midi = () => {
   return (
-    <div className="lg:p-16">
+    <div className="lg:p-16 flex flex-col items-center">
       <Heading content={headingContent} />
       <div className="relative p-12 lg:p-16">
-        <div className="absolute inset-0 z-10 mx-5 h-full rounded-3xl border backdrop-blur-sm lg:mx-0 dark:bg-black/10 dark:border-0 border-black/50" />
+        <div className="absolute inset-0 z-10 mx-5 h-full rounded-3xl border backdrop-blur-sm lg:mx-0 dark:bg-black/10 dark:border-0 border-blooperDarkBlue/50" />
         <ul
           role="list"
-          className="grid grid-cols-1 gap-8 lg:m-5 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-10 lg:m-5 md:grid-cols-2 lg:grid-cols-3"
         >
           {data.map((card) => (
             <li
@@ -67,7 +66,7 @@ const Midi = () => {
                       href={card.asset}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-bl-lg border border-transparent hover:text-gray-500"
+                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-bl-lg border border-transparent hover:text-blooperDarkBlue"
                     >
                       <span className="uppercase">View</span>
                     </a>
@@ -77,7 +76,7 @@ const Midi = () => {
                     <a
                       href={card.asset}
                       download
-                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-br-lg border border-transparent hover:text-gray-500"
+                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-br-lg border border-transparent hover:text-blooperDarkBlue"
                     >
                       <span className="uppercase">Download</span>
                     </a>

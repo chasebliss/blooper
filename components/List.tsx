@@ -53,7 +53,7 @@ const actions = [
 
 export default function Example() {
   return (
-    <motion.div className="overflow-hidden absolute relative inset-0 col-span-2 col-start-2 mx-5 rounded-3xl border backdrop-blur-sm lg:w-2/3 lg:my-16 sm:grid sm:grid-cols-2 sm:gap-px dark:bg-black/10 border-black/50 dark:border-0">
+    <motion.div className="overflow-hidden absolute relative inset-0 col-span-2 col-start-2 mx-5 rounded-3xl border backdrop-blur-sm lg:w-2/3 lg:my-16 sm:grid sm:grid-cols-2 sm:gap-px dark:bg-black/10 border-blooperDarkBlue/50 dark:border-0">
       {actions.map((action) => (
         <div key={action.title} className="relative p-6">
           <div>

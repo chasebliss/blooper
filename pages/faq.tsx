@@ -72,36 +72,36 @@ const classNames = (...classes: string[]) => classes.filter(Boolean).join(' ')
 const markdownConfig = {
   ul: ({ ...props }) => <ul className="py-3" {...props} />,
   a: ({ ...props }) => (
-    <a className="underline italic font-semibold" {...props} />
+    <a className="italic font-semibold underline" {...props} />
   ),
   li: ({ ...props }) => (
-    <li className="list-disc list-inside pb-3" {...props} />
+    <li className="pb-3 list-disc list-inside" {...props} />
   ),
 }
 
 export default function Example() {
   return (
-    <div className="pt-32 mx-5 lg:mx-0">
-      <div className="relative max-w-4xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200 relative z-40">
-          <h2 className="text-center text-3xl font-semibold  sm:text-4xl uppercase  py-8">
+    <div className="flex flex-col items-center pt-40 mx-5 lg:mx-0">
+      <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
+        <div className="relative z-40 mx-auto max-w-3xl divide-y-2 divide-blooperDarkBlue">
+          <h2 className="pb-8 text-3xl font-semibold text-center uppercase sm:text-4xl">
             Frequently asked questions
           </h2>
-          <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+          <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue">
             {faqs.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
                   <>
                     <dt className="text-lg">
-                      <Disclosure.Button className="text-left w-full flex justify-between items-start">
-                        <span className="font-medium ">
+                      <Disclosure.Button className="flex justify-between items-start w-full text-left">
+                        <span className="font-medium">
                           <ReactMarkdown
                             remarkPlugins={[remarkGfm, remarkBreaks]}
                           >
                             {faq.question}
                           </ReactMarkdown>
                         </span>
-                        <span className="ml-6 h-7 flex items-center">
+                        <span className="flex items-center ml-6 h-7">
                           <ChevronDownIcon
                             className={classNames(
                               open ? '-rotate-180' : 'rotate-0',
@@ -112,7 +112,7 @@ export default function Example() {
                         </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                    <Disclosure.Panel as="dd" className="pr-12 mt-2">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm, remarkBreaks]}
                         components={markdownConfig}
@@ -126,7 +126,7 @@ export default function Example() {
             ))}
           </dl>
         </div>
-        <div className="w-full h-full backdrop-blur-sm dark:bg-black/10 border border-black/50 darK:border-0 rounded-3xl absolute inset-0 z-10" />
+        <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/10 border-blooperDarkBlue/50 darK:border-0" />
       </div>
       <FAQParticles />
     </div>

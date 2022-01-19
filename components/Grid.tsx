@@ -40,13 +40,13 @@ const data = [
 
 export const Grid = () => {
   return (
-    <ul role="list" className="grid grid-cols-1 gap-16 m-5 md:grid-cols-2">
+    <ul role="list" className="grid grid-cols-1 gap-10 m-5 md:grid-cols-2">
       {data.map((card) => (
         <li
           key={card.title}
           className="flex relative flex-col text-center rounded-lg"
         >
-          <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/20 border-black/50 dark:border-0" />
+          <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/10 border-blooperDarkBlue/50 dark:border-0" />
           <div className="flex relative z-20 flex-col flex-1 p-8">
             <img
               className="object-contain flex-shrink-0 mx-auto w-full h-32 rounded-2xl"
@@ -60,8 +60,8 @@ export const Grid = () => {
               <dd className="text-left">{card.description}</dd>
             </dl>
           </div>
-          <div className="relative z-20 border-t border-white/20">
-            <div className="flex -mt-px divide-x divide-white/20">
+          <div className="relative z-20 border-t border-blooperDarkBlue/50">
+            <div className="flex -mt-px divide-x divide-blooperDarkBlue/50">
               <div className="flex flex-1 w-0">
                 <a
                   href={card.asset}

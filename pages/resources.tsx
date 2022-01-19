@@ -13,7 +13,7 @@ The resources below should help you get comfortable.
 
 export const Resources = () => {
   return (
-    <div className="lg:p-16">
+    <div className="lg:p-16 flex flex-col items-center">
       <Heading content={headingContent} />
       <Grid />
       <ResourcesParticles />

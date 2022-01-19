@@ -12,6 +12,8 @@ module.exports = {
     fontFamily: {
       montserrat: ['montserrat', 'sans-serif'],
       nunito: ['nunito', 'sans-serif'],
+      poppins: ['poppins', 'sans-serif'],
+      mono: ['antarctican-mono', 'sans-serif'],
     },
     screens: {
       sm: '480px',

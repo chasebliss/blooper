@@ -25,7 +25,7 @@
 html,
 body {
   height: 100%;
-  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue}
+  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue dark:font-mono font-poppins}
 
 main {
   @apply h-full;
@@ -38,7 +38,6 @@ main {
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-  font-family: antarctican-mono, sans-serif;
   font-weight: 400;
   font-style: normal;
 }

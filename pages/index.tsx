@@ -18,10 +18,9 @@ It does a lot and it can get pretty weird. So, get familiar with its many tricks
 const Home = () => {
   const { theme } = useTheme()
   return (
-    <section className="w-full md:p-16">
-      <motion.div>
-        <Heading content={headingContent} />
-      </motion.div>
+    <section className="w-full md:p-16 flex flex-col justify-center items-center">
+      <Heading content={headingContent} />
+
       <div className="flex flex-col w-full lg:flex-row">
         <motion.div className="relative mx-5 my-16 h-128 lg:h-auto lg:w-1/3">
           <Image
