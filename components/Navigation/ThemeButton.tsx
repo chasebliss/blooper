@@ -12,7 +12,7 @@ const ThemeButton = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="ml-5 p-2.5 dark:bg-blooperBlue01 bg-blooperDarkBlue rounded-full transition"
+      className="md:ml-5 flex justify-center items-center h-12 md:h-full p-2.5 dark:bg-blooperBlue01 bg-white border border-blooperDarkBlue rounded-3xl md:rounded-full transition"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {mounted && (
@@ -21,7 +21,7 @@ const ThemeButton = () => {
           viewBox="0 0 24 24"
           fill="currentColor"
           stroke="currentColor"
-          className="h-4 w-4 md:h-6 md:w-6 dark:text-blooperDarkBlue text-blooperBlue01"
+          className="h-6 w-6 dark:text-blooperDarkBlue "
         >
           {theme === 'dark' ? (
             <path
