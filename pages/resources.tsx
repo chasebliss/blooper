@@ -2,8 +2,6 @@ import Heading from 'components/Heading'
 import Grid from 'components/Grid'
 
 import { ResourcesParticles } from 'styles/particles'
-import React from 'react'
-import { useTheme } from 'next-themes'
 
 const headingContent = `
 # Resources
@@ -14,13 +12,11 @@ The resources below should help you get comfortable.
 `
 
 export const Resources = () => {
-  const { theme } = useTheme()
-
   return (
     <div className="lg:p-16">
       <Heading content={headingContent} />
       <Grid />
-      <ResourcesParticles theme={theme} />
+      <ResourcesParticles />
     </div>
   )
 }

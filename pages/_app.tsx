@@ -2,6 +2,7 @@ import DesktopNav from '../components/Navigation/DesktopNav'
 import '../styles/globals.css'
 import '../styles/typography.css'
 import '../styles/glitch.css'
+
 import type { AppProps } from 'next/app'
 import { useMediaQuery } from 'react-responsive'
 import MobileNav from '../components/Navigation/MobileNav'

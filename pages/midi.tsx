@@ -2,7 +2,6 @@ import Heading from 'components/Heading'
 import React from 'react'
 
 import { MidiParticles } from '../styles/particles'
-import { useTheme } from 'next-themes'
 
 const data = [
   {
@@ -32,7 +31,6 @@ Embracing midi opens up a whole other side of blooper. Browse these quick refere
 `
 
 const Midi = () => {
-  const { theme } = useTheme()
   return (
     <div className="lg:p-16">
       <Heading content={headingContent} />
@@ -89,7 +87,7 @@ const Midi = () => {
           ))}
         </ul>
       </div>
-      <MidiParticles theme={theme} />
+      <MidiParticles />
     </div>
   )
 }

@@ -3,7 +3,6 @@ import React from 'react'
 
 import GlassGrid from '../components/GlassGrid'
 import { ModifierParticles } from '../styles/particles'
-import { useTheme } from 'next-themes'
 
 const headingContent = `
 # Modifiers
@@ -16,7 +15,6 @@ The modifiers are the creative heart of blooper, allowing you to contort and rei
 `
 
 const Modifiers = () => {
-  const { theme } = useTheme()
   return (
     <div className="lg:p-16">
       <Heading content={headingContent} />
@@ -37,7 +35,7 @@ const Modifiers = () => {
         ]}
       />
 
-      <ModifierParticles theme={theme} />
+      <ModifierParticles />
     </div>
   )
 }

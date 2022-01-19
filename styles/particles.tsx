@@ -1,10 +1,6 @@
 import Particles from 'react-tsparticles'
 
-interface Props {
-  theme?: 'dark' | 'light'
-}
-
-const HomeParticles = ({ theme }: Props) => {
+const HomeParticles = ({ theme }: any) => {
   const options = {
     background: {
       position: '50% 50%',
@@ -415,7 +411,7 @@ const MidiParticles = () => {
   )
 }
 
-const FAQParticles = ({ theme }: Props) => {
+const FAQParticles = ({ theme }: any) => {
   const options = {
     background: {
       position: '50% 50%',
