@@ -16,7 +16,7 @@ The modifiers are the creative heart of blooper, allowing you to contort and rei
 
 const Modifiers = () => {
   return (
-    <div className="lg:p-16 flex flex-col items-center">
+    <div className="xl:p-16 flex flex-col items-center">
       <Heading content={headingContent} />
       <GlassGrid
         images={[

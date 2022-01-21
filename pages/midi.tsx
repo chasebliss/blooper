@@ -32,7 +32,7 @@ Embracing midi opens up a whole other side of blooper. Browse these quick refere
 
 const Midi = () => {
   return (
-    <div className="lg:p-16 flex flex-col items-center">
+    <div className="flex flex-col items-center lg:p-16">
       <Heading content={headingContent} />
       <div className="relative p-12 lg:p-16">
         <div className="absolute inset-0 z-10 mx-5 h-full rounded-3xl border backdrop-blur-sm lg:mx-0 dark:bg-black/10 dark:border-0 border-blooperDarkBlue/50" />
@@ -66,9 +66,9 @@ const Midi = () => {
                       href={card.asset}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-bl-lg border border-transparent hover:text-blooperDarkBlue"
+                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-bl-3xl border border-transparent hover:bg-black/20"
                     >
-                      <span className="uppercase">View</span>
+                      <span className="uppercase hover:bg-black/20">View</span>
                     </a>
                   </div>
 
@@ -76,7 +76,7 @@ const Midi = () => {
                     <a
                       href={card.asset}
                       download
-                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium rounded-br-lg border border-transparent hover:text-blooperDarkBlue"
+                      className="inline-flex relative flex-1 justify-center items-center py-4 w-0 text-sm font-medium  rounded-br-3xl border border-transparent hover:bg-black/20"
                     >
                       <span className="uppercase">Download</span>
                     </a>

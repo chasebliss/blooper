@@ -92,8 +92,8 @@ export default function Example() {
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
                   <>
-                    <dt className="text-lg">
-                      <Disclosure.Button className="flex justify-between items-start w-full text-left">
+                    <dt className="text-lg px-6 hover:bg-black/10 rounded-3xl ">
+                      <Disclosure.Button className="flex justify-between items-center w-full text-left">
                         <span className="font-medium">
                           <ReactMarkdown
                             remarkPlugins={[remarkGfm, remarkBreaks]}
@@ -112,7 +112,7 @@ export default function Example() {
                         </span>
                       </Disclosure.Button>
                     </dt>
-                    <Disclosure.Panel as="dd" className="pr-12 mt-2">
+                    <Disclosure.Panel as="dd" className="pr-12 mt-2 px-6">
                       <ReactMarkdown
                         remarkPlugins={[remarkGfm, remarkBreaks]}
                         components={markdownConfig}

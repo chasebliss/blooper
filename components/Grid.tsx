@@ -62,7 +62,7 @@ export const Grid = () => {
           </div>
           <div className="relative z-20 border-t border-blooperDarkBlue/50">
             <div className="flex -mt-px divide-x divide-blooperDarkBlue/50">
-              <div className="flex flex-1 w-0">
+              <div className="flex flex-1 w-0 hover:bg-black/20">
                 <a
                   href={card.asset}
                   target="_blank"
@@ -73,7 +73,7 @@ export const Grid = () => {
                 </a>
               </div>
               {card.downloadable && (
-                <div className="flex flex-1 -ml-px w-0">
+                <div className="flex flex-1 -ml-px w-0 hover:bg-black/20">
                   <a
                     href={card.asset}
                     download
