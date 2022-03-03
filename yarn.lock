@@ -305,6 +305,11 @@
   "resolved" "https://registry.npmjs.org/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz"
   "version" "1.2.1"
 
+"@jsfowles/component-library@^1.0.1":
+  "integrity" "sha512-ttyHRwD6448yvKmmfFWCcuQgyCpHCgSMaaWUZDeLesiq6DhUinIzeviaM5+WxGs3Z/kKPWbRLOHo3Ta85jSprw=="
+  "resolved" "https://npm.pkg.github.com/download/@jsfowles/component-library/1.0.1/c8bf74c441696f35bcd3a67438466ec6a595b87e12c637c79a7060e6901067f9"
+  "version" "1.0.1"
+
 "@napi-rs/triples@1.0.3":
   "integrity" "sha512-jDJTpta+P4p1NZTFVLHJ/TLFVYVcOqv6l8xwOeBKNPMgY/zDYH/YH7SJbvrr/h1RcS9GzbPcLKGzpuK9cV56UA=="
   "resolved" "https://registry.npmjs.org/@napi-rs/triples/-/triples-1.0.3.tgz"
@@ -2310,6 +2315,11 @@
   "integrity" "sha512-8QADVssbrFjivHWQU7KkMgptGTl6WAcSdlbBPY4uNF+mWr6DGcKrvY2w4FQJoXch7+fKMjj0dRrL75vk3k23OA=="
   "resolved" "https://registry.npmjs.org/kleur/-/kleur-4.1.4.tgz"
   "version" "4.1.4"
+
+"kyper-rollup@^1.0.1":
+  "integrity" "sha512-JrwHJB6t+/VXN+WNNHcxdtymhgaffW3pbi7lg0O0rUVlmS1JT3+Rhn9If5HLa5hpEsCzICcJ7xjt+cZfPNTM2g=="
+  "resolved" "https://registry.npmjs.org/kyper-rollup/-/kyper-rollup-1.0.1.tgz"
+  "version" "1.0.1"
 
 "language-subtag-registry@~0.3.2":
   "integrity" "sha512-L0IqwlIXjilBVVYKFT37X9Ih11Um5NEl9cbJIuU/SwP/zEEAbBPOnEeeuxVMf45ydWQRDQN3Nqc96OgbH1K+Pg=="

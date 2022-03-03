@@ -1,5 +1,6 @@
 import Heading from 'components/Heading'
 import React from 'react'
+import { useTheme } from 'next-themes'
 
 import { MidiParticles } from '../styles/particles'
 
@@ -31,6 +32,8 @@ Embracing midi opens up a whole other side of blooper. Browse these quick refere
 `
 
 const Midi = () => {
+  const { theme } = useTheme()
+
   return (
     <div className="flex flex-col items-center lg:p-16">
       <Heading content={headingContent} />
@@ -87,7 +90,7 @@ const Midi = () => {
           ))}
         </ul>
       </div>
-      <MidiParticles />
+      {theme === 'dark' && <MidiParticles />}
     </div>
   )
 }

@@ -5,6 +5,7 @@ import remarkGfm from 'remark-gfm'
 import remarkBreaks from 'remark-breaks'
 import ReactMarkdown from 'react-markdown'
 import { FAQParticles } from '../styles/particles'
+import { useTheme } from 'next-themes'
 
 const faqs = [
   {
@@ -80,6 +81,8 @@ const markdownConfig = {
 }
 
 export default function Example() {
+  const { theme } = useTheme()
+
   return (
     <div className="flex flex-col items-center pt-40 mx-5 lg:mx-0">
       <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
@@ -128,7 +131,7 @@ export default function Example() {
         </div>
         <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/10 border-blooperDarkBlue/50 darK:border-0" />
       </div>
-      <FAQParticles />
+      {theme === 'dark' && <FAQParticles />}
     </div>
   )
 }

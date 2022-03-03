@@ -20,7 +20,6 @@ const Home = () => {
   return (
     <section className="w-full md:p-16 flex flex-col justify-center items-center">
       <Heading content={headingContent} />
-
       <div className="flex flex-col w-full lg:flex-row">
         <motion.div className="relative mx-5 my-16 h-128 lg:h-auto lg:w-1/3">
           <Image
@@ -36,7 +35,7 @@ const Home = () => {
 
         <List />
       </div>
-      <HomeParticles theme={theme} />
+      {theme === 'dark' && <HomeParticles theme={theme} />}
     </section>
   )
 }
