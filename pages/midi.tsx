@@ -1,6 +1,7 @@
 import Heading from 'components/Heading';
 import React from 'react';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 import { MidiParticles } from '../styles/particles';
 
@@ -19,7 +20,7 @@ const data = [
   },
   {
     title: 'Manual',
-    description: 'this is where you’ll find the details.',
+    description: 'This is where you’ll find the details.',
     imageUrl: '/midi/images/midi-manual.png',
     asset: '/midi/docs/midi-manual.pdf',
   },
@@ -50,9 +51,11 @@ const Midi = () => {
             >
               <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm bg-black/10" />
               <div className="flex relative z-10 flex-col flex-1 p-8">
-                <img
+                <Image
                   className="object-contain relative z-10 flex-shrink-0 mx-auto h-32"
                   src={card.imageUrl}
+                  width={280}
+                  height={150}
                   alt=""
                 />
                 <h3 className="pb-3 mt-6 font-medium uppercase text-md">

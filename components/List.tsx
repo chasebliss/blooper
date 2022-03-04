@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import Image from 'next/image';
 
 const actions = [
   {
@@ -60,7 +61,7 @@ export default function Example() {
             <span
               className={`${action.iconBackground} rounded-3lg inline-flex p-3 ring-4 ring-white rounded-xl`}
             >
-              <img src={action.img} className="w-6 h-6" />
+              <Image width={24} height={24} src={action.img} />
             </span>
           </div>
           <div className="mt-8">

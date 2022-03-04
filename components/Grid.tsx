@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const data = [
   {
@@ -48,8 +49,10 @@ export const Grid = () => {
         >
           <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/10 border-blooperDarkBlue/50 dark:border-0" />
           <div className="flex relative z-20 flex-col flex-1 p-8">
-            <img
+            <Image
               className="object-contain flex-shrink-0 mx-auto w-full h-32 rounded-2xl"
+              width={550}
+              height={150}
               src={card.imageUrl}
               alt=""
             />
