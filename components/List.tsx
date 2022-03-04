@@ -23,7 +23,7 @@ const actions = [
     description:
       'Connect directly to your blooper to download saved loops,' +
       ' update firmware, or customize your modifiers.',
-    href: 'https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html',
+    href: 'https://chasebliss.github.io',
     iconBackground: 'bg-thermaeGold',
     img: '/particles/s4.svg',
   },

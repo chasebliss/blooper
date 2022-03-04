@@ -19,7 +19,7 @@ const Modifiers = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="xlz:p-16 flex flex-col items-center">
+    <div className="xl:p-16 flex flex-col items-center">
       <Heading content={headingContent} />
       <GlassGrid
         images={[
