@@ -12,7 +12,7 @@ const ThemeButton = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="md:ml-5 flex justify-center items-center h-12 w-12  hover:animate-spin	bg-blooperBlue01  rounded-3xl md:rounded-full"
+      className="md:ml-10 flex justify-center items-center h-12 w-12  hover:animate-spin	bg-blooperBlue01  rounded-3xl md:rounded-full"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {mounted && <span>&#127881;</span>}
