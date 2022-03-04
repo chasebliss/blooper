@@ -11,9 +11,15 @@ const MobileNav = () => {
     <header className="max-w-[1440px] flex items-center px-5 mx-auto h-[80px] absolute inset-0 w-full z-50">
       <nav className="relative flex justify-between h-full items-center w-full z-50">
         <h5>
-          <a href="/">Chase Bliss Audio</a>
+          <Link href="/" passHref>
+            <a>Chase Bliss Audio</a>
+          </Link>
         </h5>
-        <div className="p-1 fixed right-0 top-5 z-50 text-blooperDarkBlue bg-white rounded-l-2xl ">
+        <div
+          className={`p-1 fixed right-0 top-5 z-50 text-blooperDarkBlue bg-white rounded-l-2xl ${
+            !isOpen && 'shadow-lg'
+          }`}
+        >
           <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
         </div>
 
