@@ -6,8 +6,7 @@ interface Props {
 }
 
 const GlassGrid = ({ images }: Props) => {
-  const [selectedIndex, setSelectedIndex] = React.useState(null);
-  const [onHover, setOnHover] = React.useState();
+  const [selectedIndex, setSelectedIndex] = React.useState<number | null>(null);
   return (
     <div className="p-5 sm:px-24 md:px-5">
       <div className="flex relative flex-col w-full lg:flex-row">
