@@ -1,4 +1,4 @@
-import Particles from 'react-tsparticles'
+import Particles from 'react-tsparticles';
 
 const HomeParticles = ({ theme }: any) => {
   const options = {
@@ -84,13 +84,13 @@ const HomeParticles = ({ theme }: any) => {
         },
       },
     },
-  }
+  };
   return (
     <div>
       <Particles id="tsparticles" options={options} />
     </div>
-  )
-}
+  );
+};
 
 const ResourcesParticles = () => {
   const options = {
@@ -172,13 +172,13 @@ const ResourcesParticles = () => {
       },
     },
     detectRetina: true,
-  }
+  };
   return (
     <div>
       <Particles id="tsparticles" options={options} />
     </div>
-  )
-}
+  );
+};
 
 const ModifierParticles = () => {
   const options = {
@@ -278,13 +278,13 @@ const ModifierParticles = () => {
         value: 16,
       },
     },
-  }
+  };
   return (
     <div>
       <Particles id="tsparticles" options={options} />
     </div>
-  )
-}
+  );
+};
 
 const MidiParticles = () => {
   const options = {
@@ -403,13 +403,13 @@ const MidiParticles = () => {
       },
     },
     retina_detect: true,
-  }
+  };
   return (
     <div>
       <Particles id="tsparticles" options={options} />
     </div>
-  )
-}
+  );
+};
 
 const FAQParticles = ({ theme }: any) => {
   const options = {
@@ -517,13 +517,13 @@ const FAQParticles = ({ theme }: any) => {
         },
       },
     },
-  }
+  };
   return (
     <div>
       <Particles id="tsparticles" options={options} />
     </div>
-  )
-}
+  );
+};
 
 export {
   HomeParticles,
@@ -531,4 +531,4 @@ export {
   ModifierParticles,
   MidiParticles,
   FAQParticles,
-}
+};

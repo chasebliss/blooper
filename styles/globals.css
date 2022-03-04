@@ -25,7 +25,8 @@
 html,
 body {
   height: 100%;
-  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue dark:font-mono font-poppins}
+  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue dark:font-mono font-poppins;
+}
 
 main {
   @apply h-full;

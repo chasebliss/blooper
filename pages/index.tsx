@@ -1,11 +1,11 @@
-import List from '../components/List'
-import Image from 'next/image'
-import React from 'react'
+import List from '../components/List';
+import Image from 'next/image';
+import React from 'react';
 
-import { HomeParticles } from '../styles/particles'
-import Heading from '../components/Heading'
-import { motion } from 'framer-motion'
-import { useTheme } from 'next-themes'
+import { HomeParticles } from '../styles/particles';
+import Heading from '../components/Heading';
+import { motion } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
 const headingContent = `
 # Blooper
@@ -13,10 +13,10 @@ const headingContent = `
 This is a website to help you enjoy a rich, rewarding time with your blooper. 
 
 It does a lot and it can get pretty weird. So, get familiar with its many tricks, or use the interface to update, download, and customize.
-`
+`;
 
 const Home = () => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
   return (
     <section className="w-full md:p-16 flex flex-col justify-center items-center">
       <Heading content={headingContent} />
@@ -37,7 +37,7 @@ const Home = () => {
       </div>
       {theme === 'dark' && <HomeParticles theme={theme} />}
     </section>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

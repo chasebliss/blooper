@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "types": [
-      "react"
-    ],
+    "types": ["react"],
     "module": "esnext",
     "esModuleInterop": true,
     "removeComments": true,
@@ -17,13 +15,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "typeRoots": ["node_modules/@types"],
+    "lib": ["es2018", "dom"],
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -34,21 +27,11 @@
     "noEmit": true,
     "baseUrl": "./",
     "paths": {
-      "@pages/*": [
-        "pages/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@lib/*": [
-        "src/lib/*"
-      ],
-      "@hooks/*": [
-        "src/hooks/*"
-      ],
-      "@views/*": [
-        "src/views/*"
-      ]
+      "@pages/*": ["pages/*"],
+      "@components/*": ["src/components/*"],
+      "@lib/*": ["src/lib/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@views/*": ["src/views/*"]
     },
     "incremental": true
   },
@@ -59,7 +42,5 @@
     "test/**/*",
     "apollo/**/*"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

@@ -2,12 +2,16 @@ h1 {
   @apply pb-8 text-2xl dark:uppercase sm:text-3xl md:text-4xl xl:text-5xl;
 }
 
+h2 {
+  @apply text-2xl;
+}
+
 h3 {
-@apply text-lg  uppercase
+  @apply text-lg  uppercase;
 }
 
 p {
-  @apply pb-4 text-sm md:text-base
+  @apply pb-4 text-sm md:text-base;
 }
 
 .hero {
@@ -19,8 +23,9 @@ h4 {
 
 h5 {
   font-weight: 500;
-  @apply  text-xl uppercase
+  @apply text-xl uppercase;
 }
 
 h6 {
-  @apply font-semibold text-xl pt-2 pb-3}
+  @apply font-semibold text-xl pt-2 pb-3;
+}

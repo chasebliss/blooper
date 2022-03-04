@@ -1,8 +1,8 @@
-import Heading from 'components/Heading'
-import React from 'react'
-import { useTheme } from 'next-themes'
+import Heading from 'components/Heading';
+import React from 'react';
+import { useTheme } from 'next-themes';
 
-import { MidiParticles } from '../styles/particles'
+import { MidiParticles } from '../styles/particles';
 
 const data = [
   {
@@ -23,16 +23,16 @@ const data = [
     imageUrl: '/midi/images/midi-manual.png',
     asset: '/midi/docs/midi-manual.pdf',
   },
-]
+];
 
 const headingContent = `
 # Midi
 
 Embracing midi opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going.
-`
+`;
 
 const Midi = () => {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col items-center lg:p-16">
@@ -92,7 +92,7 @@ const Midi = () => {
       </div>
       {theme === 'dark' && <MidiParticles />}
     </div>
-  )
-}
+  );
+};
 
-export default Midi
+export default Midi;

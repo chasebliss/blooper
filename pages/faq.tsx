@@ -1,11 +1,11 @@
-import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
-import React from 'react'
-import remarkGfm from 'remark-gfm'
-import remarkBreaks from 'remark-breaks'
-import ReactMarkdown from 'react-markdown'
-import { FAQParticles } from '../styles/particles'
-import { useTheme } from 'next-themes'
+import { Disclosure } from '@headlessui/react';
+import { ChevronDownIcon } from '@heroicons/react/outline';
+import React from 'react';
+import remarkGfm from 'remark-gfm';
+import remarkBreaks from 'remark-breaks';
+import ReactMarkdown from 'react-markdown';
+import { FAQParticles } from '../styles/particles';
+import { useTheme } from 'next-themes';
 
 const faqs = [
   {
@@ -67,9 +67,9 @@ This makes it possible to completely transform your loop with stability and the 
   },
 
   // More questions...
-]
+];
 
-const classNames = (...classes: string[]) => classes.filter(Boolean).join(' ')
+const classNames = (...classes: string[]) => classes.filter(Boolean).join(' ');
 const markdownConfig = {
   ul: ({ ...props }) => <ul className="py-3" {...props} />,
   a: ({ ...props }) => (
@@ -78,10 +78,10 @@ const markdownConfig = {
   li: ({ ...props }) => (
     <li className="pb-3 list-disc list-inside" {...props} />
   ),
-}
+};
 
 export default function Example() {
-  const { theme } = useTheme()
+  const { theme } = useTheme();
 
   return (
     <div className="flex flex-col items-center pt-40 mx-5 lg:mx-0">
@@ -108,7 +108,7 @@ export default function Example() {
                           <ChevronDownIcon
                             className={classNames(
                               open ? '-rotate-180' : 'rotate-0',
-                              'h-6 w-6 transform'
+                              'h-6 w-6 transform',
                             )}
                             aria-hidden="true"
                           />
@@ -133,5 +133,5 @@ export default function Example() {
       </div>
       {theme === 'dark' && <FAQParticles />}
     </div>
-  )
+  );
 }

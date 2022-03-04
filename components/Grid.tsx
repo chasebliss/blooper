@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const data = [
   {
@@ -36,7 +36,7 @@ const data = [
     asset: '/resources/docs/recording-mod.pdf',
     downloadable: true,
   },
-]
+];
 
 export const Grid = () => {
   return (
@@ -88,7 +88,7 @@ export const Grid = () => {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default Grid
+export default Grid;

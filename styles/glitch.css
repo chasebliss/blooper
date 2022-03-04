@@ -1,5 +1,5 @@
 .glitch {
-color: white;
+  color: white;
   animation: glitch 3s linear infinite;
 }
 
@@ -25,11 +25,9 @@ color: white;
 }
 
 .glitch:before {
-
   @apply text-blooperDarkBlue;
   animation: glitchTop 2.5s linear infinite;
   clip-path: polygon(12% 0, 67% 0, 100% 52%, 0 40%);
-
 }
 
 @keyframes glitchTop {
@@ -47,11 +45,10 @@ color: white;
 }
 
 .glitch:after {
-color: #739aae;
+  color: #739aae;
 
   animation: glitchBotom 3.5s linear infinite;
   clip-path: polygon(0 77%, 100% 67%, 100% 100%, 0 100%);
-
 }
 
 @keyframes glitchBotom {

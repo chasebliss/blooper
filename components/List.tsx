@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion'
-import React from 'react'
+import { motion } from 'framer-motion';
+import React from 'react';
 
 const actions = [
   {
@@ -49,7 +49,7 @@ const actions = [
     iconBackground: 'bg-darkWorldGreen',
     img: '/particles/s10.svg',
   },
-]
+];
 
 export default function Example() {
   return (
@@ -88,5 +88,5 @@ export default function Example() {
         </div>
       ))}
     </motion.div>
-  )
+  );
 }

@@ -12,7 +12,7 @@ module.exports = {
     fontFamily: {
       montserrat: ['montserrat', 'sans-serif'],
       nunito: ['nunito', 'sans-serif'],
-      poppins: ['poppins', 'sans-serif'],
+      poppins: ['Sanchez', 'sans-serif'],
       mono: ['antarctican-mono', 'sans-serif'],
     },
     screens: {
@@ -80,4 +80,4 @@ module.exports = {
     },
   },
   plugins: ['tailwindcss-filters'],
-}
+};

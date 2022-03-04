@@ -1,12 +1,12 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
-import { NAV_ITEMS } from './data'
-import { Sling as Hamburger } from 'hamburger-react'
-import ThemeButton from './ThemeButton'
+import { NAV_ITEMS } from './data';
+import { Sling as Hamburger } from 'hamburger-react';
+import ThemeButton from './ThemeButton';
 
 const MobileNav = () => {
-  const [isOpen, setOpen] = React.useState(false)
+  const [isOpen, setOpen] = React.useState(false);
   return (
     <header className="max-w-[1440px] flex items-center px-5 mx-auto h-[80px] absolute inset-0 w-full z-50">
       <nav className="relative flex justify-between h-full items-center w-full z-50">
@@ -46,7 +46,7 @@ const MobileNav = () => {
         )}
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;
