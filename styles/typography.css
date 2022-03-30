@@ -6,8 +6,14 @@ h2 {
   @apply text-2xl;
 }
 
+h3.nav {
+  letter-spacing: 1.2px;
+  padding-right: 3.5vw;
+  line-height: 0;
+}
+
 h3 {
-  @apply text-lg  uppercase;
+  @apply text-[20px] font-semibold uppercase;
 }
 
 p {

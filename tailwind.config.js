@@ -9,12 +9,6 @@ module.exports = {
       none: 'none',
       blur: 'blur(20px)',
     },
-    fontFamily: {
-      montserrat: ['montserrat', 'sans-serif'],
-      nunito: ['nunito', 'sans-serif'],
-      poppins: ['Sanchez', 'sans-serif'],
-      mono: ['antarctican-mono', 'sans-serif'],
-    },
     screens: {
       sm: '480px',
       md: '768px',

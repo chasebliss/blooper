@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
-      <main className="max-w-[1440px] mx-auto">
+      <main className="mx-auto">
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
         <Component {...pageProps} />
         <footer className="h-16 w-full" />

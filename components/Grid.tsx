@@ -45,7 +45,7 @@ export const Grid = () => {
       {data.map((card) => (
         <li
           key={card.title}
-          className="flex relative flex-col text-center rounded-lg"
+          className="flex relative flex-col text-center rounded-lg overflow-hidden"
         >
           <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/10 border-blooperDarkBlue/50 dark:border-0" />
           <div className="flex relative z-20 flex-col flex-1 p-8">
@@ -63,9 +63,13 @@ export const Grid = () => {
               <dd className="text-left">{card.description}</dd>
             </dl>
           </div>
-          <div className="relative z-20 border-t border-blooperDarkBlue/50">
-            <div className="flex -mt-px divide-x divide-blooperDarkBlue/50">
-              <div className="flex flex-1 w-0 hover:bg-black/20">
+          <div className="relative z-20 border-t border-blooperDarkBlue/50 overflow-hidden">
+            <div className="flex -mt-px divide-x divide-blooperDarkBlue/50 overflow-hidden">
+              <div
+                className={`flex flex-1 w-0 hover:bg-black/20 overflow-hidden rounded-bl-3xl ${
+                  !card.downloadable && 'rounded-br-3xl'
+                }`}
+              >
                 <a
                   href={card.asset}
                   target="_blank"

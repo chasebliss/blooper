@@ -13,10 +13,10 @@ export const NAV_ITEMS = [
     route: 'https://chasebliss.github.io/',
     external: true,
   },
-  {
-    id: 5,
-    title: 'shop',
-    route: 'https://www.chaseblissaudio.com/shop',
-    external: true,
-  },
+  // {
+  //   id: 5,
+  //   title: 'shop',
+  //   route: 'https://www.chaseblissaudio.com/shop',
+  //   external: true,
+  // },
 ];
