@@ -5,7 +5,7 @@ interface Props {
   subheading?: string;
   descriptionOne: string;
   descriptionTwo?: string;
-  images: Array<string>;
+  images?: Array<string>;
 }
 
 const Heading = ({
@@ -21,7 +21,7 @@ const Heading = ({
       {subheading && <h1>{subheading}</h1>}
       <div className="flex flex-col xl:flex-row">
         <div className="space-x-5 xl:space-x-0 xl:space-y-5 flex xl:flex-col flex-row pb-10 xl:bp0">
-          {images.map((img) => (
+          {images?.map((img) => (
             <img key={img} src={img} className="w-16 h-16" alt="bloops" />
           ))}
         </div>

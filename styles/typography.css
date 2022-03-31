@@ -15,14 +15,18 @@ h3 {
   font-size: calc((2.2 - 1) * 1.2vw + 1rem);
 }
 
+h4 {
+  font-size: calc((1.6 - 1) * 1.2vw + 1rem);
+  @apply font-semibold;
+}
+
 p {
   font-size: 28px;
   line-height: 1.7em;
   @apply pb-5;
 }
-
-h4 {
-  @apply text-4xl uppercase;
+p.troop {
+  font-size: calc((1.2 - 1) * 1.2vw + 1rem);
 }
 
 h5 {

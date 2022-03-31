@@ -47,7 +47,7 @@ const DesktopNav = () => {
               </Link>
             </li>
           ))}
-          <ThemeButton />
+          {/*<ThemeButton />*/}
         </ul>
       </nav>
     </header>

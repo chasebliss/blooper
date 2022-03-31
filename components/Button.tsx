@@ -2,7 +2,7 @@ import React from 'react';
 
 interface Props {
   children?: React.ReactNode;
-  href: string;
+  href?: string;
   downloadable?: boolean;
 }
 

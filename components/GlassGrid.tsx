@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Button from './Button';
 
 interface Props {
   images: Array<string>;
@@ -12,7 +13,7 @@ const GlassGrid = ({ images }: Props) => {
       <div className="flex relative flex-col w-full lg:flex-row">
         <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm dark:bg-black/10" />
 
-        <div className="grid relative z-10 grid-cols-1 gap-20 p-5 w-full lg:p-16 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid relative z-10 grid-cols-1 gap-20 p-5 w-full lg:p-16 md:grid-cols-2 lg:grid-cols-6">
           {images.map((image, index) => (
             <div
               key={index}
@@ -26,7 +27,7 @@ const GlassGrid = ({ images }: Props) => {
             >
               <figure
                 className={`rounded-xl border border-blooperDarkBlue/50 dark:border-0 relative z-50 transition bg-white ${
-                  selectedIndex === index && '-translate-y-14 brightness-100'
+                  selectedIndex === index && '-translate-y-16 brightness-100'
                 }`}
               >
                 <Image
@@ -40,9 +41,9 @@ const GlassGrid = ({ images }: Props) => {
                   objectFit="contain"
                 />
               </figure>
-              <div className="bottom-0 pt-8 w-full flex justify-center absolute rounded-xl hover:text-blooperDarkBlue/70 transition">
+              <div className="bottom-0 w-full flex justify-center absolute rounded-xl hover:text-blooperDarkBlue/70 transition">
                 <a href={image} download>
-                  <h2>DOWNLOAD</h2>
+                  <Button>Download</Button>
                 </a>
               </div>
             </div>

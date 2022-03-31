@@ -18,9 +18,9 @@ const Home = () => {
         descriptionTwo="It does a lot and it can get pretty weird. So, get familiar with its
           many tricks, or use the interface to update, download, and customize."
         images={[
-          '/images/troop/Chase-Bliss_blooper_Scrambler.svg',
-          '/images/troop/Chase-Bliss_blooper_Dropper.svg',
-          '/images/troop/Chase-Bliss_blooper_Smooth-Speed.svg',
+          '/images/troop/Chase-Bliss_blooper_Sampling.svg',
+          '/images/troop/Chase-Bliss_blooper_Stability.svg',
+          '/images/troop/Chase-Bliss_blooper_Layers.svg',
         ]}
       />
       <div className="flex w-screen h-full xl:py-28 justify-center px-[2vw]">
