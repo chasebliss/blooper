@@ -15,21 +15,35 @@
 }
 
 #__next {
-  @apply h-screen;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
-
 /*
   3. Allow percentage-based heights in the application
 */
 
-html,
-body {
-  height: 100%;
-  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue;
+main {
+  flex: 0 0 auto;
+  transition: all 250ms ease;
+}
+#__next > header {
+  flex-shrink: 0;
+}
+footer {
+  flex-shrink: 0;
+  z-index: 999;
 }
 
-main {
-  @apply h-full;
+html,
+body {
+  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  touch-action: manipulation;
 }
 /*
   Typographic tweaks!
@@ -41,7 +55,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   font-style: normal;
-  font-family: "Poppins", SansSerif;
+  font-family: 'Poppins', SansSerif;
 }
 /*
   6. Improve media defaults

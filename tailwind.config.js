@@ -19,12 +19,12 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
-        white: '#ffffff',
+        white: '#fefbf6',
         black: '#000000',
 
         blooperGray: '#d1d2d4',
         blooperBlue: '#265E78',
-        blooperBlue01: '#bcdeee',
+        blooperBlue01: '#a2cfe4',
         blooperDarkBlue: '#294c61',
 
         moodLightRed: '#f3887d',

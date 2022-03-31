@@ -1,28 +1,26 @@
 h1 {
-  @apply pb-8 text-2xl dark:uppercase sm:text-3xl md:text-4xl xl:text-5xl;
+  font-size: calc((4.2 - 1) * 1.2vw + 1rem);
+  line-height: 1.2em;
+  max-width: 25ch;
+  @apply font-medium  pb-12;
 }
 
 h2 {
-  @apply text-2xl;
-}
-
-h3.nav {
-  letter-spacing: 1.2px;
-  padding-right: 3.5vw;
-  line-height: 0;
+  font-size: calc((3.2 - 1) * 1.2vw + 1rem);
+  line-height: 1.2em;
+  @apply leading-normal;
 }
 
 h3 {
-  @apply text-[20px] font-semibold uppercase;
+  font-size: calc((2.2 - 1) * 1.2vw + 1rem);
 }
 
 p {
-  @apply pb-4 text-sm md:text-base;
+  font-size: 28px;
+  line-height: 1.7em;
+  @apply pb-5;
 }
 
-.hero {
-  font-size: 7vw;
-}
 h4 {
   @apply text-4xl uppercase;
 }
@@ -34,4 +32,17 @@ h5 {
 
 h6 {
   @apply font-semibold text-xl pt-2 pb-3;
+}
+
+small {
+  display: block;
+  font-size: 20px;
+}
+
+li.nav {
+  font-size: 20px;
+  letter-spacing: 1.2px;
+  padding-right: 3.5vw;
+  line-height: 0;
+  @apply leading-normal font-semibold pl-5 uppercase;
 }

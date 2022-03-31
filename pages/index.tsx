@@ -4,37 +4,35 @@ import React from 'react';
 
 import { HomeParticles } from '../styles/particles';
 import Heading from '../components/Heading';
-import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
-
-const headingContent = `
-# Blooper
-
-This is a website to help you enjoy a rich, rewarding time with your blooper. 
-
-It does a lot and it can get pretty weird. So, get familiar with its many tricks, or use the interface to update, download, and customize.
-`;
 
 const Home = () => {
   const { theme } = useTheme();
   return (
-    <section className="w-full md:p-16 flex flex-col justify-center items-center">
-      <Heading content={headingContent} />
-      <div className="flex flex-col w-full lg:flex-row">
-        <motion.div className="relative mx-5 my-16 h-128 lg:h-auto lg:w-1/3">
-          <Image
-            priority
-            alt="Front of Blooper image"
-            src="/images/blooper-front.png"
-            height={1136}
-            width="100%"
-            layout="fill"
-            objectFit="contain"
-          />
-        </motion.div>
-
-        <List />
+    <section className="w-full flex flex-col">
+      <Heading
+        title="blooper"
+        subheading="A performance looper with additive sound design."
+        descriptionOne="This is a website to help you enjoy a rich, rewarding time with your
+          blooper."
+        descriptionTwo="It does a lot and it can get pretty weird. So, get familiar with its
+          many tricks, or use the interface to update, download, and customize."
+        images={[
+          '/images/troop/Chase-Bliss_blooper_Scrambler.svg',
+          '/images/troop/Chase-Bliss_blooper_Dropper.svg',
+          '/images/troop/Chase-Bliss_blooper_Smooth-Speed.svg',
+        ]}
+      />
+      <div className="flex w-screen h-full xl:py-28 justify-center px-[2vw]">
+        <Image
+          priority
+          height={1250}
+          width={2500}
+          alt="someone twisting knobs"
+          src="/images/deeper-bloop.jpeg"
+        />
       </div>
+      <List />
       {theme === 'dark' && <HomeParticles theme={theme} />}
     </section>
   );

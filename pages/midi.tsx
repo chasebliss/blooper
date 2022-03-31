@@ -26,18 +26,17 @@ const data = [
   },
 ];
 
-const headingContent = `
-# Midi
-
-Embracing midi opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going.
-`;
-
 const Midi = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="flex flex-col items-center lg:p-16">
-      <Heading content={headingContent} />
+    <section className="w-full flex flex-col">
+      <Heading
+        title="Midi"
+        subheading="Getting blooper talking with other devices."
+        descriptionOne="Embracing midi opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going."
+        images={['/images/troop/Chase-Bliss_blooper_Filter.svg']}
+      />
       <div className="relative p-12 lg:p-16">
         <div className="absolute inset-0 z-10 mx-5 h-full rounded-3xl border backdrop-blur-sm lg:mx-0 dark:bg-black/10 dark:border-0 border-blooperDarkBlue/50" />
         <ul
@@ -94,7 +93,7 @@ const Midi = () => {
         </ul>
       </div>
       {theme === 'dark' && <MidiParticles />}
-    </div>
+    </section>
   );
 };
 

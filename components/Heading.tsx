@@ -1,18 +1,37 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-import remarkBreaks from 'remark-breaks';
 
 interface Props {
-  content: string;
+  title: string;
+  subheading?: string;
+  descriptionOne: string;
+  descriptionTwo?: string;
+  images: Array<string>;
 }
 
-const Heading = ({ content }: Props) => {
+const Heading = ({
+  title,
+  subheading,
+  descriptionOne,
+  descriptionTwo,
+  images,
+}: Props) => {
   return (
-    <div className="relative z-40 p-5 m-5 mt-24 rounded-2xl border drop-shadow-2xl backdrop-blur-sm dark:bg-black/10 md:mb-16 md:w-144 lg:mx-0 dark:border-0 border-blooperDarkBlue/50">
-      <ReactMarkdown remarkPlugins={[remarkGfm, remarkBreaks]}>
-        {content}
-      </ReactMarkdown>
+    <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-24 xl:py-16">
+      <h2 className="pb-2">{title}</h2>
+      {subheading && <h1>{subheading}</h1>}
+      <div className="flex flex-col xl:flex-row">
+        <div className="space-x-5 xl:space-x-0 xl:space-y-5 flex xl:flex-col flex-row pb-10 xl:bp0">
+          {images.map((img) => (
+            <img key={img} src={img} className="w-16 h-16" alt="bloops" />
+          ))}
+        </div>
+        <p className="xl:pl-16 leading-10 max-w-[45ch]">
+          {descriptionOne}
+          <br />
+          <br />
+          {descriptionTwo && descriptionTwo}
+        </p>
+      </div>
     </div>
   );
 };

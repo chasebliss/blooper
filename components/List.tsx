@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React from 'react';
 import Image from 'next/image';
 
@@ -9,14 +8,14 @@ const actions = [
       'What the blooper is, how it works, and how to get the most' +
       ' out of it.',
     href: '/resources',
-    iconBackground: 'bg-moodDarkRed',
+    iconBackground: 'bg-blooperBlue01',
     img: '/particles/s1.svg',
   },
   {
     title: 'Modifiers',
     description: "A closer look at blooper's cast of modifiers",
     href: '/modifiers',
-    iconBackground: 'bg-preampBlue',
+    iconBackground: 'bg-blooperBlue01',
     img: '/particles/s3.svg',
   },
   {
@@ -25,7 +24,7 @@ const actions = [
       'Connect directly to your blooper to download saved loops,' +
       ' update firmware, or customize your modifiers.',
     href: 'https://chasebliss.github.io',
-    iconBackground: 'bg-thermaeGold',
+    iconBackground: 'bg-blooperBlue01',
     img: '/particles/s4.svg',
   },
   {
@@ -33,28 +32,28 @@ const actions = [
     description:
       'The ins and out of getting blooper talking with other devices',
     href: '/midi',
-    iconBackground: 'bg-moodLightRed',
+    iconBackground: 'bg-blooperBlue01',
     img: '/particles/s7.svg',
   },
   {
     title: 'FAQ',
     description: 'Some things you might be wondering about.',
     href: 'faq',
-    iconBackground: 'bg-moodBlue',
+    iconBackground: 'bg-blooperBlue01',
     img: '/particles/s9.svg',
   },
   {
     title: 'Contact',
     description: 'Hi, we are friendly',
     href: 'mailto:https://info@chaseblissaudio.com',
-    iconBackground: 'bg-darkWorldGreen',
+    iconBackground: 'bg-blooperBlue01',
     img: '/particles/s10.svg',
   },
 ];
 
 export default function Example() {
   return (
-    <motion.div className="overflow-hidden absolute relative inset-0 col-span-2 col-start-2 mx-5 rounded-3xl border backdrop-blur-sm lg:w-2/3 lg:my-16 sm:grid sm:grid-cols-2 sm:gap-px dark:bg-black/10 border-blooperDarkBlue/50 dark:border-0">
+    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 lg:px-[7vw] py-16">
       {actions.map((action) => (
         <div key={action.title} className="relative p-6 hover:bg-black/10">
           <div>
@@ -64,14 +63,14 @@ export default function Example() {
               <Image width={24} height={24} src={action.img} />
             </span>
           </div>
-          <div className="mt-8">
+          <div className="mt-1">
             <h3 className="font-medium">
               <a href={action.href} className="focus:outline-none">
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
               </a>
             </h3>
-            <p className="mt-2 lg:text-sm xl:text-lg">{action.description}</p>
+            <p className="mt-4 w-full">{action.description}</p>
           </div>
           <span
             className="absolute top-6 right-6 pointer-events-none"
@@ -88,6 +87,6 @@ export default function Example() {
           </span>
         </div>
       ))}
-    </motion.div>
+    </div>
   );
 }

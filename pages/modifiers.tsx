@@ -5,22 +5,22 @@ import GlassGrid from '../components/GlassGrid';
 import { ModifierParticles } from '../styles/particles';
 import { useTheme } from 'next-themes';
 
-const headingContent = `
-# Modifiers
-
-**AKA the Bloop Troop**. 
-
-It does a lot and it can get pretty weird. So, get familiar with its many tricks, or use the interface to update, download, and customize.
-
-The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops.
-`;
-
 const Modifiers = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="xl:p-16 flex flex-col items-center">
-      <Heading content={headingContent} />
+    <section className="w-full flex flex-col">
+      <Heading
+        title="modifiers"
+        subheading="AKA the Bloop Troop"
+        descriptionOne="It does a lot and it can get pretty weird. So, get familiar with its many tricks, or use the interface to update, download, and customize."
+        descriptionTwo="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
+        images={[
+          '/images/troop/Chase-Bliss_blooper_Scrambler.svg',
+          '/images/troop/Chase-Bliss_blooper_Dropper.svg',
+          '/images/troop/Chase-Bliss_blooper_Smooth-Speed.svg',
+        ]}
+      />
       <GlassGrid
         images={[
           '/modifiers/images/stretcher-card.png',
@@ -39,7 +39,7 @@ const Modifiers = () => {
       />
 
       {theme === 'dark' && <ModifierParticles />}
-    </div>
+    </section>
   );
 };
 

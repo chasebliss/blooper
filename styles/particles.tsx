@@ -52,14 +52,14 @@ const HomeParticles = ({ theme }: any) => {
         options: {
           character: {
             value: ['BLOOPER', 'MOD B', 'MOD A', 'LAYERS', 'STABILITY', 'RAMP'],
-            font: 'antarctican-mono',
+            font: 'Poppins',
             style: '',
             weight: '400',
             fill: true,
           },
           char: {
             value: ['BLOOPER', 'MOD B', 'MOD A', 'LAYERS', 'STABILITY', 'RAMP'],
-            font: 'antarctican-mono',
+            font: 'Poppins',
             style: '',
             weight: '400',
             fill: true,
@@ -476,14 +476,14 @@ const FAQParticles = ({ theme }: any) => {
         options: {
           character: {
             value: ['F', 'A', 'Q'],
-            font: 'antarctican-mono',
+            font: 'Poppins',
             style: '',
             weight: '400',
             fill: true,
           },
           char: {
             value: ['F', 'A', 'Q'],
-            font: 'antarctican-mono',
+            font: 'Poppins',
             style: '',
             weight: '400',
             fill: true,
