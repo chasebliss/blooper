@@ -48,7 +48,6 @@ const Home = () => {
         images={['/images/blooper-front.png']}
       />
       <GridCard
-        external
         data={DATA}
         backgroundImage="/images/modifiers-blooper.jpeg"
         icon={<HeartBrain />}

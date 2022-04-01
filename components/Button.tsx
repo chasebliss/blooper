@@ -4,7 +4,7 @@ interface Props {
   children?: React.ReactNode;
   href?: string;
   downloadable?: boolean;
-  route: string;
+  route?: string;
   light?: boolean;
 }
 

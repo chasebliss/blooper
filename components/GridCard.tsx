@@ -7,16 +7,16 @@ interface DataProps {
   link?: string;
   description?: string;
   downloadable?: boolean;
+  route?: string;
 }
 
 interface Props {
-  external: boolean;
   icon?: React.ReactNode;
   backgroundImage: string;
   data: Array<DataProps>;
 }
 
-const GridCard = ({ data, backgroundImage, icon, external }: Props) => {
+const GridCard = ({ data, backgroundImage, icon }: Props) => {
   return (
     <div className="mx-[2vw] py-16">
       <div className="w-full relative py-[7vw]">
@@ -41,16 +41,15 @@ const GridCard = ({ data, backgroundImage, icon, external }: Props) => {
                   <Button light href={data.link} route={data.route}>
                     View
                   </Button>
-                  {data.downloadable && (
-                    <Button
-                      light
-                      href={data.link}
-                      route={data.route}
-                      downloadable
-                    >
-                      Download
-                    </Button>
-                  )}
+
+                  <Button
+                    light
+                    href={data.link}
+                    route={data.route}
+                    downloadable
+                  >
+                    Download
+                  </Button>
                 </div>
               </li>
             ))}

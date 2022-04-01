@@ -7,7 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import { FAQParticles } from '../styles/particles';
 import { useTheme } from 'next-themes';
 
-const faqs = [
+const DATA = [
   {
     question: '###### What do the dip switches do and should i be afraid?',
     answer: `
@@ -91,7 +91,7 @@ export default function Example() {
             Frequently asked questions
           </h2>
           <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue">
-            {faqs.map((faq) => (
+            {DATA.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
                   <>

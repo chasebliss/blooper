@@ -1,10 +1,10 @@
+import React from 'react';
 import Heading from 'components/Heading';
+import GridCard from '../components/GridCard';
+import HeartBrain from '../public/images/heart-brain';
 
 import { ResourcesParticles } from 'styles/particles';
 import { useTheme } from 'next-themes';
-import React from 'react';
-import GridCard from '../components/GridCard';
-import HeartBrain from '../public/images/heart-brain';
 
 const DATA = [
   {
