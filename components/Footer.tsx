@@ -1,5 +1,4 @@
 import React from 'react';
-import HeartBrain from '../public/images/heart-brain';
 import MarkLogo from '../public/images/cba-mark';
 
 const DATA = [
