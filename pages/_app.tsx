@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive';
 import MobileNav from '../components/Navigation/MobileNav';
 import { ThemeProvider } from 'next-themes';
 import React from 'react';
+import Footer from '../components/Footer';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 976px)' });
@@ -17,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main>
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
         <Component {...pageProps} />
-        <footer className="h-16 w-full" />
+        <Footer />
       </main>
     </ThemeProvider>
   );

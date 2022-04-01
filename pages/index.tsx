@@ -39,7 +39,7 @@ const DATA = [
 const Home = () => {
   const { theme } = useTheme();
   return (
-    <section className="w-full flex flex-col pb-96">
+    <section className="w-full flex flex-col">
       <Heading
         title="blooper"
         subheading="A performance looper with additive sound design."
