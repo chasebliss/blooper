@@ -13,7 +13,7 @@ const MobileNav = () => {
         <Link href="/" passHref>
           <a>
             <svg
-              className="dark:fill-white fill-blooperDarkBlue w-52"
+              className="dark:fill-white fill-blooperDarkBlue w-52 pt-6"
               xmlns="http://www.w3.org/2000/svg"
               width={3086.667}
               height={409.333}

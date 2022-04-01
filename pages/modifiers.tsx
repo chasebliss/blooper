@@ -102,8 +102,9 @@ const Modifiers = () => {
         subheading="AKA the Bloop Troop"
         descriptionOne="It does a lot and it can get pretty weird. So, get familiar with its many tricks, or use the interface to update, download, and customize."
         descriptionTwo="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
+        images={['modifiers/images/filter-card.png']}
       />
-      <ul className="grid md:grid-cols-3 xl:grid-cols-4 gap-y-16 gap-x-8">
+      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw]">
         {CARDS.map((card) => (
           <li key={card.id}>
             <div className="">

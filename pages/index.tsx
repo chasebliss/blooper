@@ -1,15 +1,45 @@
-import List from '../components/List';
-import Image from 'next/image';
 import React from 'react';
 
-import { HomeParticles } from '../styles/particles';
-import Heading from '../components/Heading';
 import { useTheme } from 'next-themes';
+import Heading from '../components/Heading';
+import GridCard from '../components/GridCard';
+
+import { HomeParticles } from '../styles/particles';
+import HeartBrain from '../public/images/heart-brain';
+
+const DATA = [
+  {
+    title: 'Resources',
+    description:
+      'What the blooper is, how it works, and how to get the most' +
+      ' out of it.',
+    link: '/resources',
+    img: '/particles/s1.svg',
+  },
+  {
+    title: 'Modifiers',
+    description: "A closer look at blooper's cast of modifiers",
+    link: '/modifiers',
+    img: '/particles/s3.svg',
+  },
+
+  {
+    title: 'Midi',
+    description:
+      'The ins and out of getting blooper talking with other devices',
+    link: '/midi',
+  },
+  {
+    title: 'FAQ',
+    description: 'Some things you might be wondering about.',
+    link: 'faq',
+  },
+];
 
 const Home = () => {
   const { theme } = useTheme();
   return (
-    <section className="w-full flex flex-col">
+    <section className="w-full flex flex-col pb-96">
       <Heading
         title="blooper"
         subheading="A performance looper with additive sound design."
@@ -17,22 +47,13 @@ const Home = () => {
           blooper."
         descriptionTwo="It does a lot and it can get pretty weird. So, get familiar with its
           many tricks, or use the interface to update, download, and customize."
-        images={[
-          '/images/troop/Chase-Bliss_blooper_Sampling.svg',
-          '/images/troop/Chase-Bliss_blooper_Stability.svg',
-          '/images/troop/Chase-Bliss_blooper_Layers.svg',
-        ]}
+        images={['/images/blooper-front.png']}
       />
-      <div className="flex w-screen h-full xl:py-28 justify-center px-[2vw]">
-        <Image
-          priority
-          height={1250}
-          width={2500}
-          alt="someone twisting knobs"
-          src="/images/deeper-bloop.jpeg"
-        />
-      </div>
-      <List />
+      <GridCard
+        data={DATA}
+        backgroundImage="/images/modifiers-blooper.jpeg"
+        icon={<HeartBrain />}
+      />
       {theme === 'dark' && <HomeParticles theme={theme} />}
     </section>
   );
