@@ -28,7 +28,7 @@ const Heading = ({
             alt="bloops"
           />
         ) : (
-          <div className="space-x-5 space-y-5 flex lg:flex-col lg:justify-center items-center lg:pb-10 xl:bp-0">
+          <div className="space-x-5 lg:space-x-0 lg:space-y-5 flex lg:flex-col lg:justify-center items-center lg:pb-10 xl:bp-0">
             {images?.map((img) => (
               <img key={img} src={img} className="w-16 h-16" alt="bloops" />
             ))}
