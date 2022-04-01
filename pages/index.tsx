@@ -13,26 +13,24 @@ const DATA = [
     description:
       'What the blooper is, how it works, and how to get the most' +
       ' out of it.',
-    link: '/resources',
-    img: '/particles/s1.svg',
+    route: '/resources',
   },
   {
     title: 'Modifiers',
     description: "A closer look at blooper's cast of modifiers",
-    link: '/modifiers',
-    img: '/particles/s3.svg',
+    route: '/modifiers',
   },
 
   {
     title: 'Midi',
     description:
       'The ins and out of getting blooper talking with other devices',
-    link: '/midi',
+    route: '/midi',
   },
   {
     title: 'FAQ',
     description: 'Some things you might be wondering about.',
-    link: 'faq',
+    route: '/faq',
   },
 ];
 
@@ -50,6 +48,7 @@ const Home = () => {
         images={['/images/blooper-front.png']}
       />
       <GridCard
+        external
         data={DATA}
         backgroundImage="/images/modifiers-blooper.jpeg"
         icon={<HeartBrain />}

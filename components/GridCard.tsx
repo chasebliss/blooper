@@ -4,20 +4,21 @@ import Button from './Button';
 
 interface DataProps {
   title?: string;
-  asset?: string;
+  link?: string;
   description?: string;
   downloadable?: boolean;
 }
 
 interface Props {
+  external: boolean;
   icon?: React.ReactNode;
   backgroundImage: string;
   data: Array<DataProps>;
 }
 
-const GridCard = ({ data, backgroundImage, icon }: Props) => {
+const GridCard = ({ data, backgroundImage, icon, external }: Props) => {
   return (
-    <div className="mx-[2vw] pt-16">
+    <div className="mx-[2vw] py-16">
       <div className="w-full relative py-[7vw]">
         <div className="relative text-white grid grid-cols-1  lg:grid-cols-5 z-50 justify-items-center items-center">
           <div className="w-2/3 lg:w-full col-span-2  lg:px-[5vw] xl:px-[4vw] pt-4">
@@ -37,11 +38,16 @@ const GridCard = ({ data, backgroundImage, icon }: Props) => {
                 </div>
 
                 <div className="flex flex-col md:flex-row md:space-x-3 md:block space-y-3 justify-center">
-                  <Button light href={data.asset}>
+                  <Button light href={data.link} route={data.route}>
                     View
                   </Button>
                   {data.downloadable && (
-                    <Button light href={data.asset} downloadable>
+                    <Button
+                      light
+                      href={data.link}
+                      route={data.route}
+                      downloadable
+                    >
                       Download
                     </Button>
                   )}

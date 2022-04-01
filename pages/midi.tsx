@@ -10,22 +10,19 @@ const DATA = [
   {
     title: 'What can midi do',
     description: 'An intro to the benefits of midi blooping.',
-    link: '/midi/images/midi-can-do.png',
-    asset: '/midi/docs/midi-can-do.pdf',
+    link: '/midi/docs/midi-can-do.pdf',
     downloadable: true,
   },
   {
     title: 'Quick Start',
     description: 'A friendly guide to starting out with midi.',
-    link: '/midi/images/midi-quick-start.png',
-    asset: '/midi/docs/midi-quick-start.pdf',
+    link: '/midi/docs/midi-quick-start.pdf',
     downloadable: true,
   },
   {
     title: 'Manual',
     description: 'This is where you’ll find the details.',
-    link: '/midi/images/midi-manual.png',
-    asset: '/midi/docs/midi-manual.pdf',
+    link: '/midi/docs/midi-manual.pdf',
     downloadable: true,
   },
 ];
