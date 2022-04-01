@@ -49,3 +49,7 @@ li.nav {
   line-height: 0;
   @apply leading-normal font-semibold pl-5 uppercase;
 }
+
+a {
+  @apply hover:italic cursor-pointer;
+}

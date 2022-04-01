@@ -41,7 +41,7 @@ const DATA = [
 ];
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center md:flex-row px-[2vw] py-16 mt-32 border-t-2 border-gray-200">
+    <footer className="flex flex-col items-center md:flex-row px-[2vw] py-16 mt-32 border-t-2 border-gray-200 relative">
       <MarkLogo className="fill-blooperDarkBlue pb-12 lg:pb-0" width={120} />
       <div className=" flex w-full justify-evenly">
         {DATA.map(({ id, heading, items }) => (
@@ -57,6 +57,28 @@ const Footer = () => {
           </ul>
         ))}
       </div>
+      <small className="block text-sm text-blooperDarkBlue/50 absolute bottom-2 left-4">
+        created in 2022 by
+        <a
+          href="https://www.knobscreative.com/"
+          className="px-1 border-b border-blooperBlue01"
+        >
+          cba
+        </a>
+        <a
+          href="https://www.knobscreative.com/"
+          className="px-1 border-b border-blooperBlue01"
+        >
+          knobs
+        </a>
+        and
+        <a
+          href="https://www.jsfowles.com"
+          className="px-1 border-b border-blooperBlue01"
+        >
+          jsfowles
+        </a>
+      </small>
     </footer>
   );
 };

@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-// import { ExternalLinkIcon } from '@heroicons/react/outline';
 
 import { NAV_ITEMS } from './data';
 import ThemeButton from './ThemeButton';
 import { useRouter } from 'next/router';
+import ExternalLogo from '../../public/images/external';
 
 const DesktopNav = () => {
   const router = useRouter();
@@ -33,16 +33,19 @@ const DesktopNav = () => {
               <Link href={route} passHref>
                 <a
                   target={external ? '__blank' : ''}
-                  className={
+                  className={`hover:not-italic flex items-center ${
                     router.pathname == `${route}`
                       ? 'active border-b border-blooperBlue transition pb-1'
                       : 'hover:border-b hover:border-blooperBlue transition pb-1'
-                  }
+                  }`}
                 >
                   {title}
-                  {/*{external && (*/}
-                  {/*  <ExternalLinkIcon className="absolute w-3 -top-3 -right-3" />*/}
-                  {/*)}*/}
+                  {external && (
+                    <ExternalLogo
+                      className="fill-blooperDarkBlue ml-2"
+                      width={10}
+                    />
+                  )}
                 </a>
               </Link>
             </li>

@@ -12,7 +12,7 @@ const BtnComponent = ({ children, href, downloadable, light }: Props) => {
     <button
       className={`border w-32 ${
         light ? 'border-white' : 'border-blooperDarkBlue'
-      } border-2 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic`}
+      } border-2 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30`}
     >
       {downloadable ? (
         <a download target="_blank" rel="noreferrer" href={href}>
