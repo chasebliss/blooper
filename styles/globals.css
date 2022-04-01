@@ -37,7 +37,7 @@ footer {
 
 html,
 body {
-  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white;
+  @apply dark:bg-blooperDarkBlue dark:font-mono dark:text-white text-blooperDarkBlue bg-white;
 }
 
 html {

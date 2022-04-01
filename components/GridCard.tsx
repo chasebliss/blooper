@@ -17,7 +17,7 @@ interface Props {
 
 const GridCard = ({ data, backgroundImage, icon }: Props) => {
   return (
-    <div className="mx-[2vw] ">
+    <div className="mx-[2vw] pt-16">
       <div className="w-full relative py-[7vw]">
         <div className="relative text-white grid grid-cols-1  lg:grid-cols-5 z-50 justify-items-center items-center">
           <div className="w-2/3 lg:w-full col-span-2  lg:px-[5vw] xl:px-[4vw] pt-4">

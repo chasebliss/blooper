@@ -37,7 +37,7 @@ const Midi = () => {
     <section className="w-full flex flex-col">
       <Heading
         title="midi"
-        subheading="Get blooper talking"
+        subheading="Get your blooper talking"
         descriptionOne="The ins and outs of getting blooper talking with other devices."
         descriptionTwo="Embracing midi opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going."
         images={['/images/troop/Chase-Bliss_blooper_Filter.svg']}

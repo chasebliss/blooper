@@ -2,22 +2,23 @@ h1 {
   font-size: calc((4.2 - 1) * 1.2vw + 1rem);
   line-height: 1.2em;
   max-width: 25ch;
-  @apply font-medium  pb-12;
+  @apply font-medium  pb-12 dark:uppercase;
 }
 
 h2 {
   font-size: calc((3.2 - 1) * 1.2vw + 1rem);
   line-height: 1.2em;
-  @apply leading-normal;
+  @apply leading-normal dark:uppercase;
 }
 
 h3 {
   font-size: calc((2.2 - 1) * 1.2vw + 1rem);
+  @apply dark:uppercase;
 }
 
 h4 {
   font-size: calc((1.6 - 1) * 1.2vw + 1rem);
-  @apply font-semibold;
+  @apply font-semibold dark:uppercase;
 }
 
 p {

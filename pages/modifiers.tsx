@@ -104,7 +104,7 @@ const Modifiers = () => {
         descriptionTwo="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
         images={['modifiers/images/filter-card.png']}
       />
-      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw]">
+      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw] md:mt-16">
         {CARDS.map((card) => (
           <li key={card.id}>
             <div className="">

@@ -52,7 +52,7 @@ const Footer = () => {
             <h4>{heading}</h4>
             <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 flex-wrap">
               {items.map((item) => (
-                <a key={item.id}>
+                <a key={item.id} href={item.link} target="_blank">
                   <li className="flex text-xl">{item.title}</li>
                 </a>
               ))}

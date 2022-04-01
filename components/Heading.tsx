@@ -16,8 +16,8 @@ const Heading = ({
   images,
 }: Props) => {
   return (
-    <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown pt-24 pb-16 xl:py-16">
-      <h2 className="pb-2">{title}</h2>
+    <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-24 pb-16 xl:py-16">
+      <h2 className="pb-2 ">{title}</h2>
       {subheading && <h1>{subheading}</h1>}
       <div className="flex flex-col lg:flex-row">
         {images?.length === 1 ? (
