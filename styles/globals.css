@@ -27,9 +27,15 @@ main {
   flex: 0 0 auto;
   transition: all 250ms ease;
 }
+
 #__next > header {
   flex-shrink: 0;
 }
+
+header {
+  z-index: 999;
+}
+
 footer {
   flex-shrink: 0;
   z-index: 999;

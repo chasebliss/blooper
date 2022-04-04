@@ -105,6 +105,7 @@ const DATA = [
     asset: '/modifiers/images/smooth-speed-card.png',
   },
 ];
+
 const Modifiers = () => {
   const { theme } = useTheme();
 

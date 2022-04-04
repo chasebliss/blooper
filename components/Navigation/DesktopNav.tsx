@@ -9,7 +9,7 @@ import ExternalLogo from '../../public/images/external';
 const DesktopNav = () => {
   const router = useRouter();
   return (
-    <header className="px-[4vw] py-[1.6vw]  mx-auto flex items-center w-full z-50">
+    <header className="px-[4vw] py-[1.6vw]  mx-auto flex items-center w-full">
       <nav className="flex items-center justify-between w-full z-50">
         <h3>
           <Link href="/" passHref>
