@@ -11,8 +11,7 @@ const DATA = [
   {
     title: 'Resources',
     description:
-      'What the blooper is, how it works, and how to get the most' +
-      ' out of it.',
+      'What blooper is, how it works, and how to get the most out of it.',
     route: '/resources',
   },
   {

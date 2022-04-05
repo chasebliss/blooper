@@ -3,7 +3,7 @@ import React from 'react';
 interface Props {
   title: string;
   subheading?: string;
-  descriptionOne: string;
+  descriptionOne?: string;
   descriptionTwo?: string;
   images?: Array<string>;
 }
@@ -34,12 +34,14 @@ const Heading = ({
             ))}
           </div>
         )}
-        <p className="lg:pl-16 leading-10 max-w-[45ch] pt-16 lg:pt-0">
-          {descriptionOne}
-          <br />
-          <br />
-          {descriptionTwo && descriptionTwo}
-        </p>
+        {descriptionOne && (
+          <p className="lg:pl-16 leading-10 max-w-[45ch] pt-16 lg:pt-0">
+            {descriptionOne}
+            <br />
+            <br />
+            {descriptionTwo && descriptionTwo}
+          </p>
+        )}
       </div>
     </div>
   );

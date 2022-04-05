@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes';
 const DATA = [
   {
     title: 'Quick Start',
-    description: 'The bare essentials, for the looping experience.',
+    description: 'The bare essentials, for the looping experienced.',
     link: '/resources/docs/quick-start.pdf',
     downloadable: true,
   },
@@ -24,7 +24,7 @@ const DATA = [
   {
     title: 'Manual',
     description:
-      'There are lots of idden goodies in blooper, so you might' +
+      'There are lots of hidden goodies in blooper, so you might' +
       ' want to read this. It’s pretty fun, as manuals go.',
     link: '/resources/docs/manual.pdf',
     downloadable: true,
@@ -46,7 +46,7 @@ export const Resources = () => {
     <section className="w-full flex flex-col ">
       <Heading
         title="resources"
-        subheading="What blooper is and how it works."
+        subheading="Bloop?"
         descriptionOne="Blooper was designed to encourage free, experimental, and personalized looping. And with great freedom comes great confusion, sometimes."
         descriptionTwo="The resources below should help you get comfortable."
         images={[

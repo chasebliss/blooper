@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes';
 
 const DATA = [
   {
-    question: '###### What do the dip switches do and should i be afraid?',
+    question: '###### What do the dip switches do and should I be afraid?',
     answer: `
 No, they are fun and helpful. the dip switches perform two jobs:
 
@@ -26,14 +26,14 @@ They add a lot of depth and flexibility to the Blooper – it won’t break. Get
 Some usb cables won’t make a good connection with blooper. Use the included usb cable if possible, make sure the pedal is powered, and the rest is a breeze.,`,
   },
   {
-    question: `###### How do i access the alternate modifiers?`,
+    question: `###### How do I access the alternate modifiers?`,
     answer: `
 the bank a and bank b dip switches give you access to two different
 sets of modifiers. you can also choose your own modifiers and
 arrangements using the [blip interface](https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html).,`,
   },
   {
-    question: `###### Why is my loop getting weird when i record modifiers in add mode?`,
+    question: `###### Why is my loop getting weird when I record modifiers in add mode?`,
     answer: `
 You may notice the start/end points of your loop changing places, or other weird behaviour when you record certain modifiers. It can be helpful to physically think of blooper as a tape machine. When you first record a loop, you are setting the length of the tape.  
             
@@ -42,7 +42,7 @@ From this point on you are free to do all kinds of weird things to the audio on 
 So let’s say you record a 3 second loop, then use a modifier to slow it down to half speed. The loop is now in fact 6 seconds. This will play no problem, but once you record this effect in add mode you essentially lose half of your loop. It just can’t fit. It can be disorienting, but it makes sense with practice. It also has its advantages. This [breakdown](/docs/recording-mod.pdf) should really help.,`,
   },
   {
-    question: `###### What can i do with midi, and how?`,
+    question: `###### What can I do with midi, and how?`,
     answer: `We have a [page](/midi) for that!`,
   },
   {
@@ -76,21 +76,22 @@ const markdownConfig = {
     <a className="italic font-semibold underline" {...props} />
   ),
   li: ({ ...props }) => (
-    <li className="pb-3 list-disc list-inside" {...props} />
+    <li className="pb-3 text-lg list-disc list-inside" {...props} />
   ),
+  p: ({ ...props }) => <p className="text-xl" {...props} />,
 };
 
 export default function Example() {
   const { theme } = useTheme();
 
   return (
-    <div className="flex flex-col items-center pt-40 mx-5 lg:mx-0">
+    <section className="w-full flex flex-col py-24">
       <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
-        <div className="relative z-40 mx-auto max-w-3xl divide-y-2 divide-blooperDarkBlue">
-          <h2 className="pb-8 text-3xl font-semibold text-center uppercase sm:text-4xl">
+        <div className="relative z-40 mx-auto max-w-3xl">
+          <h3 className="pb-8 font-semibold text-center">
             Frequently asked questions
-          </h2>
-          <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue">
+          </h3>
+          <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40">
             {DATA.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
                 {({ open }) => (
@@ -129,9 +130,9 @@ export default function Example() {
             ))}
           </dl>
         </div>
-        <div className="absolute inset-0 z-10 w-full h-full rounded-3xl border backdrop-blur-sm dark:bg-black/10 border-blooperDarkBlue/50 darK:border-0" />
+        <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm " />
       </div>
       {theme === 'dark' && <FAQParticles />}
-    </div>
+    </section>
   );
 }

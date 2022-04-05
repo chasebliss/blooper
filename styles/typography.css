@@ -35,7 +35,7 @@ h5 {
 }
 
 h6 {
-  @apply font-semibold text-xl pt-2 pb-3;
+  @apply font-semibold text-2xl pt-2 pb-3;
 }
 
 small {
