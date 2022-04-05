@@ -60,7 +60,7 @@ const Footer = () => {
           </ul>
         ))}
       </div>
-      <small className="block text-sm dark:text-white text-blooperDarkBlue/50 absolute bottom-3 left-[2vw]">
+      <small className="block text-sm dark:text-white text-blooperDarkBlue/80 absolute bottom-3 left-[2vw]">
         created in 2022 - by{' '}
         <a
           href="https://www.knobscreative.com/"
