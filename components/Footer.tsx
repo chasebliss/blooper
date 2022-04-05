@@ -63,7 +63,7 @@ const Footer = () => {
       <small className="block text-sm dark:text-white text-blooperDarkBlue/80 absolute bottom-3 left-[2vw]">
         created in 2022 - by{' '}
         <a
-          href="https://www.knobscreative.com/"
+          href="https://www.youtube.com/watch?v=izDc3G9ZRfw"
           className="border-b border-blooperBlue01"
         >
           cba,

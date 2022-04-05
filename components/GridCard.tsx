@@ -13,7 +13,7 @@ interface DataProps {
 interface Props {
   icon?: React.ReactNode;
   backgroundImage: string;
-  data: Array<DataProps>;
+  data?: Array<DataProps>;
 }
 
 const GridCard = ({ data, backgroundImage, icon }: Props) => {
@@ -24,36 +24,38 @@ const GridCard = ({ data, backgroundImage, icon }: Props) => {
           <div className="w-2/3 lg:w-full col-span-2  lg:px-[5vw] xl:px-[4vw] pt-4">
             {icon}
           </div>
-          <ul className="grid gird-cols-1 md:grid-cols-2  pt-8 gap-6 xl:gap-16  col-span-3">
-            {data.map((data) => (
-              <li
-                key={data.title}
-                className="grid px-[4vw] lg:px-0 grid-cols-2 md:grid-cols-1 h-full justify-items-end md:justify-items-start items-center"
-              >
-                <div className="h-full ">
-                  <h3 className="font-semibold pb-3">{data.title}</h3>
-                  <p className="text-base xl:text-2xl max-w-[25ch]">
-                    {data.description}
-                  </p>
-                </div>
+          {data && (
+            <ul className="grid gird-cols-1 md:grid-cols-2  pt-8 gap-6 xl:gap-16  col-span-3">
+              {data.map((data) => (
+                <li
+                  key={data.title}
+                  className="grid px-[4vw] lg:px-0 grid-cols-2 md:grid-cols-1 h-full justify-items-end md:justify-items-start items-center"
+                >
+                  <div className="h-full ">
+                    <h3 className="font-semibold pb-3">{data.title}</h3>
+                    <p className="text-base xl:text-2xl max-w-[25ch]">
+                      {data.description}
+                    </p>
+                  </div>
 
-                <div className="flex flex-col md:flex-row md:space-x-3 md:block space-y-3 justify-center">
-                  <Button light href={data.link} route={data.route}>
-                    View
-                  </Button>
+                  <div className="flex flex-col md:flex-row md:space-x-3 md:block space-y-3 justify-center">
+                    <Button light href={data.link} route={data.route}>
+                      View
+                    </Button>
 
-                  <Button
-                    light
-                    href={data.link}
-                    route={data.route}
-                    downloadable
-                  >
-                    Download
-                  </Button>
-                </div>
-              </li>
-            ))}
-          </ul>
+                    <Button
+                      light
+                      href={data.link}
+                      route={data.route}
+                      downloadable
+                    >
+                      Download
+                    </Button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
         <figure className="absolute inset-0">
           <Image

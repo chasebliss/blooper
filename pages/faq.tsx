@@ -6,6 +6,7 @@ import remarkBreaks from 'remark-breaks';
 import ReactMarkdown from 'react-markdown';
 import { FAQParticles } from '../styles/particles';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 const DATA = [
   {
@@ -86,11 +87,24 @@ export default function Example() {
 
   return (
     <section className="w-full flex flex-col py-24">
+      <figure className="relative w-full xl:w-[1250px] mx-auto">
+        <Image
+          priority
+          width={2500}
+          height={1250}
+          layout="responsive"
+          objectFit="contain"
+          alt="someone twisting knobs"
+          src="/images/deeper-bloop.jpeg"
+        />
+        <div className="absolute inset-0 bg-black/40 z-40 flex justify-center items-center text-center">
+          <h1 className="pb-8  text-5xl lg:text-7xl font-semibold text-white mx-auto">
+            Frequently asked questions
+          </h1>
+        </div>
+      </figure>
       <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
         <div className="relative z-40 mx-auto max-w-3xl">
-          <h3 className="pb-8 font-semibold text-center">
-            Frequently asked questions
-          </h3>
           <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40">
             {DATA.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">
