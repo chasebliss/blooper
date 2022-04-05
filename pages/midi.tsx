@@ -4,7 +4,7 @@ import { useTheme } from 'next-themes';
 
 import { MidiParticles } from '../styles/particles';
 import GridCard from '../components/GridCard';
-import MidiLogo from '../public/images/midi';
+
 import S1 from '../public/particles/s1';
 
 const DATA = [
