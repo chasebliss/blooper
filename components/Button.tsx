@@ -17,7 +17,7 @@ const BtnComponent = ({
 }: Props) => {
   return (
     <button
-      className={`border w-32 transition-all ${
+      className={`border w-32 transition-all duration-300 ${
         light ? 'border-white' : 'border-blooperDarkBlue'
       } border-2 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30`}
     >
