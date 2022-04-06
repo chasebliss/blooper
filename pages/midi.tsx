@@ -10,7 +10,7 @@ import S1 from '../public/particles/s1';
 const DATA = [
   {
     title: 'What can MIDI do',
-    description: 'An intro to the benefits of midi blooping.',
+    description: 'An intro to the benefits of MIDI blooping.',
     link: '/midi/docs/midi-can-do.pdf',
     downloadable: true,
   },
@@ -37,7 +37,7 @@ const Midi = () => {
         title="MIDI"
         subheading="Get your blooper talking"
         descriptionOne="Embracing MIDI opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going."
-        images={['/images/troop/Chase-Bliss_blooper_Filter.svg']}
+        images={['/images/troop/Chase-Bliss_blooper_Stutter.svg']}
       />
       <GridCard
         backgroundImage="/images/bottom-view-blooper.jpeg"

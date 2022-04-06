@@ -111,7 +111,11 @@ const Modifiers = () => {
 
   return (
     <section className="w-full flex flex-col">
-      <Heading title="modifiers" subheading="AKA the Bloop Troop" />
+      <Heading
+        title="modifiers"
+        subheading="AKA the Bloop Troop"
+        descriptionOne="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
+      />
       <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw] md:mt-16">
         {DATA.map((card) => (
           <li key={card.id}>

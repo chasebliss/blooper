@@ -6,7 +6,6 @@ import remarkBreaks from 'remark-breaks';
 import ReactMarkdown from 'react-markdown';
 import { FAQParticles } from '../styles/particles';
 import { useTheme } from 'next-themes';
-import Image from 'next/image';
 
 const DATA = [
   {
@@ -29,7 +28,7 @@ Some usb cables won’t make a good connection with blooper. Use the included us
   {
     question: `###### How do I access the alternate modifiers?`,
     answer: `
-the bank a and bank b dip switches give you access to two different
+The bank a and bank b dip switches give you access to two different
 sets of modifiers. you can also choose your own modifiers and
 arrangements using the [blip interface](https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html).,`,
   },
@@ -43,7 +42,7 @@ From this point on you are free to do all kinds of weird things to the audio on 
 So let’s say you record a 3 second loop, then use a modifier to slow it down to half speed. The loop is now in fact 6 seconds. This will play no problem, but once you record this effect in add mode you essentially lose half of your loop. It just can’t fit. It can be disorienting, but it makes sense with practice. It also has its advantages. This [breakdown](/docs/recording-mod.pdf) should really help.,`,
   },
   {
-    question: `###### What can I do with midi, and how?`,
+    question: `###### What can I do with MIDI, and how?`,
     answer: `We have a [page](/midi) for that!`,
   },
   {
@@ -77,7 +76,7 @@ const markdownConfig = {
     <a className="italic font-semibold underline" {...props} />
   ),
   li: ({ ...props }) => (
-    <li className="pb-3 text-lg list-disc list-inside" {...props} />
+    <li className="pb-3 text-xl list-disc list-inside" {...props} />
   ),
   p: ({ ...props }) => <p className="text-xl" {...props} />,
 };
@@ -87,24 +86,11 @@ export default function Example() {
 
   return (
     <section className="w-full flex flex-col py-24">
-      <figure className="relative w-full xl:w-[1250px] mx-auto">
-        <Image
-          priority
-          width={2500}
-          height={1250}
-          layout="responsive"
-          objectFit="contain"
-          alt="someone twisting knobs"
-          src="/images/deeper-bloop.jpeg"
-        />
-        <div className="absolute inset-0 bg-black/40 z-40 flex justify-center items-center text-center">
-          <h1 className="pb-8  text-5xl lg:text-7xl font-semibold text-white mx-auto">
-            Frequently asked questions
-          </h1>
-        </div>
-      </figure>
       <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
         <div className="relative z-40 mx-auto max-w-3xl">
+          <h3 className="pb-8 font-semibold text-center">
+            Frequently asked questions
+          </h3>
           <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40">
             {DATA.map((faq) => (
               <Disclosure as="div" key={faq.question} className="pt-6">

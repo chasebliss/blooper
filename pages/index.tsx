@@ -16,14 +16,14 @@ const DATA = [
   },
   {
     title: 'Modifiers',
-    description: "A closer look at blooper's cast of modifiers",
+    description: "A closer look at blooper's cast of modifiers.",
     route: '/modifiers',
   },
 
   {
-    title: 'Midi',
+    title: 'MIDI',
     description:
-      'The ins and out of getting blooper talking with other devices',
+      'The ins and out of getting blooper talking with other devices.',
     route: '/midi',
   },
   {
