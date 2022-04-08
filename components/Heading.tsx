@@ -38,7 +38,7 @@ const Heading = ({
           <p
             className={`${
               images && `lg:pl-16`
-            } leading-10 max-w-[45ch] pt-16 lg:pt-0`}
+            } leading-10 max-w-[40ch] pt-16 lg:pt-0`}
           >
             {descriptionOne}
             <br />
