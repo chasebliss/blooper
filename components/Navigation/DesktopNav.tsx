@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import { NAV_ITEMS } from './data';
-import ThemeButton from './ThemeButton';
+// import ThemeButton from './ThemeButton';
 import { useRouter } from 'next/router';
 import ExternalLogo from '../../public/images/external';
 
@@ -48,7 +48,7 @@ const DesktopNav = () => {
               </Link>
             </li>
           ))}
-          <ThemeButton />
+          {/*<ThemeButton />*/}
         </ul>
       </nav>
     </header>
