@@ -41,15 +41,16 @@ const GridCard = ({ data, backgroundImage, icon }: Props) => {
                   <Button light href={data.link} route={data.route}>
                     View
                   </Button>
-
-                  <Button
-                    light
-                    href={data.link}
-                    route={data.route}
-                    downloadable
-                  >
-                    Download
-                  </Button>
+                  {data.downloadable && (
+                    <Button
+                      light
+                      href={data.link}
+                      route={data.route}
+                      downloadable
+                    >
+                      Download
+                    </Button>
+                  )}
                 </div>
               </li>
             ))}

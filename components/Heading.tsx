@@ -6,6 +6,7 @@ interface Props {
   descriptionOne?: string;
   descriptionTwo?: string;
   images?: Array<string>;
+  modifier?: boolean;
 }
 
 const Heading = ({
@@ -14,6 +15,7 @@ const Heading = ({
   descriptionOne,
   descriptionTwo,
   images,
+  modifier,
 }: Props) => {
   return (
     <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-24 pb-16 xl:py-16">
@@ -44,6 +46,15 @@ const Heading = ({
             <br />
             <br />
             {descriptionTwo && descriptionTwo}
+            {modifier && (
+              <a
+                target="_blank"
+                className="underline text-blooperBlue/70 hover:text-blooperBlue"
+                href="/resources/docs/modifier-manual.pdf"
+              >
+                Click here to download the full guide
+              </a>
+            )}
           </p>
         )}
       </div>
