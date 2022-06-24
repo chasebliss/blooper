@@ -6,6 +6,7 @@ import remarkBreaks from 'remark-breaks';
 import ReactMarkdown from 'react-markdown';
 import { FAQParticles } from '../styles/particles';
 import { useTheme } from 'next-themes';
+import Head from 'next/head';
 
 const DATA = [
   {
@@ -85,54 +86,59 @@ export default function Example() {
   const { theme } = useTheme();
 
   return (
-    <section className="w-full flex flex-col py-24">
-      <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
-        <div className="relative z-40 mx-auto max-w-3xl">
-          <h3 className="pb-8 font-semibold text-center">
-            Frequently asked questions
-          </h3>
-          <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40">
-            {DATA.map((faq) => (
-              <Disclosure as="div" key={faq.question} className="pt-6">
-                {({ open }) => (
-                  <>
-                    <dt className="text-lg px-6 hover:bg-black/10 rounded-3xl ">
-                      <Disclosure.Button className="flex justify-between items-center w-full text-left">
-                        <span className="font-medium">
-                          <ReactMarkdown
-                            remarkPlugins={[remarkGfm, remarkBreaks]}
-                          >
-                            {faq.question}
-                          </ReactMarkdown>
-                        </span>
-                        <span className="flex items-center ml-6 h-7">
-                          <ChevronDownIcon
-                            className={classNames(
-                              open ? '-rotate-180' : 'rotate-0',
-                              'h-6 w-6 transform',
-                            )}
-                            aria-hidden="true"
-                          />
-                        </span>
-                      </Disclosure.Button>
-                    </dt>
-                    <Disclosure.Panel as="dd" className="pr-12 mt-2 px-6">
-                      <ReactMarkdown
-                        remarkPlugins={[remarkGfm, remarkBreaks]}
-                        components={markdownConfig}
-                      >
-                        {faq.answer}
-                      </ReactMarkdown>
-                    </Disclosure.Panel>
-                  </>
-                )}
-              </Disclosure>
-            ))}
-          </dl>
+    <>
+      <Head>
+        <title>FAQ - Blooper</title>
+      </Head>
+      <section className="w-full flex flex-col py-24">
+        <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
+          <div className="relative z-40 mx-auto max-w-3xl">
+            <h3 className="pb-8 font-semibold text-center">
+              Frequently asked questions
+            </h3>
+            <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40">
+              {DATA.map((faq) => (
+                <Disclosure as="div" key={faq.question} className="pt-6">
+                  {({ open }) => (
+                    <>
+                      <dt className="text-lg px-6 hover:bg-black/10 rounded-3xl ">
+                        <Disclosure.Button className="flex justify-between items-center w-full text-left">
+                          <span className="font-medium">
+                            <ReactMarkdown
+                              remarkPlugins={[remarkGfm, remarkBreaks]}
+                            >
+                              {faq.question}
+                            </ReactMarkdown>
+                          </span>
+                          <span className="flex items-center ml-6 h-7">
+                            <ChevronDownIcon
+                              className={classNames(
+                                open ? '-rotate-180' : 'rotate-0',
+                                'h-6 w-6 transform',
+                              )}
+                              aria-hidden="true"
+                            />
+                          </span>
+                        </Disclosure.Button>
+                      </dt>
+                      <Disclosure.Panel as="dd" className="pr-12 mt-2 px-6">
+                        <ReactMarkdown
+                          remarkPlugins={[remarkGfm, remarkBreaks]}
+                          components={markdownConfig}
+                        >
+                          {faq.answer}
+                        </ReactMarkdown>
+                      </Disclosure.Panel>
+                    </>
+                  )}
+                </Disclosure>
+              ))}
+            </dl>
+          </div>
+          <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm " />
         </div>
-        <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm " />
-      </div>
-      {theme === 'dark' && <FAQParticles />}
-    </section>
+        {theme === 'dark' && <FAQParticles />}
+      </section>
+    </>
   );
 }

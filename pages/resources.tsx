@@ -5,6 +5,7 @@ import HeartBrain from '../public/images/heart-brain';
 
 import { ResourcesParticles } from 'styles/particles';
 import { useTheme } from 'next-themes';
+import Head from 'next/head';
 
 const DATA = [
   {
@@ -43,26 +44,31 @@ export const Resources = () => {
   const { theme } = useTheme();
 
   return (
-    <section className="w-full flex flex-col ">
-      <Heading
-        title="resources"
-        subheading="Bloop?"
-        descriptionOne="Blooper was designed to encourage free, experimental, and personalized looping. And with great freedom comes great confusion, sometimes."
-        descriptionTwo="The resources below should help you get comfortable."
-        images={[
-          '/images/troop/Chase-Bliss_blooper_Pitcher.svg',
-          '/images/troop/Chase-Bliss_blooper_Trimmer.svg',
-          '/images/troop/Chase-Bliss_blooper_Swapper.svg',
-        ]}
-      />
-      <GridCard
-        data={DATA}
-        backgroundImage="/images/additive-blooper.jpeg"
-        icon={<HeartBrain />}
-      />
+    <>
+      <Head>
+        <title>Resources - Blooper</title>
+      </Head>
+      <section className="w-full flex flex-col ">
+        <Heading
+          title="resources"
+          subheading="Bloop?"
+          descriptionOne="Blooper was designed to encourage free, experimental, and personalized looping. And with great freedom comes great confusion, sometimes."
+          descriptionTwo="The resources below should help you get comfortable."
+          images={[
+            '/images/troop/Chase-Bliss_blooper_Pitcher.svg',
+            '/images/troop/Chase-Bliss_blooper_Trimmer.svg',
+            '/images/troop/Chase-Bliss_blooper_Swapper.svg',
+          ]}
+        />
+        <GridCard
+          data={DATA}
+          backgroundImage="/images/additive-blooper.jpeg"
+          icon={<HeartBrain />}
+        />
 
-      {theme === 'dark' && <ResourcesParticles />}
-    </section>
+        {theme === 'dark' && <ResourcesParticles />}
+      </section>
+    </>
   );
 };
 

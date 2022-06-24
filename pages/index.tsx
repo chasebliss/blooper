@@ -6,6 +6,7 @@ import GridCard from '../components/GridCard';
 
 import { HomeParticles } from '../styles/particles';
 import HeartBrain from '../public/images/heart-brain';
+import Head from 'next/head';
 
 const DATA = [
   {
@@ -36,23 +37,28 @@ const DATA = [
 const Home = () => {
   const { theme } = useTheme();
   return (
-    <section className="w-full flex flex-col">
-      <Heading
-        title="blooper"
-        subheading="A performance looper with additive sound design."
-        descriptionOne="This is a website to help you enjoy a rich, rewarding time with your
+    <>
+      <Head>
+        <title>Blooper - Chase Bliss Audio</title>
+      </Head>
+      <section className="w-full flex flex-col">
+        <Heading
+          title="blooper"
+          subheading="A performance looper with additive sound design."
+          descriptionOne="This is a website to help you enjoy a rich, rewarding time with your
           blooper."
-        descriptionTwo="It does a lot and it can get pretty weird. So, get familiar with its
+          descriptionTwo="It does a lot and it can get pretty weird. So, get familiar with its
           many tricks, or use the interface to update, download, and customize."
-        images={['/images/blooper-front.png']}
-      />
-      <GridCard
-        data={DATA}
-        backgroundImage="/images/modifiers-blooper.jpeg"
-        icon={<HeartBrain />}
-      />
-      {theme === 'dark' && <HomeParticles theme={theme} />}
-    </section>
+          images={['/images/blooper-front.png']}
+        />
+        <GridCard
+          data={DATA}
+          backgroundImage="/images/modifiers-blooper.jpeg"
+          icon={<HeartBrain />}
+        />
+        {theme === 'dark' && <HomeParticles theme={theme} />}
+      </section>
+    </>
   );
 };
 

@@ -4,6 +4,7 @@ import React from 'react';
 import { ModifierParticles } from '../styles/particles';
 import { useTheme } from 'next-themes';
 import Button from '../components/Button';
+import Head from 'next/head';
 
 const DATA = [
   {
@@ -110,40 +111,45 @@ const Modifiers = () => {
   const { theme } = useTheme();
 
   return (
-    <section className="w-full flex flex-col">
-      <Heading
-        title="modifiers"
-        subheading="AKA the Bloop Troop"
-        descriptionOne="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
-        modifier
-      />
-      <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw] md:mt-16">
-        {DATA.map((card) => (
-          <li key={card.id}>
-            <div className="">
-              <figure className="relative ">
-                <img
-                  src={card.img}
-                  alt={card.title}
-                  className="min-w-32 max-h-32 object-contain"
+    <>
+      <Head>
+        <title>Modifiers - Blooper</title>
+      </Head>
+      <section className="w-full flex flex-col">
+        <Heading
+          title="modifiers"
+          subheading="AKA the Bloop Troop"
+          descriptionOne="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
+          modifier
+        />
+        <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw] md:mt-16">
+          {DATA.map((card) => (
+            <li key={card.id}>
+              <div className="">
+                <figure className="relative ">
+                  <img
+                    src={card.img}
+                    alt={card.title}
+                    className="min-w-32 max-h-32 object-contain"
+                  />
+                </figure>
+                <p
+                  className="troop pt-8"
+                  dangerouslySetInnerHTML={{ __html: card.description }}
                 />
-              </figure>
-              <p
-                className="troop pt-8"
-                dangerouslySetInnerHTML={{ __html: card.description }}
-              />
-            </div>
-            <div className="flex space-x-3 md:block md:space-y-3 md:justify-center">
-              <Button href={card.asset}>View</Button>
-              <Button href={card.asset} downloadable>
-                Download
-              </Button>
-            </div>
-          </li>
-        ))}
-      </ul>
-      {theme === 'dark' && <ModifierParticles />}
-    </section>
+              </div>
+              <div className="flex space-x-3 md:block md:space-y-3 md:justify-center">
+                <Button href={card.asset}>View</Button>
+                <Button href={card.asset} downloadable>
+                  Download
+                </Button>
+              </div>
+            </li>
+          ))}
+        </ul>
+        {theme === 'dark' && <ModifierParticles />}
+      </section>
+    </>
   );
 };
 

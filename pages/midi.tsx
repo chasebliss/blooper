@@ -6,6 +6,7 @@ import { MidiParticles } from '../styles/particles';
 import GridCard from '../components/GridCard';
 
 import S1 from '../public/particles/s1';
+import Head from 'next/head';
 
 const DATA = [
   {
@@ -32,20 +33,25 @@ const Midi = () => {
   const { theme } = useTheme();
 
   return (
-    <section className="w-full flex flex-col">
-      <Heading
-        title="MIDI"
-        subheading="Get your blooper talking"
-        descriptionOne="Embracing MIDI opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going."
-        images={['/images/troop/Chase-Bliss_blooper_Stutter.svg']}
-      />
-      <GridCard
-        backgroundImage="/images/bottom-view-blooper.jpeg"
-        data={DATA}
-        icon={<S1 className="fill-white w-1/2 mx-auto" />}
-      />
-      {theme === 'dark' && <MidiParticles />}
-    </section>
+    <>
+      <Head>
+        <title>MIDI - Blooper</title>
+      </Head>
+      <section className="w-full flex flex-col">
+        <Heading
+          title="MIDI"
+          subheading="Get your blooper talking"
+          descriptionOne="Embracing MIDI opens up a whole other side of blooper. Browse these quick references for an idea of what’s possible, and how to get going."
+          images={['/images/troop/Chase-Bliss_blooper_Stutter.svg']}
+        />
+        <GridCard
+          backgroundImage="/images/bottom-view-blooper.jpeg"
+          data={DATA}
+          icon={<S1 className="fill-white w-1/2 mx-auto" />}
+        />
+        {theme === 'dark' && <MidiParticles />}
+      </section>
+    </>
   );
 };
 
