@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react';
-import { ChevronDownIcon } from '@heroicons/react/outline';
+import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import React from 'react';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
