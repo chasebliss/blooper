@@ -9,9 +9,6 @@ module.exports = {
       none: 'none',
       blur: 'blur(20px)',
     },
-    fontFamily: {
-      mono: ['antarctican-mono', 'sans-serif'],
-    },
     screens: {
       sm: '480px',
       md: '768px',

@@ -96,7 +96,7 @@ export default function Example() {
             <h3 className="pb-8 font-semibold text-center">
               Frequently asked questions
             </h3>
-            <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40">
+            <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40 dark:divide-white/40">
               {DATA.map((faq) => (
                 <Disclosure as="div" key={faq.question} className="pt-6">
                   {({ open }) => (
@@ -121,7 +121,10 @@ export default function Example() {
                           </span>
                         </Disclosure.Button>
                       </dt>
-                      <Disclosure.Panel as="dd" className="pr-12 mt-2 px-6">
+                      <Disclosure.Panel
+                        as="dd"
+                        className="pr-12 ml-6 mt-2 px-6"
+                      >
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm, remarkBreaks]}
                           components={markdownConfig}

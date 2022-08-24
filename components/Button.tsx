@@ -16,30 +16,20 @@ const BtnComponent = ({
   route,
 }: Props) => {
   return (
-    <button
-      className={`border w-32 transition-all duration-300 ${
-        light ? 'border-white' : 'border-blooperDarkBlue'
-      } border-2 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30`}
+    <a
+      download={downloadable}
+      target={!route ? '_blank' : ''}
+      rel="noreferrer"
+      href={!route ? href : route}
     >
-      {downloadable ? (
-        <a
-          download
-          target={!route ? '_blank' : ''}
-          rel="noreferrer"
-          href={!route ? href : route}
-        >
-          {children}
-        </a>
-      ) : (
-        <a
-          target={!route ? '_blank' : ''}
-          rel="noreferrer"
-          href={!route ? href : route}
-        >
-          {children}
-        </a>
-      )}
-    </button>
+      <button
+        className={`border w-32 transition-all duration-300 ${
+          light ? 'border-white' : 'border-blooperDarkBlue dark:border-white'
+        } border-2 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30`}
+      >
+        {children}
+      </button>
+    </a>
   );
 };
 

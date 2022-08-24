@@ -5,6 +5,7 @@ import { NAV_ITEMS } from './data';
 // import ThemeButton from './ThemeButton';
 import { useRouter } from 'next/router';
 import ExternalLogo from '../../public/images/external';
+import ThemeButton from './ThemeButton';
 
 const DesktopNav = () => {
   const router = useRouter();
@@ -33,8 +34,8 @@ const DesktopNav = () => {
                   target={external ? '__blank' : ''}
                   className={`hover:not-italic flex items-center ${
                     router.pathname == `${route}`
-                      ? 'active border-b border-blooperBlue transition pb-1'
-                      : 'hover:border-b hover:border-blooperBlue transition pb-1'
+                      ? 'active border-b border-blooperBlue dark:border-white transition pb-1'
+                      : 'hover:border-b hover:border-blooperBlue dark:hover:border-white transition pb-1'
                   }`}
                 >
                   {title}
@@ -48,7 +49,7 @@ const DesktopNav = () => {
               </Link>
             </li>
           ))}
-          {/*<ThemeButton />*/}
+          <ThemeButton />
         </ul>
       </nav>
     </header>

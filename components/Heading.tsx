@@ -49,7 +49,7 @@ const Heading = ({
             {modifier && (
               <a
                 target="_blank"
-                className="underline text-blooperBlue/70 hover:text-blooperBlue"
+                className="underline text-blooperBlue/70 dark:text-white hover:text-blooperBlue"
                 href="/resources/docs/modifier-manual.pdf"
               >
                 Click here to download the full guide
