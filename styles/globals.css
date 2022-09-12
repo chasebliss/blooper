@@ -33,7 +33,7 @@ main {
 }
 
 header {
-  z-index: 999;
+  z-index: 1000;
 }
 
 footer {

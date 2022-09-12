@@ -28,7 +28,7 @@ const GridCard = ({ data, backgroundImage, icon }: Props) => {
             {data.map((data) => (
               <li
                 key={data.title}
-                className="grid px-[4vw] lg:px-0 grid-cols-2 md:grid-cols-1 h-full justify-items-end md:justify-items-start items-end"
+                className="grid px-[4vw] lg:px-0 grid-cols-2 md:grid-cols-1 h-full justify-items-end md:justify-items-start items-center md:items-end"
               >
                 <div className="h-full ">
                   <h3 className="font-semibold pb-3">{data.title}</h3>
