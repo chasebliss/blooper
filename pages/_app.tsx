@@ -1,4 +1,5 @@
 import DesktopNav from '../components/Navigation/DesktopNav';
+import { Analytics } from '@vercel/analytics/react';
 import '../styles/globals.css';
 import '../styles/typography.css';
 import '../styles/glitch.css';
@@ -39,6 +40,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             className=""
           >
             <Component {...pageProps} key={router.route} />
+            <Analytics />
           </motion.main>
         </AnimatePresence>
       </main>
