@@ -39,6 +39,9 @@ const DATA = [
     ],
   },
 ];
+
+const currentYear = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <footer className="flex flex-col items-center md:flex-row px-[2vw] py-16 mt-32 border-t-2 border-gray-200 relative">
@@ -61,7 +64,7 @@ const Footer = () => {
         ))}
       </div>
       <small className="block text-sm dark:text-white text-blooperDarkBlue/80 absolute bottom-3 left-[2vw]">
-        created in 2022 - by{' '}
+        created and copyrighted in {currentYear} - by{' '}
         <a
           href="https://www.youtube.com/watch?v=izDc3G9ZRfw"
           className="border-b border-blooperBlue01"

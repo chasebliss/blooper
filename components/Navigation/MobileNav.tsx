@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { NAV_ITEMS } from './data';
 import { Sling as Hamburger } from 'hamburger-react';
 import ThemeButton from './ThemeButton';
-// import ThemeButton from './ThemeButton';
 
 const MobileNav = () => {
   const [isOpen, setOpen] = React.useState(false);

@@ -74,12 +74,12 @@ const DATA = [
   },
   {
     id: 8,
-    title: 'Speed Trimmer',
+    title: 'Stepped Trimmer',
     description:
-      '<strong>Speed Trimmer</strong> allows you to shrink your loop by precise subdivisions, so your adjustments fit nicely into rhythm.\n' +
+      '<strong>Stepped Trimmer</strong> allows you to shrink your loop by precise subdivisions, so your adjustments fit nicely into rhythm.\n' +
       '\n',
     img: '/images/troop/Chase-Bliss_blooper_Speed-Trimmer.svg',
-    asset: '/modifiers/images/speed-trimmer-card.png',
+    asset: '/modifiers/images/stepped-trimmer-card.png',
   },
   {
     id: 9,
@@ -103,7 +103,7 @@ const DATA = [
     description:
       '<strong>Pitcher</strong> allows you to transpose your loop without changing the speed, with an outrageous three octave range up or down.',
     img: '/images/troop/Chase-Bliss_blooper_Pitcher.svg',
-    asset: '/modifiers/images/smooth-speed-card.png',
+    asset: '/modifiers/images/pitcher-card.png',
   },
 ];
 

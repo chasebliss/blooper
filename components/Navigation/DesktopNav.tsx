@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 import { NAV_ITEMS } from './data';
-// import ThemeButton from './ThemeButton';
 import { useRouter } from 'next/router';
 import ExternalLogo from '../../public/images/external';
 import ThemeButton from './ThemeButton';

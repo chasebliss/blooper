@@ -36,6 +36,7 @@ const DATA = [
 
 const Home = () => {
   const { theme } = useTheme();
+
   return (
     <>
       <Head>
