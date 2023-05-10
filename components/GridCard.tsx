@@ -58,10 +58,9 @@ const GridCard = ({ data, backgroundImage, icon }: Props) => {
         </div>
         <figure className="absolute inset-0">
           <Image
-            priority
-            layout="fill"
-            objectFit="cover"
+            style={{ objectFit: 'cover' }}
             alt="someone twisting knobs"
+            fill
             src={backgroundImage}
           />
           <div className="absolute inset-0 bg-black/40 z-40" />

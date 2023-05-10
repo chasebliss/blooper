@@ -1,10 +1,6 @@
-import Heading from 'components/Heading';
 import React from 'react';
-import { useTheme } from 'next-themes';
-
-import { MidiParticles } from '../styles/particles';
+import Heading from 'components/Heading';
 import GridCard from '../components/GridCard';
-
 import S1 from '../public/particles/s1';
 import Head from 'next/head';
 
@@ -30,8 +26,6 @@ const DATA = [
 ];
 
 const Midi = () => {
-  const { theme } = useTheme();
-
   return (
     <>
       <Head>
@@ -45,11 +39,10 @@ const Midi = () => {
           images={['/images/troop/Chase-Bliss_blooper_Stutter.svg']}
         />
         <GridCard
-          backgroundImage="/images/bottom-view-blooper.jpeg"
+          backgroundImage="/images/bottom-view-blooper.webp"
           data={DATA}
           icon={<S1 className="fill-white w-1/2 mx-auto" />}
         />
-        {theme === 'dark' && <MidiParticles />}
       </section>
     </>
   );

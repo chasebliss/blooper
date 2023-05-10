@@ -1,11 +1,9 @@
+import React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
-import React from 'react';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 import ReactMarkdown from 'react-markdown';
-import { FAQParticles } from '../styles/particles';
-import { useTheme } from 'next-themes';
 import Head from 'next/head';
 
 const DATA = [
@@ -72,19 +70,13 @@ This makes it possible to completely transform your loop with stability and the 
 
 const classNames = (...classes: string[]) => classes.filter(Boolean).join(' ');
 const markdownConfig = {
-  ul: ({ ...props }) => <ul className="py-3" {...props} />,
   a: ({ ...props }) => (
     <a className="italic font-semibold underline" {...props} />
-  ),
-  li: ({ ...props }) => (
-    <li className="pb-3 text-xl list-disc list-inside" {...props} />
   ),
   p: ({ ...props }) => <p className="text-xl" {...props} />,
 };
 
 export default function Example() {
-  const { theme } = useTheme();
-
   return (
     <>
       <Head>
@@ -140,7 +132,6 @@ export default function Example() {
           </div>
           <div className="absolute inset-0 z-10 w-full h-full rounded-3xl backdrop-blur-sm " />
         </div>
-        {theme === 'dark' && <FAQParticles />}
       </section>
     </>
   );

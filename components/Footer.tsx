@@ -1,5 +1,5 @@
 import React from 'react';
-import MarkLogo from '../public/images/cba-mark';
+import CBAMarkIcon from './Icons/CBAMarkIcon';
 
 const DATA = [
   {
@@ -44,8 +44,8 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center md:flex-row px-[2vw] py-16 mt-32 border-t-2 border-gray-200 relative">
-      <MarkLogo
+    <div className="flex flex-col items-center md:flex-row px-[2vw] py-16 mt-32 border-t-2 border-gray-200 relative">
+      <CBAMarkIcon
         className="fill-blooperDarkBlue dark:fill-white pb-12 lg:pb-0"
         width={120}
       />
@@ -85,7 +85,7 @@ const Footer = () => {
           jsfowles
         </a>
       </small>
-    </footer>
+    </div>
   );
 };
 

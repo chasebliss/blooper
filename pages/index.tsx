@@ -1,12 +1,8 @@
 import React from 'react';
-
-import { useTheme } from 'next-themes';
 import Heading from '../components/Heading';
 import GridCard from '../components/GridCard';
-
-import { HomeParticles } from '../styles/particles';
-import HeartBrain from '../public/images/heart-brain';
 import Head from 'next/head';
+import HeartBrainIcon from '../components/Icons/HeartBrainIcon';
 
 const DATA = [
   {
@@ -35,8 +31,6 @@ const DATA = [
 ];
 
 const Home = () => {
-  const { theme } = useTheme();
-
   return (
     <>
       <Head>
@@ -50,14 +44,13 @@ const Home = () => {
           blooper."
           descriptionTwo="It does a lot and it can get pretty weird. So, get familiar with its
           many tricks, or use the interface to update, download, and customize."
-          images={['/images/blooper-front.png']}
+          images={['/images/blooper-front.webp']}
         />
         <GridCard
           data={DATA}
-          backgroundImage="/images/modifiers-blooper.jpeg"
-          icon={<HeartBrain />}
+          backgroundImage="/images/modifiers-blooper.webp"
+          icon={<HeartBrainIcon />}
         />
-        {theme === 'dark' && <HomeParticles theme={theme} />}
       </section>
     </>
   );

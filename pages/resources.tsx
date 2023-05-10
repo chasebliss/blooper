@@ -1,11 +1,9 @@
 import React from 'react';
 import Heading from 'components/Heading';
 import GridCard from '../components/GridCard';
-import HeartBrain from '../public/images/heart-brain';
 
-import { ResourcesParticles } from 'styles/particles';
-import { useTheme } from 'next-themes';
 import Head from 'next/head';
+import HeartBrainIcon from '../components/Icons/HeartBrainIcon';
 
 const DATA = [
   {
@@ -41,8 +39,6 @@ const DATA = [
 ];
 
 export const Resources = () => {
-  const { theme } = useTheme();
-
   return (
     <>
       <Head>
@@ -62,11 +58,9 @@ export const Resources = () => {
         />
         <GridCard
           data={DATA}
-          backgroundImage="/images/additive-blooper.jpeg"
-          icon={<HeartBrain />}
+          backgroundImage="/images/additive-blooper.webp"
+          icon={<HeartBrainIcon />}
         />
-
-        {theme === 'dark' && <ResourcesParticles />}
       </section>
     </>
   );
