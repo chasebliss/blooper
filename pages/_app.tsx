@@ -12,6 +12,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 import { Poppins } from 'next/font/google';
 import { useMediaQuery } from 'react-responsive';
+import Head from 'next/head';
 
 const poppins = Poppins({ weight: ['400', '500', '600'], subsets: ['latin'] });
 
@@ -26,6 +27,9 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
 
   return (
     <ThemeProvider attribute="class" defaultTheme="light">
+      <Head>
+        <link rel="icon" href="/images/favicon.ico" />
+      </Head>
       <header className={poppins.className}>
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
       </header>

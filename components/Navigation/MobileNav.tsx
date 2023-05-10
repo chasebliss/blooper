@@ -9,9 +9,12 @@ import CBALogo from '../Icons/CBALogo';
 const MobileNav = () => {
   const [isOpen, setOpen] = React.useState(false);
   return (
-    <header className="max-w-[1440px] flex items-center px-5 mx-auto h-[80px] absolute inset-0 w-full">
-      <nav className="relative flex justify-between h-full items-center w-full z-50">
-        <Link href="/" passHref>
+    <div className="max-w-[1440px] flex items-center px-5 mx-auto h-[80px] absolute inset-0 w-full">
+      <nav
+        className="relative flex justify-between h-full items-center w-full z-50"
+        role="navigation"
+      >
+        <Link href="/" passHref role="link" aria-label="Go to homepage">
           <CBALogo />
         </Link>
 
@@ -51,7 +54,7 @@ const MobileNav = () => {
           </ul>
         )}
       </nav>
-    </header>
+    </div>
   );
 };
 
