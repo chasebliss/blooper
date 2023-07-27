@@ -29,13 +29,17 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     <ThemeProvider attribute="class" defaultTheme="light">
       <Head>
         <link rel="icon" href="/images/favicon.ico" />
-        <meta property="twitter:card" content="CBA TESTING TWITTER CARD" />
-        <meta property="twitter:title" content="CBA TESTING TWITTER TITLE" />
+        <meta property="og:title" content="Blooper by Chase Bliss" />
         <meta
-          property="twitter:description"
-          content="CBA TESTING TWITTER DESCRIPTION"
+          property="og:description"
+          content="A performance looper with additive sound design."
         />
-        <meta property="description" content="CBA TESTING DESCRIPTION" />
+        <meta
+          property="og:image"
+          content="https://blooper.chasebliss.com/_next/image?url=%2Fimages%2Fblooper-front.webp&w=256&q=75"
+        />
+        <meta property="og:url" content="https://blooper.chasebliss.com" />
+        <meta property="og:type" content="website" />
       </Head>
       <header className={poppins.className}>
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
