@@ -35,12 +35,26 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           content="A performance looper with additive sound design."
         />
         <meta
+          property="description"
+          content="A performance looper with additive sound design."
+        />
+        <meta
           property="og:image"
-          content="https://blooper.chasebliss.com/_next/image?url=%2Fimages%2Fblooper-front.webp&w=256&q=75"
+          content="https://images.squarespace-cdn.com/content/v1/622176a9b8d15d57ffbf5700/dc30d122-ba24-4732-a3cd-eaa2744c6b40/Chase+Bliss_Logo_Horizontal.png?format=1500w"
         />
         <meta property="og:image:height" content="100" />
         <meta property="og:url" content="https://blooper.chasebliss.com" />
         <meta property="og:type" content="website" />
+        <meta
+          property="twitter:image"
+          content="https://images.squarespace-cdn.com/content/v1/622176a9b8d15d57ffbf5700/dc30d122-ba24-4732-a3cd-eaa2744c6b40/Chase+Bliss_Logo_Horizontal.png?format=1500w"
+        />
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:title" content="Blooper by Chase Bliss" />
+        <meta
+          property="twitter:description"
+          content="A performance looper with additive sound design."
+        />
       </Head>
       <header className={poppins.className}>
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
