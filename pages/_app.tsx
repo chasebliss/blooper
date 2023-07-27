@@ -38,6 +38,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           property="og:image"
           content="https://blooper.chasebliss.com/_next/image?url=%2Fimages%2Fblooper-front.webp&w=256&q=75"
         />
+        <meta property="og:image:height" content="100" />
         <meta property="og:url" content="https://blooper.chasebliss.com" />
         <meta property="og:type" content="website" />
       </Head>
