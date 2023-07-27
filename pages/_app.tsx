@@ -29,6 +29,13 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     <ThemeProvider attribute="class" defaultTheme="light">
       <Head>
         <link rel="icon" href="/images/favicon.ico" />
+        <meta property="twitter:card" content="CBA TESTING TWITTER CARD" />
+        <meta property="twitter:title" content="CBA TESTING TWITTER TITLE" />
+        <meta
+          property="twitter:description"
+          content="CBA TESTING TWITTER DESCRIPTION"
+        />
+        <meta property="description" content="CBA TESTING DESCRIPTION" />
       </Head>
       <header className={poppins.className}>
         {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
