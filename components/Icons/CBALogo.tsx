@@ -2,7 +2,7 @@ import * as React from 'react';
 import { SVGProps } from 'react';
 const CBALogo = (props: SVGProps<SVGSVGElement>) => (
   <figure
-    className="w-52 fill-blooperDarkBlue"
+    className="w-52 fill-blooperDarkBlue dark:fill-white cursor-pointer"
     title="Click to go to home page"
   >
     <svg
