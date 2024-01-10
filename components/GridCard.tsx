@@ -63,7 +63,7 @@ const GridCard = ({ data, backgroundImage, icon }: Props) => {
             fill
             src={backgroundImage}
           />
-          <div className="absolute inset-0 bg-black/40 z-40" />
+          <div className="absolute inset-0 bg-black/50 z-40" />
         </figure>
       </div>
     </div>

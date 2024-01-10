@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
+import clsx from 'clsx';
 
 const DATA = [
   {
@@ -64,7 +64,6 @@ This makes it possible to completely transform your loop with stability and the 
   },
 ];
 
-const classNames = (...classes: string[]) => classes.filter(Boolean).join(' ');
 const markdownConfig = {
   a: ({ ...props }) => (
     <a className="italic font-semibold underline" {...props} />
@@ -73,7 +72,7 @@ const markdownConfig = {
 };
 
 export default function Example() {
-  const [isOpen, setIsOpen] = useState(Array(DATA.length).fill(false));
+  const [openIndex, setOpenIndex] = useState(-1);
 
   return (
     <>
@@ -84,64 +83,55 @@ export default function Example() {
         <div className="relative px-4 pt-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
           <div className="relative z-40 mx-auto max-w-3xl">
             <h1 className="pb-8 text-5xl lg:text-8xl md:text-7xl font-semibold text-center">
-              FAQ's
+              FAQ&apos;s
             </h1>
             <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40 dark:divide-white/40">
               {DATA.map((faq, index) => (
-                <Disclosure
-                  as="div"
-                  key={faq.question}
-                  className="pt-6 group"
-                  defaultOpen={isOpen[index]}
-                >
-                  {({ open }) => (
-                    <>
-                      <dt
-                        className={`${
-                          open ? 'italic' : ''
-                        } text-lg rounded-3xl group-hover:italic`}
-                      >
-                        <button
-                          className="flex justify-between items-center w-full text-left"
-                          onClick={() => {
-                            const newIsOpen = [...isOpen];
-                            newIsOpen[index] = !newIsOpen[index];
-                            setIsOpen(newIsOpen);
-                          }}
-                        >
-                          <span className="font-medium">
-                            <ReactMarkdown
-                              remarkPlugins={[remarkGfm, remarkBreaks]}
-                            >
-                              {faq.question}
-                            </ReactMarkdown>
-                          </span>
-                          <span className="flex items-center ml-6 h-7">
-                            <ChevronDownIcon
-                              className={classNames(
-                                open ? '-rotate-180' : 'rotate-0',
-                                'w-16 transform',
-                              )}
-                              aria-hidden="true"
-                            />
-                          </span>
-                        </button>
-                      </dt>
-                      <div
-                        className={`pr-12 ml-6 mt-2 transition-all duration-500 ease-in-out ${
-                          isOpen[index] ? 'max-h-[100vh]' : 'max-h-0'
-                        } overflow-hidden`}
-                      >
+                <div key={faq.question} className="pt-6 group">
+                  <dt
+                    className={`${
+                      openIndex === index ? 'italic' : ''
+                    } text-lg rounded-3xl group-hover:italic`}
+                  >
+                    <button
+                      onClick={() =>
+                        setOpenIndex(openIndex === index ? -1 : index)
+                      }
+                      className="flex gap-8 justify-between items-center w-full text-left"
+                    >
+                      <span className="font-medium">
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm, remarkBreaks]}
-                          components={markdownConfig}
                         >
-                          {faq.answer}
+                          {faq.question}
                         </ReactMarkdown>
-                      </div>
-                    </>
-                  )}
-                </Disclosure>
+                      </span>
+                      <span
+                        className={clsx('transform transition-transform', {
+                          'rotate-180': openIndex === index,
+                          'rotate-0': openIndex !== index,
+                        })}
+                      >
+                        <ChevronDownIcon
+                          aria-hidden="true"
+                          className="w-16 md:w-8"
+                        />
+                      </span>
+                    </button>
+                  </dt>
+                  <div
+                    className={`pr-12 ml-6 mt-2 transition-all duration-500 ease-in-out ${
+                      openIndex === index ? 'max-h-[100vh]' : 'max-h-0'
+                    } overflow-hidden`}
+                  >
+                    <ReactMarkdown
+                      remarkPlugins={[remarkGfm, remarkBreaks]}
+                      components={markdownConfig}
+                    >
+                      {faq.answer}
+                    </ReactMarkdown>
+                  </div>
+                </div>
               ))}
             </dl>
           </div>
