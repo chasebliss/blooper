@@ -19,7 +19,7 @@ const Heading = ({
   modifier,
 }: Props) => {
   return (
-    <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-24 pb-16 xl:py-16">
+    <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-32 pb-16 xl:py-16">
       <h2 className="pb-2 ">{title}</h2>
       {subheading && <h1>{subheading}</h1>}
       <div className="flex flex-col lg:flex-row">
@@ -55,8 +55,8 @@ const Heading = ({
         {descriptionOne && (
           <p
             className={`${
-              images && `lg:pl-16`
-            } leading-10 max-w-[40ch] pt-16 lg:pt-0`}
+              images && images.length > 0 ? `lg:pl-16 pt-16` : 'pt-2'
+            } leading-10 max-w-[40ch] lg:pt-0`}
           >
             {descriptionOne}
             <br />

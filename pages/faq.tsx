@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import remarkGfm from 'remark-gfm';
@@ -12,8 +12,8 @@ const DATA = [
     answer: `
 No, they are fun and helpful. the dip switches perform two jobs:
 
-- Customize blooper
-- Configure expression, cv, or internal modulation
+\` -\` __Customize blooper__
+\` -\` __Configure expression, cv, or internal modulation__
 
 That’s it! 
     
@@ -27,9 +27,7 @@ Some usb cables won’t make a good connection with blooper. Use the included us
   {
     question: `###### How do I access the alternate modifiers?`,
     answer: `
-The bank a and bank b dip switches give you access to two different
-sets of modifiers. you can also choose your own modifiers and
-arrangements using the [blip interface](https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html).`,
+The bank a and bank b dip switches give you access to two different sets of modifiers. You can also choose your own modifiers and arrangements using the [blip interface](https://chasebliss.com/wp-content/uploads/2021/12/blooper.3.1.1.html).`,
   },
   {
     question: `###### Why is my loop getting weird when I record modifiers in add mode?`,
@@ -64,8 +62,6 @@ This way, when you load up an old loop the controls won’t be invisibly locked 
 This makes it possible to completely transform your loop with stability and the modifiers, instead of those effects simply getting piled on top. you can go forward and backward through your layers, but you can’t isolate the audio on just one layer.
 `,
   },
-
-  // More questions...
 ];
 
 const classNames = (...classes: string[]) => classes.filter(Boolean).join(' ');
@@ -77,24 +73,42 @@ const markdownConfig = {
 };
 
 export default function Example() {
+  const [isOpen, setIsOpen] = useState(Array(DATA.length).fill(false));
+
   return (
     <>
       <Head>
         <title>FAQ - Blooper</title>
       </Head>
-      <section className="w-full flex flex-col py-24">
-        <div className="relative px-4 py-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
+      <section className="w-full flex flex-col pt-24 lg:py-0">
+        <div className="relative px-4 pt-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
           <div className="relative z-40 mx-auto max-w-3xl">
-            <h3 className="pb-8 font-semibold text-center">
-              Frequently asked questions
-            </h3>
+            <h1 className="pb-8 text-5xl lg:text-8xl md:text-7xl font-semibold text-center">
+              FAQ's
+            </h1>
             <dl className="mt-6 space-y-6 divide-y divide-blooperDarkBlue/40 dark:divide-white/40">
-              {DATA.map((faq) => (
-                <Disclosure as="div" key={faq.question} className="pt-6">
+              {DATA.map((faq, index) => (
+                <Disclosure
+                  as="div"
+                  key={faq.question}
+                  className="pt-6 group"
+                  defaultOpen={isOpen[index]}
+                >
                   {({ open }) => (
                     <>
-                      <dt className="text-lg px-6 hover:bg-black/10 rounded-3xl ">
-                        <Disclosure.Button className="flex justify-between items-center w-full text-left">
+                      <dt
+                        className={`${
+                          open ? 'italic' : ''
+                        } text-lg rounded-3xl group-hover:italic`}
+                      >
+                        <button
+                          className="flex justify-between items-center w-full text-left"
+                          onClick={() => {
+                            const newIsOpen = [...isOpen];
+                            newIsOpen[index] = !newIsOpen[index];
+                            setIsOpen(newIsOpen);
+                          }}
+                        >
                           <span className="font-medium">
                             <ReactMarkdown
                               remarkPlugins={[remarkGfm, remarkBreaks]}
@@ -106,16 +120,17 @@ export default function Example() {
                             <ChevronDownIcon
                               className={classNames(
                                 open ? '-rotate-180' : 'rotate-0',
-                                'h-6 w-6 transform',
+                                'w-16 transform',
                               )}
                               aria-hidden="true"
                             />
                           </span>
-                        </Disclosure.Button>
+                        </button>
                       </dt>
-                      <Disclosure.Panel
-                        as="dd"
-                        className="pr-12 ml-6 mt-2 px-6"
+                      <div
+                        className={`pr-12 ml-6 mt-2 transition-all duration-500 ease-in-out ${
+                          isOpen[index] ? 'max-h-[100vh]' : 'max-h-0'
+                        } overflow-hidden`}
                       >
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm, remarkBreaks]}
@@ -123,7 +138,7 @@ export default function Example() {
                         >
                           {faq.answer}
                         </ReactMarkdown>
-                      </Disclosure.Panel>
+                      </div>
                     </>
                   )}
                 </Disclosure>

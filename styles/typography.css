@@ -2,7 +2,7 @@ h1 {
   font-size: calc((4.2 - 1) * 1.2vw + 1rem);
   line-height: 1.2em;
   max-width: 25ch;
-  @apply font-medium  pb-12;
+  @apply font-medium pb-12;
 }
 
 h2 {

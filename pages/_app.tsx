@@ -11,14 +11,17 @@ import Footer from '../components/Footer';
 import { AnimatePresence, motion } from 'framer-motion';
 
 import { Poppins } from 'next/font/google';
-import { useMediaQuery } from 'react-responsive';
+
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const MediaQuery = dynamic(() => import('react-responsive'), {
+  ssr: false,
+});
 
 const poppins = Poppins({ weight: ['400', '500', '600'], subsets: ['latin'] });
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
-  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 976px)' });
-
   const variants = {
     hidden: { opacity: 0, x: -200, y: 0 },
     enter: { opacity: 1, x: 0, y: 0 },
@@ -26,7 +29,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
   };
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class" defaultTheme="dark">
       <Head>
         <link rel="icon" href="/images/favicon.ico" />
         <meta property="og:title" content="Blooper by Chase Bliss" />
@@ -57,7 +60,9 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
         />
       </Head>
       <header className={poppins.className}>
-        {isTabletOrMobile ? <MobileNav /> : <DesktopNav />}
+        <MediaQuery query="(max-width: 976px)">
+          {(matches) => (matches ? <MobileNav /> : <DesktopNav />)}
+        </MediaQuery>
       </header>
 
       <AnimatePresence

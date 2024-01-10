@@ -118,9 +118,9 @@ const Modifiers = () => {
           descriptionOne="The modifiers are the creative heart of blooper, allowing you to contort and reimagine your loops."
           modifier
         />
-        <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw] md:mt-16">
+        <ul className="grid md:grid-cols-2 xl:grid-cols-3 gap-16 mx-[10vw] md:mt-16 flex flex-wrap align-stretch">
           {DATA.map((card) => (
-            <li key={card.id}>
+            <li key={card.id} className="flex flex-col justify-between">
               <div className="">
                 <figure className="relative w-full flex justify-center">
                   <Image
