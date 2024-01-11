@@ -22,7 +22,7 @@ const DesktopNav = () => {
           {NAV_ITEMS.map(({ id, title, route, external }) => (
             <li key={id} className="nav relative">
               <Link href={route} passHref target={external ? '__blank' : ''}>
-                <div className={`hover:not-italic flex items-center`}>
+                <div className="hover:not-italic flex items-center">
                   {title}
                   {external && (
                     <ExternalLinkIcon

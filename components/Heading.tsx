@@ -23,12 +23,12 @@ const Heading: React.FC<Props> = ({
   const hasImages = images && images?.length > 0;
 
   return (
-    <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-32 pb-16 xl:py-16">
+    <div className="mx-[7vw] lg:mt-8">
       <h2 className="pb-2">{title}</h2>
       {subheading && <h1>{subheading}</h1>}
       <div className="flex flex-col lg:flex-row">
         {singleImage ? (
-          <figure className="w-1/2 lg:w-56 lg:mx-0 mx-auto relative">
+          <figure className="w-24 md:w-48 lg:w-56 lg:mx-0 mx-auto relative">
             <Image
               priority
               src={images[0]}
@@ -59,7 +59,7 @@ const Heading: React.FC<Props> = ({
         {descriptionOne && (
           <div
             className={clsx(
-              'flex flex-col lg:space-y-8 justify-center',
+              'flex flex-col gap-8 lg:space-y-8 justify-center',
               hasImages && 'lg:pl-16 pt-8',
             )}
           >

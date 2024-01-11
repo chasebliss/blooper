@@ -1,4 +1,5 @@
 import React from 'react';
+import clsx from 'clsx';
 
 interface Props {
   children?: React.ReactNode;
@@ -29,9 +30,10 @@ const BtnComponent = ({
       aria-label={ariaLabel || 'Button'}
     >
       <button
-        className={`border w-32 transition-all duration-300 ${
-          light ? 'border-white' : 'border-blooperDarkBlue dark:border-white'
-        } border-2 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30`}
+        className={clsx(
+          'border w-32 transition-all duration-300 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30',
+          light ? 'border-white' : 'border-blooperDarkBlue dark:border-white',
+        )}
         aria-label={children ? undefined : ariaLabel || 'Button'}
       >
         {children}

@@ -1,9 +1,9 @@
 h1 {
-  font-size: calc((4.2 - 1) * 1.2vw + 1rem);
+  @apply font-medium pb-12 text-[calc((4.2-1)*1.2vw+1rem)] md:text-[calc((4.2-1)*1.2vw+1.5rem)];
   line-height: 1.2em;
   max-width: 25ch;
-  @apply font-medium pb-12;
 }
+
 
 h2 {
   font-size: calc((3.2 - 1) * 1.0vw + 1rem);
@@ -22,7 +22,7 @@ h4 {
 
 p {
   line-height: 1.7em;
-  @apply pb-5 text-[22px] md:text-[28px];
+  @apply text-[22px] md:text-[28px];
 }
 p.troop {
   font-size: calc((1.2 - 1) * 1.2vw + 1rem);

@@ -41,11 +41,17 @@ const DATA = [
   },
 ];
 
+interface FooterProps {
+  className: string;
+}
+
 const currentYear = new Date().getFullYear();
 
-const Footer = () => {
+const Footer = ({ className }: FooterProps) => {
   return (
-    <div className="flex flex-col items-center md:flex-row px-4 md:px-8 lg:px-16 py-16 mt-32 border-t-2 border-gray-200 relative">
+    <div
+      className={`flex flex-col items-center md:flex-row px-4 md:px-8 lg:px-16 py-16 border-t-2 border-gray-200 relative ${className}`}
+    >
       <CBAMarkIcon
         className="fill-blooperDarkBlue dark:fill-white pb-12 lg:pb-0"
         width={120}

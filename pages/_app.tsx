@@ -59,33 +59,33 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
           content="A performance looper with additive sound design."
         />
       </Head>
-      <header className={poppins.className}>
-        <MediaQuery query="(max-width: 976px)">
-          {(matches) => (matches ? <MobileNav /> : <DesktopNav />)}
-        </MediaQuery>
-      </header>
+      <div>
+        <header className={poppins.className}>
+          <MediaQuery query="(max-width: 976px)">
+            {(matches) => (matches ? <MobileNav /> : <DesktopNav />)}
+          </MediaQuery>
+        </header>
 
-      <AnimatePresence
-        mode="wait"
-        initial={false}
-        onExitComplete={() => window.scrollTo(0, 0)}
-      >
-        <motion.main
-          className={poppins.className}
-          key={router.route}
-          variants={variants} // Pass the variant object into Framer Motion
-          initial="hidden" // Set the initial state to variants.hidden
-          animate="enter" // Animated state to variants.enter
-          exit="exit" // Exit state (used later) to variants.exit
-          transition={{ type: 'linear' }} // Set the transition to linear
+        <AnimatePresence
+          mode="wait"
+          initial={false}
+          onExitComplete={() => window.scrollTo(0, 0)}
         >
-          <Component {...pageProps} key={router.route} />
-          <Analytics />
-        </motion.main>
-      </AnimatePresence>
-      <footer className={poppins.className}>
-        <Footer />
-      </footer>
+          <motion.main
+            className={`${poppins.className} flex-main`}
+            key={router.route}
+            variants={variants} // Pass the variant object into Framer Motion
+            initial="hidden" // Set the initial state to variants.hidden
+            animate="enter" // Animated state to variants.enter
+            exit="exit" // Exit state (used later) to variants.exit
+            transition={{ type: 'linear' }} // Set the transition to linear
+          >
+            <Component {...pageProps} key={router.route} />
+            <Analytics />
+          </motion.main>
+        </AnimatePresence>
+        <Footer className={poppins.className} />
+      </div>
     </ThemeProvider>
   );
 };
