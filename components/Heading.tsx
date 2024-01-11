@@ -7,7 +7,7 @@ interface Props {
   subheading?: string;
   descriptionOne?: string;
   descriptionTwo?: string;
-  images: string[];
+  images?: string[];
   modifier?: boolean;
 }
 
@@ -19,8 +19,8 @@ const Heading: React.FC<Props> = ({
   images,
   modifier,
 }) => {
-  const singleImage = images?.length === 1;
-  const hasImages = images?.length > 0;
+  const singleImage = images && images?.length === 1;
+  const hasImages = images && images?.length > 0;
 
   return (
     <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-32 pb-16 xl:py-16">
