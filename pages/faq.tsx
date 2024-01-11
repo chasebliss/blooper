@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import Head from 'next/head';
 import clsx from 'clsx';
 import { faqData } from '../data/faqData';
+import { useInView } from 'react-intersection-observer';
 
 const markdownConfig = {
   a: ({ ...props }) => (
@@ -16,13 +17,23 @@ const markdownConfig = {
 
 export default function Example() {
   const [openIndex, setOpenIndex] = useState(-1);
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0,
+  });
 
   return (
     <>
       <Head>
         <title>FAQ - Blooper</title>
       </Head>
-      <section className="w-full flex flex-col">
+      <section
+        ref={ref}
+        className={clsx(
+          'w-full flex flex-col transition-opacity duration-1000',
+          inView ? 'opacity-100' : 'opacity-0',
+        )}
+      >
         <div className="relative px-6 pt-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
           <div className="relative z-40 mx-auto max-w-3xl">
             <h1 className="pb-8 text-5xl lg:text-8xl md:text-7xl font-semibold text-center">

@@ -9,7 +9,7 @@ import { modifiersData } from '../data/modifiersData';
 
 const Modifiers = () => {
   const [headingRef, headingInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (

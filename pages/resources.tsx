@@ -9,11 +9,12 @@ import { resourcesData } from '../data/resourcesData';
 
 export const Resources = () => {
   const [headingRef, headingInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
   const [gridCardRef, gridCardInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
+
   return (
     <>
       <Head>

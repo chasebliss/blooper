@@ -7,10 +7,10 @@ import { homeData } from '../data/homeData';
 
 const Home = () => {
   const [headingRef, headingInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
   const [gridCardRef, gridCardInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (

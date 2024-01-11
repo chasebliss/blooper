@@ -8,10 +8,10 @@ import { midiData } from '../data/midiData';
 
 const Midi = () => {
   const [headingRef, headingInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
   const [gridCardRef, gridCardInView] = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
 
   return (

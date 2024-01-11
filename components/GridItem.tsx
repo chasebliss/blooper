@@ -12,17 +12,17 @@ export interface DataProps {
 }
 
 const GridItem = ({ item }: { item: DataProps }) => {
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <li
       ref={ref}
       className={clsx(
-        'grid lg:px-0 grid-cols-1 md:grid-cols-1 h-full md:items-end gap-8 transition-opacity duration-1000',
+        'grid lg:px-0 grid-cols-1 px-6 md:grid-cols-1 h-full md:items-end gap-8 transition-opacity duration-1000',
         inView ? 'opacity-100' : 'opacity-0',
       )}
     >
-      <div className="h-full">
+      <div>
         <h3 className="font-semibold break-keep">{item.title}</h3>
         <p className="text-base xl:text-2xl md:max-w-[25ch]">
           {item.description}

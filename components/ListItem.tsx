@@ -16,7 +16,7 @@ interface ListItemProps {
 }
 
 const ListItem: React.FC<Readonly<ListItemProps>> = ({ card }) => {
-  const [ref, inView] = useInView({ threshold: 0.2 });
+  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
     <li
