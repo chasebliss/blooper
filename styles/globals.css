@@ -27,10 +27,6 @@ header {
   z-index: 1000;
 }
 
-footer {
-  flex-shrink: 0;
-}
-
 html,
 body {
   @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white;

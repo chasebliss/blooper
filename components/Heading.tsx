@@ -1,33 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
+import clsx from 'clsx';
 
 interface Props {
   title: string;
   subheading?: string;
   descriptionOne?: string;
   descriptionTwo?: string;
-  images?: Array<string>;
+  images: string[];
   modifier?: boolean;
 }
 
-const Heading = ({
+const Heading: React.FC<Props> = ({
   title,
   subheading,
   descriptionOne,
   descriptionTwo,
   images,
   modifier,
-}: Props) => {
+}) => {
+  const singleImage = images?.length === 1;
+  const hasImages = images?.length > 0;
+
   return (
     <div className="px-6 md:px-[7vw] xl:px-[10vw] markdown py-32 pb-16 xl:py-16">
-      <h2 className="pb-2 ">{title}</h2>
+      <h2 className="pb-2">{title}</h2>
       {subheading && <h1>{subheading}</h1>}
       <div className="flex flex-col lg:flex-row">
-        {images?.length === 1 ? (
-          <figure className="w-1/2 lg:w-40 lg:mx-0 mx-auto relative">
+        {singleImage ? (
+          <figure className="w-1/2 lg:w-56 lg:mx-0 mx-auto relative">
             <Image
               priority
-              key={images[0]}
               src={images[0]}
               width={128}
               height={64}
@@ -52,26 +55,29 @@ const Heading = ({
             ))}
           </div>
         )}
+
         {descriptionOne && (
-          <p
-            className={`${
-              images && images.length > 0 ? `lg:pl-16 pt-16` : 'pt-2'
-            } leading-10 max-w-[40ch] lg:pt-0`}
+          <div
+            className={clsx(
+              'flex flex-col lg:space-y-8 justify-center',
+              hasImages && 'lg:pl-16 pt-8',
+            )}
           >
-            {descriptionOne}
-            <br />
-            <br />
-            {descriptionTwo && descriptionTwo}
+            <p className="leading-10 max-w-[40ch]">{descriptionOne}</p>
+            {descriptionTwo && (
+              <p className="leading-10 max-w-[40ch]">{descriptionTwo}</p>
+            )}
             {modifier && (
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 className="underline text-blooperBlue/70 dark:text-white hover:text-blooperBlue"
                 href="/resources/docs/modifier-manual.pdf"
               >
                 Click here to download the full guide
               </a>
             )}
-          </p>
+          </div>
         )}
       </div>
     </div>

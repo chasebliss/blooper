@@ -1,5 +1,6 @@
 import React from 'react';
 import CBAMarkIcon from './Icons/CBAMarkIcon';
+import FooterLinkList from './FooterLinkList';
 
 const DATA = [
   {
@@ -10,7 +11,7 @@ const DATA = [
       { id: 1, title: 'Store', link: 'https://www.chasebliss.com' },
       {
         id: 3,
-        title: 'Mailing List',
+        title: 'Newsletter sign up',
         link: 'https://www.chasebliss.com/mailing-list/about',
       },
     ],
@@ -44,45 +45,40 @@ const currentYear = new Date().getFullYear();
 
 const Footer = () => {
   return (
-    <div className="flex flex-col items-center md:flex-row px-[2vw] py-16 mt-32 border-t-2 border-gray-200 relative">
+    <div className="flex flex-col items-center md:flex-row px-4 md:px-8 lg:px-16 py-16 mt-32 border-t-2 border-gray-200 relative">
       <CBAMarkIcon
         className="fill-blooperDarkBlue dark:fill-white pb-12 lg:pb-0"
         width={120}
       />
-      <div className=" flex w-full justify-evenly">
-        {DATA.map(({ id, heading, items }) => (
-          <ul key={id} className="flex flex-col space-y-3">
-            <h4>{heading}</h4>
-            <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 flex-wrap">
-              {items.map((item) => (
-                <a key={item.id} href={item.link} target="_blank">
-                  <li className="flex text-xl">{item.title}</li>
-                </a>
-              ))}
-            </div>
-          </ul>
+      <div className="flex w-full mb-4 justify-evenly space-x-4 lg:space-x-8">
+        {DATA.map((section) => (
+          <FooterLinkList
+            key={section.id}
+            heading={section.heading}
+            items={section.items}
+          />
         ))}
       </div>
-      <small className="block text-sm dark:text-white text-blooperDarkBlue/80 absolute bottom-3 left-[2vw]">
-        created and copyrighted in {currentYear} - by{' '}
+      <small className="block text-sm dark:text-white text-blooperDarkBlue/80 absolute bottom-3 left-4 md:left-8 lg:left-16">
+        created and copyrighted in {currentYear} - by
         <a
           href="https://www.youtube.com/watch?v=izDc3G9ZRfw"
-          className="border-b border-blooperBlue01"
+          className="border-b border-blooperBlue01 ml-1"
         >
           cba,
-        </a>{' '}
+        </a>
         <a
           href="https://www.knobscreative.com/"
-          className=" border-b border-blooperBlue01"
+          className="border-b border-blooperBlue01 ml-1"
         >
-          knobs{' '}
-        </a>
-        and{' '}
+          knobs
+        </a>{' '}
+        and
         <a
           href="https://www.jsfowles.com"
-          className=" border-b border-blooperBlue01"
+          className="border-b border-blooperBlue01 ml-1"
         >
-          jsfowles
+          jsfowles.
         </a>
       </small>
     </div>

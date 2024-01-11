@@ -3,7 +3,7 @@ import { SVGProps } from 'react';
 
 const HeartBrain = (props: SVGProps<SVGSVGElement>) => (
   <svg
-    className="fill-white"
+    className="fill-white w-full"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 248.18 79.51"
     {...props}

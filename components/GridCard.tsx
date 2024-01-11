@@ -1,67 +1,32 @@
 import React from 'react';
 import Image from 'next/image';
-import Button from './Button';
 
-interface DataProps {
-  title?: string;
-  link?: string;
-  description?: string;
-  downloadable?: boolean;
-  route?: string;
-}
+import GridItem, { DataProps } from './GridItem';
 
 interface Props {
   icon?: React.ReactNode;
   backgroundImage: string;
-  data: Array<DataProps>;
+  data: DataProps[];
 }
 
-const GridCard = ({ data, backgroundImage, icon }: Props) => {
+const GridCard: React.FC<Props> = ({ data, backgroundImage, icon }) => {
   return (
     <div className="mx-[7vw] lg:py-16">
       <div className="w-full relative py-16">
-        <div className="relative text-white grid grid-cols-1  lg:grid-cols-5 z-50 justify-items-center items-center">
-          <div className="w-2/3 lg:w-full col-span-2 lg:px-[5vw] xl:px-[4vw] pt-4">
-            {icon}
-          </div>
-          <ul className="grid gird-cols-1 md:grid-cols-2  pt-8 gap-6 xl:gap-16  col-span-3">
-            {data.map((data) => (
-              <li
-                key={data.title}
-                className="grid px-[4vw] lg:px-0 grid-cols-2 md:grid-cols-1 h-full justify-items-end md:justify-items-start items-center md:items-end"
-              >
-                <div className="h-full ">
-                  <h3 className="font-semibold pb-3">{data.title}</h3>
-                  <p className="text-base xl:text-2xl max-w-[25ch]">
-                    {data.description}
-                  </p>
-                </div>
-
-                <div className="flex flex-col md:flex-row md:space-x-3 md:block space-y-3 justify-center">
-                  <Button light href={data.link} route={data.route}>
-                    View
-                  </Button>
-                  {data.downloadable && (
-                    <Button
-                      light
-                      href={data.link}
-                      route={data.route}
-                      downloadable
-                    >
-                      Download
-                    </Button>
-                  )}
-                </div>
-              </li>
+        <div className="relative text-white grid grid-cols-1 lg:grid-cols-3 z-50 justify-items-center items-center">
+          <div className="col-span-1 pb-16">{icon}</div>
+          <ul className="grid grid-cols-1 md:grid-cols-2 col-span-2 gap-16 px-8 w-full">
+            {data.map((item) => (
+              <GridItem key={item.title} item={item} />
             ))}
           </ul>
         </div>
         <figure className="absolute inset-0">
           <Image
-            style={{ objectFit: 'cover' }}
-            alt="someone twisting knobs"
+            alt="Background"
             fill
             src={backgroundImage}
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/50 z-40" />
         </figure>
