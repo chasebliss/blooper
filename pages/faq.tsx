@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDownIcon } from '@heroicons/react/24/outline';
+import { ChevronUpIcon } from '@heroicons/react/24/outline';
 import remarkGfm from 'remark-gfm';
 import remarkBreaks from 'remark-breaks';
 import ReactMarkdown from 'react-markdown';
@@ -97,9 +97,9 @@ export default function Example() {
                       onClick={() =>
                         setOpenIndex(openIndex === index ? -1 : index)
                       }
-                      className="flex gap-8 justify-between items-center w-full text-left"
+                      className="flex gap-4 justify-between items-center w-full text-left"
                     >
-                      <span className="font-medium">
+                      <span className="font-medium flex-grow">
                         <ReactMarkdown
                           remarkPlugins={[remarkGfm, remarkBreaks]}
                         >
@@ -107,22 +107,25 @@ export default function Example() {
                         </ReactMarkdown>
                       </span>
                       <span
-                        className={clsx('transform transition-transform', {
-                          'rotate-180': openIndex === index,
-                          'rotate-0': openIndex !== index,
-                        })}
+                        className={clsx(
+                          'flex-shrink-0 transform transition-transform pr-2',
+                          {
+                            'rotate-180': openIndex === index,
+                          },
+                        )}
                       >
-                        <ChevronDownIcon
-                          aria-hidden="true"
-                          className="w-16 md:w-8"
-                        />
+                        <ChevronUpIcon aria-hidden="true" className="w-6 h-6" />
                       </span>
                     </button>
                   </dt>
                   <div
-                    className={`pr-12 ml-6 mt-2 transition-all duration-500 ease-in-out ${
-                      openIndex === index ? 'max-h-[100vh]' : 'max-h-0'
-                    } overflow-hidden`}
+                    className={clsx(
+                      'pr-12 ml-6 mt-2 transition-all duration-500 ease-in-out overflow-hidden',
+                      {
+                        'max-h-[100vh]': openIndex === index,
+                        'max-h-0': openIndex !== index,
+                      },
+                    )}
                   >
                     <ReactMarkdown
                       remarkPlugins={[remarkGfm, remarkBreaks]}
