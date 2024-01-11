@@ -13,7 +13,7 @@ interface Props {
 const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
   return (
     <div className="mx-[4vw] drop-shadow-2xl my-16 lg:my-32">
-      <figure className="w-64  md:w-96 lg:w-[30vw] mx-auto pb-16">
+      <figure className="w-80  md:w-96 lg:w-[30vw] mx-auto pb-16">
         <HeartBrainIcon />
       </figure>
       <div className="w-full relative py-16 lg:p-24 rounded-3xl overflow-hidden aspect-auto">
