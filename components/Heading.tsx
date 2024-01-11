@@ -28,7 +28,7 @@ const Heading: React.FC<Props> = ({
       {subheading && <h1>{subheading}</h1>}
       <div className="flex flex-col lg:flex-row">
         {singleImage ? (
-          <figure className="w-24 md:w-48 lg:w-56 lg:mx-0 mx-auto relative">
+          <figure className="w-48 lg:w-56 lg:mx-0 mx-auto relative">
             <Image
               priority
               src={images[0]}
