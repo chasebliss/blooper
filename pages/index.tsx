@@ -2,7 +2,6 @@ import React from 'react';
 import Heading from '../components/Heading';
 import GridCard from '../components/GridCard';
 import Head from 'next/head';
-import HeartBrainIcon from '../components/Icons/HeartBrainIcon';
 import { useInView } from 'react-intersection-observer';
 import { homeData } from '../data/homeData';
 
