@@ -56,7 +56,7 @@ const Footer = ({ className }: FooterProps) => {
         className="fill-blooperDarkBlue dark:fill-white pb-12 lg:pb-0"
         width={120}
       />
-      <div className="flex w-full mb-4 justify-evenly space-x-4 lg:space-x-8">
+      <div className="flex w-full mb-4 justify-around space-x-4 lg:space-x-8">
         {DATA.map((section) => (
           <FooterLinkList
             key={section.id}
