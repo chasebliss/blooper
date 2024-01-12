@@ -32,11 +32,13 @@ const Modifiers = () => {
             modifier
           />
         </div>
-        <ul className="grid md:grid-cols-2 xl:grid-cols-3 my-16 gap-24 lg:gap-32 mx-[7vw] md:mt-16 ">
-          {modifiersData.map((card) => (
-            <ListItem key={card.id} card={card} />
-          ))}
-        </ul>
+        <div className="mx-[7vw]">
+          <ul className="grid gap-x-16 gap-y-24 mx-auto xl:gap-32 md:grid-cols-2 lg:grid-cols-3 my-16 w-fit">
+            {modifiersData.map((card) => (
+              <ListItem key={card.id} card={card} />
+            ))}
+          </ul>
+        </div>
       </section>
     </>
   );

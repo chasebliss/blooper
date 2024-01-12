@@ -22,7 +22,7 @@ const ListItem: React.FC<Readonly<ListItemProps>> = ({ card }) => {
     <li
       ref={ref}
       className={clsx(
-        'flex flex-col space-y-8 justify-between  transition-all duration-1000',
+        'flex flex-col space-y-8 justify-between w-72 transition-all duration-1000',
         inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
       )}
     >
@@ -40,7 +40,7 @@ const ListItem: React.FC<Readonly<ListItemProps>> = ({ card }) => {
         dangerouslySetInnerHTML={{ __html: card.description }}
       />
 
-      <div className="flex space-x-3 ">
+      <div className="flex space-x-8 justify-center lg:justify-start ">
         <Button href={card.asset}>View</Button>
         <Button href={card.asset} downloadable>
           Download

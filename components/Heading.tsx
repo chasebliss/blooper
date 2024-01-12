@@ -30,7 +30,7 @@ const Heading: React.FC<Props> = ({
     <div className="mx-[7vw] lg:mt-8">
       <h2 className="pb-2 font-extralight">{title}</h2>
       {subheading && <h1 className="font-black">{subheading}</h1>}
-      <div className="flex flex-col items-center lg:flex-row">
+      <div className="flex flex-col lg:flex-row">
         {singleImage ? (
           <figure className="w-48 lg:w-56 lg:mx-0 mx-auto relative pb-8 lg:pb-0">
             <Image
