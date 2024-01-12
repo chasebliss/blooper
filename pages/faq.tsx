@@ -12,7 +12,7 @@ const markdownConfig = {
   a: ({ ...props }) => (
     <a className="italic font-semibold underline" {...props} />
   ),
-  p: ({ ...props }) => <p className="text-xl" {...props} />,
+  p: ({ ...props }) => <p className="text-xl pb-6" {...props} />,
 };
 
 export default function Example() {

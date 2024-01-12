@@ -21,20 +21,28 @@ const Heading: React.FC<Props> = ({
 }) => {
   const singleImage = images && images?.length === 1;
   const hasImages = images && images?.length > 0;
+  const [imageLoaded, setImageLoaded] = React.useState(false);
 
+  React.useEffect(() => {
+    setImageLoaded(true);
+  }, []);
   return (
     <div className="mx-[7vw] lg:mt-8">
       <h2 className="pb-2 font-extralight">{title}</h2>
       {subheading && <h1 className="font-black">{subheading}</h1>}
-      <div className="flex flex-col lg:flex-row">
+      <div className="flex flex-col items-center lg:flex-row">
         {singleImage ? (
-          <figure className="w-48 lg:w-56 lg:mx-0 mx-auto relative">
+          <figure className="w-48 lg:w-56 lg:mx-0 mx-auto relative pb-8 lg:pb-0">
             <Image
               priority
               src={images[0]}
               width={128}
               height={64}
               alt="bloops"
+              className={clsx(
+                'transition-all duration-1000 ease-in-out',
+                imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
+              )}
               style={{
                 width: '100%',
                 height: 'auto',
@@ -42,7 +50,7 @@ const Heading: React.FC<Props> = ({
             />
           </figure>
         ) : (
-          <div className="space-x-5 lg:space-x-0 lg:space-y-5 flex lg:flex-col lg:justify-center items-center lg:pb-10 xl:bp-0">
+          <div className="space-x-5 lg:space-x-0 lg:space-y-5 flex lg:flex-col lg:justify-center items-center pb-8 lg:pb-0 ">
             {images?.map((img) => (
               <Image
                 priority
@@ -51,6 +59,10 @@ const Heading: React.FC<Props> = ({
                 width={64}
                 height={64}
                 alt="bloops"
+                className={clsx(
+                  'transition-all duration-1000 ease-in-out',
+                  imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
+                )}
               />
             ))}
           </div>
@@ -60,7 +72,7 @@ const Heading: React.FC<Props> = ({
           <div
             className={clsx(
               'flex flex-col gap-8 lg:space-y-8 justify-center',
-              hasImages && 'lg:pl-16 pt-8',
+              hasImages && 'lg:pl-16',
             )}
           >
             <p className="leading-10 max-w-[40ch]">{descriptionOne}</p>

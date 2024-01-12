@@ -18,17 +18,16 @@ const GridItem = ({ item }: { item: DataProps }) => {
     <li
       ref={ref}
       className={clsx(
-        'grid lg:px-0 grid-cols-1 px-6 md:grid-cols-1 h-full md:items-end gap-8 transition-all duration-1000',
+        'grid justify-between space-y-6 mx-6 transition-all duration-1000',
         inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
       )}
     >
-      <div>
-        <h3 className="font-semibold break-keep">{item.title}</h3>
-        <p className="text-base xl:text-2xl md:max-w-[25ch]">
-          {item.description}
-        </p>
-      </div>
-      <div className="flex gap-3">
+      <h3 className="font-semibold">{item.title}</h3>
+      <p className="text-base xl:text-2xl md:max-w-[25ch]">
+        {item.description}
+      </p>
+
+      <div className="flex gap-3 items-end">
         <Button light href={item.link} route={item.route}>
           View
         </Button>

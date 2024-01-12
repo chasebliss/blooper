@@ -12,14 +12,14 @@ interface Props {
 
 const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
   return (
-    <div className="mx-[7vw] lg:mx-0 drop-shadow-2xl lg:drop-shadow-none my-16 lg:mb-0">
+    <div className="mx-[7vw] lg:mx-0 drop-shadow-2xl lg:drop-shadow-none my-16 lg:mb-0 ">
       <figure className="w-80  md:w-96 lg:w-[30vw] mx-auto pb-20 lg:pt-20 lg:pb-32">
         <HeartBrainIcon />
       </figure>
       <div className="w-full relative py-16 lg:p-24 rounded-3xl lg:rounded-none overflow-hidden ">
         <div className="relative text-white grid z-50 justify-items-center items-center">
           {/*<div className="col-span-1 pb-16 drop-shadow-2xl">{icon}</div>*/}
-          <ul className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-32 px-auto lg:px-0 ">
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-x-32 px-auto lg:px-0 ">
             {data.map((item) => (
               <GridItem key={item.title} item={item} />
             ))}

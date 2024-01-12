@@ -2,7 +2,7 @@ export const faqData = [
   {
     question: '###### What do the dip switches do and should I be afraid?',
     answer: `
-No, they are fun and helpful. the dip switches perform two jobs:
+No, they are fun and helpful. the dip switches perform two jobs:  
 
 \` -\` __Customize blooper__
 \` -\` __Configure expression, cv, or internal modulation__
@@ -24,7 +24,7 @@ The bank a and bank b dip switches give you access to two different sets of modi
   {
     question: `###### Why is my loop getting weird when I record modifiers in add mode?`,
     answer: `
-You may notice the start/end points of your loop changing places, or other weird behaviour when you record certain modifiers. It can be helpful to physically think of blooper as a tape machine. When you first record a loop, you are setting the length of the tape.  
+You may notice the start/end points of your loop changing places, or other weird behaviour when you record certain modifiers. It can be helpful to physically think of blooper as a tape machine. When you first record a loop, you are setting the length of the tape.    
             
 From this point on you are free to do all kinds of weird things to the audio on that tape – and even the machinery itself – but you can’t change the length of that tape. 
 
