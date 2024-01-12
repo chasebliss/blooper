@@ -24,6 +24,7 @@ p {
   line-height: 1.7em;
   @apply text-[22px] md:text-[28px];
 }
+
 p.troop {
   font-size: calc((1.2 - 1) * 1.2vw + 1rem);
 }

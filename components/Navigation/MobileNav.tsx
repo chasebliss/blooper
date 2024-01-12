@@ -40,11 +40,15 @@ const MobileNav = () => {
       >
         <div
           className={clsx(
-            'flex justify-center items-center space-x-16 p-4 fixed z-50 text-blooperDarkBlue bg-white dark:bg-blooperBlue dark:text-white rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0',
-            !isOpen && 'shadow-lg',
+            'flex justify-center border  items-center space-x-12 p-2 fixed z-50  bg-white dark:bg-blooperBlue text-white rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 transition-colors duration-300',
+            !isOpen
+              ? 'shadow-lg border-transparent'
+              : 'border border-blooperDarkBlue/20 dark:border-blooperDarkBlue',
           )}
         >
-          <Hamburger toggled={isOpen} toggle={setOpen} size={32} />
+          <div className="dark:bg-blooperDarkBlue bg-blooperBlue01  rounded-full">
+            <Hamburger toggled={isOpen} toggle={setOpen} size={28} />
+          </div>
           <div>
             <ThemeButton />
           </div>
@@ -52,7 +56,7 @@ const MobileNav = () => {
 
         <ul
           className={clsx(
-            'flex items-center flex-col fixed bottom-0 left-0 w-full rounded-t-3xl bg-white dark:bg-blooperBlue p-16 pb-36 shadow-2xl transform transition-transform duration-500 ease-in-out',
+            'flex items-center flex-col fixed bottom-0 left-0 w-full rounded-t-3xl bg-white dark:bg-blooperBlue p-16 pb-36 shadow-2xl transform transition-all duration-500 ease-in-out',
             isOpen ? 'translate-y-0' : 'translate-y-full',
           )}
         >

@@ -20,7 +20,6 @@
 
 main {
   flex: 0 0 auto;
-  transition: all 10ms ease;
 }
 
 header {
@@ -29,7 +28,7 @@ header {
 
 html,
 body {
-  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white;
+  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white transition-colors duration-500;
 }
 
 html {
