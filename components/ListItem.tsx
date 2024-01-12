@@ -22,8 +22,8 @@ const ListItem: React.FC<Readonly<ListItemProps>> = ({ card }) => {
     <li
       ref={ref}
       className={clsx(
-        'flex flex-col space-y-8 justify-between transition-opacity duration-1000',
-        inView ? 'opacity-100' : 'opacity-0',
+        'flex flex-col space-y-8 justify-between  transition-all duration-1000',
+        inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
       )}
     >
       <figure className="relative w-full flex justify-center">

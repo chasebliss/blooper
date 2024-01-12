@@ -10,6 +10,7 @@ import { resourcesData } from '../data/resourcesData';
 export const Resources = () => {
   const [headingRef, headingInView] = useInView({
     threshold: 0.1,
+    triggerOnce: true,
   });
   const [gridCardRef, gridCardInView] = useInView({
     threshold: 0.1,
@@ -23,8 +24,8 @@ export const Resources = () => {
       <section className="w-full flex flex-col ">
         <div
           ref={headingRef}
-          className={`transition-opacity duration-1000 ${
-            headingInView ? 'opacity-100' : 'opacity-0'
+          className={`transition-all duration-1000 ${
+            headingInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
           <Heading
@@ -41,8 +42,8 @@ export const Resources = () => {
         </div>
         <div
           ref={gridCardRef}
-          className={`transition-opacity duration-1000 ${
-            gridCardInView ? 'opacity-100' : 'opacity-0'
+          className={`transition-all duration-1000 ${
+            gridCardInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
           <GridCard

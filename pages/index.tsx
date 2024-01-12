@@ -8,6 +8,7 @@ import { homeData } from '../data/homeData';
 const Home = () => {
   const [headingRef, headingInView] = useInView({
     threshold: 0.1,
+    triggerOnce: true,
   });
   const [gridCardRef, gridCardInView] = useInView({
     threshold: 0.1,
@@ -21,8 +22,8 @@ const Home = () => {
       <section className="w-full flex flex-col">
         <div
           ref={headingRef}
-          className={`transition-opacity duration-1000 ${
-            headingInView ? 'opacity-100' : 'opacity-0'
+          className={`transition-all duration-1000 ${
+            headingInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
           <Heading
@@ -35,8 +36,8 @@ const Home = () => {
         </div>
         <div
           ref={gridCardRef}
-          className={`transition-opacity duration-1000 ${
-            gridCardInView ? 'opacity-100' : 'opacity-0'
+          className={`transition-all duration-1000 ${
+            gridCardInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
           <GridCard

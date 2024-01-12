@@ -18,8 +18,8 @@ const GridItem = ({ item }: { item: DataProps }) => {
     <li
       ref={ref}
       className={clsx(
-        'grid lg:px-0 grid-cols-1 px-6 md:grid-cols-1 h-full md:items-end gap-8 transition-opacity duration-1000',
-        inView ? 'opacity-100' : 'opacity-0',
+        'grid lg:px-0 grid-cols-1 px-6 md:grid-cols-1 h-full md:items-end gap-8 transition-all duration-1000',
+        inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
       )}
     >
       <div>

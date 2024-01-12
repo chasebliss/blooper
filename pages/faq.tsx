@@ -30,8 +30,8 @@ export default function Example() {
       <section
         ref={ref}
         className={clsx(
-          'w-full flex flex-col transition-opacity duration-1000',
-          inView ? 'opacity-100' : 'opacity-0',
+          'w-full flex flex-col transition-all duration-1000',
+          inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
         )}
       >
         <div className="relative px-6 pt-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">

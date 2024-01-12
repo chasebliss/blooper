@@ -10,6 +10,7 @@ import { modifiersData } from '../data/modifiersData';
 const Modifiers = () => {
   const [headingRef, headingInView] = useInView({
     threshold: 0.1,
+    triggerOnce: true,
   });
 
   return (
@@ -20,8 +21,8 @@ const Modifiers = () => {
       <section className="w-full flex flex-col pb-8 lg:pb-16">
         <div
           ref={headingRef}
-          className={`transition-opacity duration-1000 ${
-            headingInView ? 'opacity-100' : 'opacity-0'
+          className={`transition-all duration-1000 ${
+            headingInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
           <Heading
