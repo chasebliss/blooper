@@ -43,13 +43,6 @@ const Home = () => {
           <GridCard
             data={homeData}
             backgroundImage="/images/modifiers-blooper.webp"
-            icon={
-              <img
-                src="/particles/s3.svg"
-                alt="Blooper"
-                className="fill-white w-1/2 mx-auto"
-              />
-            }
           />
         </div>
       </section>

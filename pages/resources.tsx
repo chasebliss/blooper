@@ -49,13 +49,6 @@ export const Resources = () => {
           <GridCard
             data={resourcesData}
             backgroundImage="/images/additive-blooper.webp"
-            icon={
-              <img
-                src="/particles/s9.svg"
-                alt="Blooper"
-                className="fill-white w-[20vw] mx-auto"
-              />
-            }
           />
         </div>
       </section>

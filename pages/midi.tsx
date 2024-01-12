@@ -1,7 +1,6 @@
 import React from 'react';
 import Heading from 'components/Heading';
 import GridCard from '../components/GridCard';
-import S1 from '../public/particles/s1';
 import Head from 'next/head';
 import { useInView } from 'react-intersection-observer';
 import { midiData } from '../data/midiData';
@@ -43,7 +42,6 @@ const Midi = () => {
           <GridCard
             backgroundImage="/images/bottom-view-blooper.webp"
             data={midiData}
-            icon={<S1 className="fill-white w-1/2 mx-auto" />}
           />
         </div>
       </section>
