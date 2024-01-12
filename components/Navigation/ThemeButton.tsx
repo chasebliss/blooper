@@ -15,7 +15,7 @@ const ThemeButton = () => {
     <button
       aria-label="Toggle Dark Mode"
       type="button"
-      className="relative flex justify-center items-center bg-blooperDarkBlue h-12 w-12 rounded-3xl md:rounded-full group"
+      className="relative flex justify-center items-center dark:bg-blooperDarkBlue bg-blooperBlue dark:lg:bg-blooperBlue h-12 w-12 rounded-3xl md:rounded-full group"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       <SunIcon

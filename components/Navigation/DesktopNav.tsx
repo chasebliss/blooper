@@ -30,7 +30,7 @@ const DesktopNav = () => {
   };
 
   return (
-    <header className="px-[4vw] py-[1.6vw] mx-auto flex items-center w-full">
+    <header className="fixed backdrop-blur-md backdrop-saturate-200 dark:backdrop-saturate-100 px-[4vw] h-[100px] mx-auto flex items-center w-full">
       <nav role="navigation" className="w-full">
         <motion.div
           variants={containerVariants}

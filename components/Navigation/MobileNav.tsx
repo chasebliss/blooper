@@ -18,28 +18,26 @@ const MobileNav = () => {
       document.body.classList.remove('no-scroll');
     }
 
-    // Cleanup function to remove the class when the component unmounts
     return () => {
       document.body.classList.remove('no-scroll');
     };
   }, [isOpen]);
 
   return (
-    <div className="max-w-[1440px] flex items-center px-5 mx-auto h-[100px] w-full">
+    <>
+      <Link
+        href="/"
+        passHref
+        role="link"
+        className="fixed max-w-[1440px] flex justify-center  h-[80px] w-full z-50 backdrop-blur-lg"
+        aria-label="Go to homepage"
+      >
+        <CBALogo />
+      </Link>
       <nav
         className="relative flex justify-between h-full items-center w-full z-50"
         role="navigation"
       >
-        <Link
-          href="/"
-          passHref
-          role="link"
-          className="mx-auto"
-          aria-label="Go to homepage"
-        >
-          <CBALogo />
-        </Link>
-
         <div
           className={clsx(
             'flex justify-center items-center space-x-16 p-4 fixed z-50 text-blooperDarkBlue bg-white dark:bg-blooperBlue dark:text-white rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0',
@@ -88,7 +86,7 @@ const MobileNav = () => {
           ))}
         </ul>
       </nav>
-    </div>
+    </>
   );
 };
 

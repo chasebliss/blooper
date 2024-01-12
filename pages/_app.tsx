@@ -60,7 +60,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
             </MediaQuery>
           </header>
 
-          <main>
+          <main className="pt-[100px]">
             <Component {...pageProps} key={router.route} />
             <Analytics />
           </main>
