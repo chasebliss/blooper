@@ -10,7 +10,7 @@ export const NAV_ITEMS = [
   {
     id: 4,
     title: 'interface',
-    route: 'https://chasebliss.github.io/',
+    route: 'https://blip.chasebliss.com',
     external: true,
   },
   // {
