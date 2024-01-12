@@ -40,7 +40,7 @@ const MobileNav = () => {
       >
         <div
           className={clsx(
-            'flex justify-center border  items-center space-x-12 p-2 fixed z-50  bg-white dark:bg-blooperBlue text-white rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 bottom-0 transition-colors duration-300',
+            'flex justify-center border  items-center space-x-12 p-2 fixed z-50  bg-white dark:bg-blooperBlue text-white rounded-full transform -translate-x-1/2 -translate-y-1/2 left-1/2 -bottom-2 transition-colors duration-300',
             !isOpen
               ? 'shadow-lg border-transparent'
               : 'border border-blooperDarkBlue/20 dark:border-blooperDarkBlue',
