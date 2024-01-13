@@ -48,7 +48,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
     };
   }, []);
 
-  if (isPageLoaded) {
+  if (!isPageLoaded) {
     return (
       <div className="h-screen flex justify-center text-5xl items-center w-screen">
         Loading...
