@@ -28,7 +28,7 @@ const Heading: React.FC<Props> = ({
   }, []);
   return (
     <div className="mx-[7vw] lg:mt-8">
-      <h2 className="pb-2 font-extralight">{title}</h2>
+      <h2 className="hidden lg:block pb-2 font-extralight">{title}</h2>
       {subheading && <h1 className="font-black">{subheading}</h1>}
       <div className="flex flex-col lg:flex-row">
         {singleImage ? (
@@ -49,7 +49,7 @@ const Heading: React.FC<Props> = ({
               }}
             />
           </figure>
-        ) : (
+        ) : (images &&
           <div className="space-x-5 lg:space-x-0 lg:space-y-5 flex lg:flex-col lg:justify-center items-center pb-8 lg:pb-0 ">
             {images?.map((img) => (
               <Image

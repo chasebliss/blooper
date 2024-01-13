@@ -6,8 +6,10 @@ import { NAV_ITEMS } from './data';
 import ThemeButton from './ThemeButton';
 import CBALogo from '../Icons/CBALogo';
 import ExternalLinkIcon from '../Icons/ExternalLinkIcon';
+import { useRouter } from 'next/router';
 
 const DesktopNav = () => {
+  const router = useRouter();
   const containerVariants = {
     hidden: { opacity: 1 },
     visible: {
@@ -48,7 +50,11 @@ const DesktopNav = () => {
             {NAV_ITEMS.map(({ id, title, route, external }) => (
               <motion.li
                 key={id}
-                className="nav relative"
+                className={`nav relative ${
+                  router.pathname === route
+                    ? 'underline underline-offset-8'
+                    : ''
+                }`}
                 variants={itemVariants}
               >
                 <Link href={route} passHref target={external ? '__blank' : ''}>
@@ -56,7 +62,7 @@ const DesktopNav = () => {
                     {title}
                     {external && (
                       <ExternalLinkIcon
-                        className="fill-blooperDarkBlue ml-2"
+                        className="dark:fill-white fill-blooperDarkBlue ml-2"
                         width={10}
                       />
                     )}

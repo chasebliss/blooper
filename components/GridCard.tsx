@@ -9,7 +9,7 @@ interface Props {
 
 const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
   return (
-    <div className="mx-[7vw] md:mx-[4vw] lg:mx-0 my-16 lg:mb-0 drop-shadow-2xl lg:drop-shadow-none">
+    <div className="mx-[4vw] lg:mx-0 my-16 lg:mb-0 drop-shadow-2xl lg:drop-shadow-none">
       <figure className="w-80 md:w-96 lg:w-[30vw] mx-auto pb-20 lg:pt-20 lg:pb-32">
         <HeartBrainIcon />
       </figure>
@@ -21,7 +21,7 @@ const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
           }}
         />
 
-        <ul className="grid grid-cols-1 md:grid-cols-2 relative gap-16 lg:gap-x-32 px-auto lg:px-0 z-20">
+        <ul className="grid grid-cols-1 md:grid-cols-2 text-white relative gap-16 lg:gap-x-32 px-auto lg:px-0 z-20">
           {data.map((item) => (
             <GridItem key={item.title} item={item} />
           ))}

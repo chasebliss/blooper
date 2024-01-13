@@ -5,11 +5,24 @@ import clsx from 'clsx';
 import { NAV_ITEMS } from './data';
 import { Sling as Hamburger } from 'hamburger-react';
 import ThemeButton from './ThemeButton';
-import CBALogo from '../Icons/CBALogo';
 import ExternalLinkIcon from '../Icons/ExternalLinkIcon';
+import { useRouter } from 'next/router';
+import CBAMarkIcon from '../Icons/CBAMarkIcon';
 
 const MobileNav = () => {
   const [isOpen, setOpen] = React.useState(false);
+  const router = useRouter();
+  const displayRoute =
+    router.pathname === '/'
+      ? 'Home'
+      : router.pathname
+          .replace(/^\/|\/$/g, '')
+          .charAt(0)
+          .toUpperCase() + router.pathname.slice(2);
+
+  const isActiveRoute = (route: string) => {
+    return router.pathname === route;
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -29,13 +42,14 @@ const MobileNav = () => {
         href="/"
         passHref
         role="link"
-        className="fixed max-w-[1440px] flex justify-center  h-[80px] w-full z-50 backdrop-blur-lg"
+        className="fixed max-w-[1440px] gap-8  flex items-center justify-center  h-[80px] w-full z-50 backdrop-blur-lg"
         aria-label="Go to homepage"
       >
-        <CBALogo />
+        <CBAMarkIcon className="w-8 fill-blooperDarkBlue" />
+        <h2 className="font-black">{displayRoute}</h2>
       </Link>
       <nav
-        className="relative flex justify-between h-full items-center w-full z-50"
+        className="relative flex justify-between h-full items-center w-full z-50 shadow-2xl"
         role="navigation"
       >
         <div
@@ -65,7 +79,15 @@ const MobileNav = () => {
               onClick={() => setOpen((curr) => !curr)}
               className="text-blooperDarkBlue dark:text-white"
             >
-              <Link href="/" passHref>
+              <Link
+                href="/"
+                passHref
+                className={clsx(
+                  'flex items-center',
+                  isActiveRoute('/') ? 'underline underline-offset-8' : '', // Apply underline if active
+                  'text-blooperDarkBlue dark:text-white',
+                )}
+              >
                 Home
               </Link>
             </h5>
@@ -76,7 +98,15 @@ const MobileNav = () => {
                 onClick={() => setOpen((curr) => !curr)}
                 className="text-blooperDarkBlue dark:text-white"
               >
-                <Link href={route} passHref className="flex">
+                <Link
+                  href={route}
+                  passHref
+                  className={clsx(
+                    'flex items-center',
+                    isActiveRoute(route) ? 'underline underline-offset-8' : '', // Apply underline if active
+                    'text-blooperDarkBlue dark:text-white',
+                  )}
+                >
                   {title}
                   {external && (
                     <ExternalLinkIcon
