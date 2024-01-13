@@ -7,18 +7,21 @@ import { Sling as Hamburger } from 'hamburger-react';
 import ThemeButton from './ThemeButton';
 import ExternalLinkIcon from '../Icons/ExternalLinkIcon';
 import { useRouter } from 'next/router';
-import CBAMarkIcon from '../Icons/CBAMarkIcon';
+import CBALogo from '../Icons/CBALogo';
 
 const MobileNav = () => {
   const [isOpen, setOpen] = React.useState(false);
   const router = useRouter();
-  const displayRoute =
-    router.pathname === '/'
-      ? 'Home'
-      : router.pathname
-          .replace(/^\/|\/$/g, '')
-          .charAt(0)
-          .toUpperCase() + router.pathname.slice(2);
+
+  const getDisplayRoute = (pathname: string) => {
+    if (pathname === '/') return '';
+    if (pathname === '/faq') return "FAQ's";
+
+    const formattedPath = pathname.replace(/^\/|\/$/g, '');
+    return formattedPath.charAt(0).toUpperCase() + formattedPath.slice(1);
+  };
+
+  const displayRoute = getDisplayRoute(router.pathname);
 
   const isActiveRoute = (route: string) => {
     return router.pathname === route;
@@ -38,16 +41,21 @@ const MobileNav = () => {
 
   return (
     <>
-      <Link
-        href="/"
-        passHref
-        role="link"
-        className="fixed max-w-[1440px] gap-8  flex items-center justify-center  h-[80px] w-full z-50 backdrop-blur-lg"
-        aria-label="Go to homepage"
-      >
-        <CBAMarkIcon className="w-8 dark:fill-white fill-blooperDarkBlue" />
-        <h2 className="font-black">{displayRoute}</h2>
-      </Link>
+      <div className="fixed grid grid-cols-2 px-[7vw] items-center h-[80px] z-50 backdrop-blur-lg w-full justify-center">
+        <Link
+          href="/"
+          passHref
+          role="link"
+          aria-label="Go to homepage"
+          className="flex justify-self-start w-40"
+        >
+          <CBALogo className=" dark:fill-white fill-blooperDarkBlue" />
+        </Link>
+        <h2 className="font-black leading-none text-xl w-fit justify-self-end pb-0.5">
+          {displayRoute}
+        </h2>
+      </div>
+
       <nav
         className="relative flex justify-between h-full items-center w-full z-50 shadow-2xl"
         role="navigation"

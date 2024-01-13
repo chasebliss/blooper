@@ -34,9 +34,9 @@ export default function Example() {
           inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
         )}
       >
-        <div className="relative px-6 pt-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
+        <div className="relative px-6 lg:pt-12 mx-auto max-w-4xl sm:py-16 sm:px-6 lg:px-8">
           <div className="relative z-40 mx-auto max-w-3xl">
-            <h1 className="pb-8 text-5xl lg:text-8xl md:text-7xl font-semibold text-center">
+            <h1 className="lg:block hidden pb-8 text-5xl lg:text-8xl md:text-7xl font-semibold text-center">
               FAQ&apos;s
             </h1>
             <dl className="mt-6 mb-16 space-y-6 divide-y divide-blooperDarkBlue/40 dark:divide-white/40">
