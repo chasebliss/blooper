@@ -45,7 +45,7 @@ const MobileNav = () => {
         className="fixed max-w-[1440px] gap-8  flex items-center justify-center  h-[80px] w-full z-50 backdrop-blur-lg"
         aria-label="Go to homepage"
       >
-        <CBAMarkIcon className="w-8 fill-blooperDarkBlue" />
+        <CBAMarkIcon className="w-8 dark:fill-white fill-blooperDarkBlue" />
         <h2 className="font-black">{displayRoute}</h2>
       </Link>
       <nav
