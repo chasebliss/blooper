@@ -21,40 +21,40 @@ const MediaQuery = dynamic(() => import('react-responsive'), {
 const poppins = Poppins({ weight: ['400', '500', '600'], subsets: ['latin'] });
 
 const MyApp = ({ Component, pageProps, router }: AppProps) => {
-  const [isPageLoaded, setIsPageLoaded] = useState(false);
-
-  useEffect(() => {
-    // Function to set isPageLoaded to true
-    const handleLoad = () => {
-      setIsPageLoaded(true);
-    };
-
-    // Ensure this runs only on the client side
-    if (typeof window !== 'undefined') {
-      // Add event listener for 'load' event
-      window.addEventListener('load', handleLoad);
-
-      // Check if the page is already loaded
-      if (document.readyState === 'complete') {
-        handleLoad();
-      }
-    }
-
-    // Cleanup function to remove the event listener
-    return () => {
-      if (typeof window !== 'undefined') {
-        window.removeEventListener('load', handleLoad);
-      }
-    };
-  }, []);
-
-  if (!isPageLoaded) {
-    return (
-      <div className="h-screen flex justify-center text-5xl items-center w-screen">
-        Loading...
-      </div>
-    ); // Or a more sophisticated loading component
-  }
+  // const [isPageLoaded, setIsPageLoaded] = useState(false);
+  //
+  // useEffect(() => {
+  //   // Function to set isPageLoaded to true
+  //   const handleLoad = () => {
+  //     setIsPageLoaded(true);
+  //   };
+  //
+  //   // Ensure this runs only on the client side
+  //   if (typeof window !== 'undefined') {
+  //     // Add event listener for 'load' event
+  //     window.addEventListener('load', handleLoad);
+  //
+  //     // Check if the page is already loaded
+  //     if (document.readyState === 'complete') {
+  //       handleLoad();
+  //     }
+  //   }
+  //
+  //   // Cleanup function to remove the event listener
+  //   return () => {
+  //     if (typeof window !== 'undefined') {
+  //       window.removeEventListener('load', handleLoad);
+  //     }
+  //   };
+  // }, []);
+  //
+  // if (!isPageLoaded) {
+  //   return (
+  //     <div className="h-screen flex justify-center text-5xl items-center w-screen">
+  //       Loading...
+  //     </div>
+  //   ); // Or a more sophisticated loading component
+  // }
 
   return (
     <ThemeProvider attribute="class" defaultTheme="dark">
