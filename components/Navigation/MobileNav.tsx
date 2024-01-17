@@ -51,7 +51,7 @@ const MobileNav = () => {
         >
           <CBALogo className=" dark:fill-white fill-blooperDarkBlue" />
         </Link>
-        <h2 className="font-black leading-none text-xl w-fit justify-self-end pb-0.5">
+        <h2 className="font-medium leading-none text-lg w-fit justify-self-end pb-0.5">
           {displayRoute}
         </h2>
       </div>
