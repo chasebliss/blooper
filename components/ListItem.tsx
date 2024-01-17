@@ -28,6 +28,7 @@ const ListItem: React.FC<Readonly<ListItemProps>> = ({ card }) => {
     >
       <figure className="relative w-full flex justify-center">
         <Image
+          priority
           width={175}
           height={150}
           src={card.img}
