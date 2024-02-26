@@ -33,7 +33,7 @@ const Modifiers = () => {
           />
         </div>
         <div className="mx-[7vw]">
-          <ul className="grid gap-x-16 gap-y-24 mx-auto xl:gap-32 md:grid-cols-2 lg:grid-cols-3 my-16 w-fit">
+          <ul className="grid gap-[14vw] mx-auto  md:grid-cols-2 lg:grid-cols-3 my-16 w-fit">
             {modifiersData.map((card) => (
               <ListItem key={card.id} card={card} />
             ))}

@@ -12,11 +12,11 @@ interface FooterLinkListProps {
 }
 
 const FooterLinkList: React.FC<FooterLinkListProps> = ({ heading, items }) => (
-  <ul className="flex flex-col space-y-3">
+  <ul className="flex flex-col space-y-3 w-fit">
     <h4>{heading}</h4>
-    <div className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4">
+    <div className="flex flex-col space-y-2">
       {items.map((item) => (
-        <li key={item.id} className="text-xl">
+        <li key={item.id} className="text-xl ">
           <a href={item.link} target="_blank" rel="noopener noreferrer">
             {item.title}
           </a>

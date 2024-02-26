@@ -18,7 +18,7 @@ const GridItem = ({ item }: { item: DataProps }) => {
     <li
       ref={ref}
       className={clsx(
-        'grid space-y-6  w-72 transition-all mx-auto duration-1000 rounded-3xl ',
+        'grid space-y-6 transition-all md:mx-auto duration-1000 rounded-3xl ',
         inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
       )}
     >
@@ -27,7 +27,7 @@ const GridItem = ({ item }: { item: DataProps }) => {
         {item.description}
       </p>
 
-      <div className="flex space-x-8 items-end lg:justify-start ">
+      <div className="flex justify-around items-end lg:justify-start ">
         <Button light href={item.link} route={item.route}>
           View
         </Button>

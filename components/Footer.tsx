@@ -49,45 +49,42 @@ const currentYear = new Date().getFullYear();
 
 const Footer = ({ className }: FooterProps) => {
   return (
-    <div
-      className={`flex flex-col items-center md:flex-row px-4 md:px-8 lg:px-16 py-16  relative ${className}`}
+    <footer
+      className={`flex flex-col md:flex-row gap-12 relative mx-[7vw] py-16 md:py-24 border-white border-t justify-around ${className}`}
     >
-      <CBAMarkIcon
-        className="fill-blooperDarkBlue dark:fill-white pb-12 lg:pb-0"
-        width={120}
-      />
-      <div className="flex w-full mb-4 justify-around space-x-4 lg:space-x-8">
-        {DATA.map((section) => (
-          <FooterLinkList
-            key={section.id}
-            heading={section.heading}
-            items={section.items}
-          />
-        ))}
+      <div className="flex flex-col items-center justify-center md:justify-start">
+        <CBAMarkIcon className="h-fit fill-blooperDarkBlue dark:fill-white pb-12 w-[150px] md:w-[200px]" />
+        <div className="text-sm dark:text-white text-blooperDarkBlue/80 h-fit max-w-[250px] ">
+          Created and copyrighted in {currentYear} - by
+          <a
+            href="https://www.youtube.com/watch?v=izDc3G9ZRfw"
+            className="border-b h-fit border-blooperBlue01 ml-1"
+          >
+            cba,
+          </a>
+          <a
+            href="https://www.knobscreative.com/"
+            className="border-b h-fit border-blooperBlue01 ml-1"
+          >
+            knobs
+          </a>{' '}
+          and
+          <a
+            href="https://www.jsfowles.com"
+            className="border-b h-fit border-blooperBlue01 ml-1"
+          >
+            jsfowles.
+          </a>
+        </div>
       </div>
-      <small className="block text-sm dark:text-white text-blooperDarkBlue/80 absolute bottom-3 left-4 md:left-8 lg:left-16">
-        created and copyrighted in {currentYear} - by
-        <a
-          href="https://www.youtube.com/watch?v=izDc3G9ZRfw"
-          className="border-b border-blooperBlue01 ml-1"
-        >
-          cba,
-        </a>
-        <a
-          href="https://www.knobscreative.com/"
-          className="border-b border-blooperBlue01 ml-1"
-        >
-          knobs
-        </a>{' '}
-        and
-        <a
-          href="https://www.jsfowles.com"
-          className="border-b border-blooperBlue01 ml-1"
-        >
-          jsfowles.
-        </a>
-      </small>
-    </div>
+      {DATA.map((section) => (
+        <FooterLinkList
+          key={section.id}
+          heading={section.heading}
+          items={section.items}
+        />
+      ))}
+    </footer>
   );
 };
 
