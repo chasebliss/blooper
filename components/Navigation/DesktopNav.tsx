@@ -33,7 +33,7 @@ const DesktopNav = () => {
 
   return (
     <header className="fixed backdrop-blur-md px-[4vw] h-[100px] mx-auto flex items-center w-full">
-      <nav role="navigation" className="w-full">
+      <nav role="navigation" className="w-full max-w-[1800px] mx-auto">
         <motion.div
           variants={containerVariants}
           initial="hidden"

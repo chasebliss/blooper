@@ -53,7 +53,7 @@ const Footer = ({ className }: FooterProps) => {
       className={`flex flex-col md:flex-row gap-12 relative mx-[7vw] py-16 md:py-24 border-white border-t justify-around ${className}`}
     >
       <div className="flex flex-col items-center justify-center md:justify-start">
-        <CBAMarkIcon className="h-fit fill-blooperDarkBlue dark:fill-white pb-12 w-[150px] md:w-[200px]" />
+        <CBAMarkIcon className="h-fit fill-blooperDarkBlue dark:fill-white pb-12 w-[150px] lg:w-[200px]" />
         <div className="text-sm dark:text-white text-blooperDarkBlue/80 h-fit max-w-[250px] ">
           Created and copyrighted in {currentYear} - by
           <a

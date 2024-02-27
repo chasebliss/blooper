@@ -13,7 +13,7 @@ const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
       <figure className="w-80 md:w-96 lg:w-[30vw] mx-auto pb-20 lg:pt-20 lg:pb-32">
         <HeartBrainIcon />
       </figure>
-      <div className="relative max-w-[1200px] mx-auto p-4 py-12 lg:py-32  border border-white/50 drop-shadow-2xl rounded-3xl">
+      <div className="relative max-w-[1800px] mx-auto p-4 py-12 lg:py-32  border border-white/50 drop-shadow-2xl rounded-3xl">
         <div
           className="absolute inset-0 z-10 rounded-3xl brightness-[40%]  bg-cover bg-center"
           style={{
