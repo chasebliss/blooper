@@ -19,10 +19,10 @@ const Home = () => {
       <Head>
         <title>Blooper - Chase Bliss Audio</title>
       </Head>
-      <section className="w-full max-w-[1800px] mx-auto flex flex-col">
+      <section className="w-full mx-auto flex flex-col">
         <div
           ref={headingRef}
-          className={`transition-all duration-1000 ${
+          className={`transition-all max-w-[1800px] w-full mx-auto duration-1000 ${
             headingInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >

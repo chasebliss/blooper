@@ -9,19 +9,19 @@ interface Props {
 
 const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
   return (
-    <div className="px-[4vw]  mx-auto  py-16 md:py-32 drop-shadow-2xl lg:drop-shadow-none">
-      <figure className="w-80 md:w-96 lg:w-[30vw] mx-auto pb-20 lg:pt-20 lg:pb-32">
+    <div className="mx-auto  py-16 md:py-32">
+      <figure className="w-80 md:w-96 lg:w-[30vw] mx-auto pb-12 lg:pt-20 md:pb-28">
         <HeartBrainIcon />
       </figure>
-      <div className="relative max-w-[1800px] mx-auto p-4 py-12 lg:py-32  border border-white/50 drop-shadow-2xl rounded-3xl">
+      <div className="relative w-full ">
         <div
-          className="absolute inset-0 z-10 rounded-3xl brightness-[40%]  bg-cover bg-center"
+          className="absolute w-screen  left-0 top-0 bottom-0 z-10 brightness-[60%] sm:brightness-100 dark:brightness-[60%] bg-cover bg-center"
           style={{
             backgroundImage: `url(${backgroundImage})`,
           }}
         />
 
-        <ul className="grid grid-cols-1 md:grid-cols-2 text-white relative gap-16 z-20">
+        <ul className="grid backdrop-blur-sm w-fit mx-[4vw] gap-[14vw] md:gap-12 lg:mx-auto py-12 md:py-28 lg:py-48 grid-cols-1 md:grid-cols-2 text-white relative lg:gap-32 z-20">
           {data.map((item) => (
             <GridItem key={item.title} item={item} />
           ))}

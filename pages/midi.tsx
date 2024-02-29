@@ -22,7 +22,7 @@ const Midi = () => {
       <section className="w-full flex flex-col">
         <div
           ref={headingRef}
-          className={`transition-all duration-1000 ${
+          className={`transition-all max-w-[1800px] w-full mx-auto duration-1000 ${
             headingInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
