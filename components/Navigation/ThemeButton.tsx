@@ -20,13 +20,13 @@ const ThemeButton = () => {
     >
       <SunIcon
         className={clsx(
-          'absolute h-6 w-6 text-yellow-400 transition-opacity duration-300',
+          'absolute h-6 w-6 text-yellow-400 transition-opacity duration-1000',
           theme === 'dark' ? 'opacity-100' : 'opacity-0',
         )}
       />
       <MoonIcon
         className={clsx(
-          'absolute h-6 w-6 text-white transition-opacity duration-300',
+          'absolute h-6 w-6 text-white transition-opacity duration-1000',
           theme === 'light' ? 'opacity-100' : 'opacity-0',
         )}
       />

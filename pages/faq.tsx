@@ -74,7 +74,7 @@ export default function Example() {
                   </dt>
                   <div
                     className={clsx(
-                      'pr-12 ml-6 m-2 transition-all duration-500 ease-in-out overflow-hidden',
+                      'pr-12 ml-6 m-2 transition-all duration-1000 ease-in-out overflow-hidden',
                       {
                         'max-h-[100vh]': openIndex === index,
                         'max-h-0': openIndex !== index,

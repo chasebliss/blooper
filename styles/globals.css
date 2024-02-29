@@ -28,7 +28,7 @@ header {
 
 html,
 body {
-  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white transition-colors duration-500;
+  @apply dark:bg-blooperDarkBlue dark:text-white text-blooperDarkBlue bg-white ;
 }
 
 html {

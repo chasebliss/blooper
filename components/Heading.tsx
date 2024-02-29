@@ -49,23 +49,27 @@ const Heading: React.FC<Props> = ({
               }}
             />
           </figure>
-        ) : (images &&
-          <div className="space-x-5 lg:space-x-0 lg:space-y-5 flex lg:flex-col lg:justify-center items-center pb-8 lg:pb-0 ">
-            {images?.map((img) => (
-              <Image
-                priority
-                key={img}
-                src={img}
-                width={64}
-                height={64}
-                alt="bloops"
-                className={clsx(
-                  'transition-all duration-1000 ease-in-out',
-                  imageLoaded ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
-                )}
-              />
-            ))}
-          </div>
+        ) : (
+          images && (
+            <div className="space-x-5 lg:space-x-0 lg:space-y-5 flex lg:flex-col lg:justify-center items-center pb-8 lg:pb-0 ">
+              {images?.map((img) => (
+                <Image
+                  priority
+                  key={img}
+                  src={img}
+                  width={64}
+                  height={64}
+                  alt="bloops"
+                  className={clsx(
+                    'transition-all duration-1000 ease-in-out',
+                    imageLoaded
+                      ? 'opacity-100 scale-100'
+                      : 'opacity-0 scale-95',
+                  )}
+                />
+              ))}
+            </div>
+          )
         )}
 
         {descriptionOne && (

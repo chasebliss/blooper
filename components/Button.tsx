@@ -31,7 +31,7 @@ const BtnComponent = ({
     >
       <button
         className={clsx(
-          'border w-32 transition-all duration-300 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30',
+          'border w-32 py-2 px-4 text-[18px] font-semibold tracking-wide hover:italic hover:backdrop-blur-sm hover:bg-blooperBlue01/30',
           light ? 'border-white' : 'border-blooperDarkBlue dark:border-white',
         )}
         aria-label={children ? undefined : ariaLabel || 'Button'}

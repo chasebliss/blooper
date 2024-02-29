@@ -58,7 +58,7 @@ const DesktopNav = () => {
                 variants={itemVariants}
               >
                 <Link href={route} passHref target={external ? '__blank' : ''}>
-                  <div className="hover:not-italic flex items-center">
+                  <div className="hover:not-italic flex items-center hover:scale-105 transition-transform">
                     {title}
                     {external && (
                       <ExternalLinkIcon
