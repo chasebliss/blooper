@@ -50,7 +50,7 @@ const currentYear = new Date().getFullYear();
 const Footer = ({ className }: FooterProps) => {
   return (
     <footer
-      className={`flex flex-col md:flex-row gap-12 relative mx-[7vw] py-16 md:py-24  justify-around ${className}`}
+      className={`flex flex-col md:flex-row gap-12 relative mx-[7vw] pb-16 md:pb-24  justify-around ${className}`}
     >
       <div className="flex flex-col items-center justify-center md:justify-start">
         <CBAMarkIcon className="h-fit fill-blooperDarkBlue dark:fill-white pb-12 w-[150px] lg:w-[200px]" />
