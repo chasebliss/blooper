@@ -21,7 +21,7 @@ const GridCard: React.FC<Props> = ({ data, backgroundImage }) => {
           }}
         />
 
-        <ul className="grid w-fit mx-[4vw] gap-[14vw] md:gap-12 lg:mx-auto py-12 md:py-28  grid-cols-1 md:grid-cols-2 text-white relative lg:gap-32 z-20">
+        <ul className="grid w-fit mx-[4vw] gap-[14vw] md:gap-12 lg:mx-auto py-12 md:py-28  grid-cols-1 md:grid-cols-2 text-white relative lg:gap-32 lg:gap-x-64 z-20">
           {data.map((item) => (
             <GridItem key={item.title} item={item} />
           ))}
