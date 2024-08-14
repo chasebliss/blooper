@@ -78,7 +78,7 @@ const MobileNav = () => {
 
         <ul
           className={clsx(
-            'flex items-center flex-col fixed bottom-0 left-0 w-full rounded-t-3xl bg-white dark:bg-blooperBlue p-16 pb-36 shadow-2xl transform transition-all duration-1000 ease-in-out',
+            'flex items-center flex-col fixed bottom-0 left-0 w-full rounded-t-3xl bg-white dark:bg-blooperBlue p-16 pb-36 shadow-2xl transform transition-all duration-500 ease-in-out',
             isOpen ? 'translate-y-0' : 'translate-y-full',
           )}
         >

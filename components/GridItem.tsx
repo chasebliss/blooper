@@ -18,7 +18,7 @@ const GridItem = ({ item }: { item: DataProps }) => {
     <li
       ref={ref}
       className={clsx(
-        'md:backdrop-blur-md md:backdrop-saturate-125 md:-backdrop-hue-rotate-30 md:backdrop-contrast-125 md:border md:border-white md:bg-black/40 md:p-8 grid space-y-6 w-full lg:w-128 transition-all md:mx-auto duration-1000 rounded-3xl ',
+        'grid space-y-6 w-full transition-all md:mx-auto duration-1000',
         inView ? 'opacity-100 scale-100' : 'opacity-0 scale-95',
       )}
     >

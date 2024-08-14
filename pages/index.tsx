@@ -22,7 +22,7 @@ const Home = () => {
       <section className="w-full mx-auto flex flex-col">
         <div
           ref={headingRef}
-          className={`transition-all max-w-[1800px] w-full mx-auto duration-1000 ${
+          className={`transition-all max-w-[1600px] w-full mx-auto duration-1000 ${
             headingInView ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
           }`}
         >
@@ -42,7 +42,7 @@ const Home = () => {
         >
           <GridCard
             data={homeData}
-            backgroundImage="/images/modifiers-blooper.webp"
+            backgroundImage="/images/kickstarter.png"
           />
         </div>
       </section>
